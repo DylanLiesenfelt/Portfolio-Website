@@ -1,0 +1,97 @@
+/*Globals*/
+* {
+margin: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root {
+    --BG1: rgb(29, 30, 30);
+    --BG2: rgb(51, 51, 52);
+}
+
+/*Content*/
+body {
+    flex-direction: column;    
+    height: 200vh;
+    width: 100%;
+}
+
+/* ------------------------------ Top --------------------------------- */
+header {
+    background-color: var(--BG1);
+    height: 10%;
+    position: fixed;
+    top: 0;
+}
+
+nav {
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+h1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 7%;
+}
+
+#icon-cont {
+    justify-content: space-evenly;
+    width: 60%;
+    height: 90%;
+}
+
+.icon {
+    display: flex;
+    height: 80%;
+    width: 20%;
+}
+
+/* --------------------------------- Middle --------------------------- */
+main {
+    background-color: var(--BG2);
+    margin-top: 17.5%;
+    height: 90%;
+    width: 100%;
+    flex-direction: column;
+}
+
+#about {
+    border: 2px solid red;
+    height: 50%;
+    width: 100%;
+    margin: 1.5%;
+}
+
+#projects {
+    border: 2px solid blue;
+    height: 50%;
+    width: 100%;
+    margin: 1.5%;
+}
+
+#contact {
+    border: 2px solid green;
+    height: 50%;
+    width: 100%;
+    margin: 1.5%;
+}
+
+/* --------------------------------- Bottom --------------------------- */
+footer {
+    background-color: var(--BG1);
+    height: 5%;
+    width: 100%;
+}
+
+
+/*Desktop styling*/
+@media only screen and (min-width: 768px) {
+}
