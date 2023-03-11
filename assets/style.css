@@ -10,8 +10,11 @@ margin: 0;
 }
 
 :root {
-    --BG1: rgb(29, 30, 30);
-    --BG2: rgb(51, 51, 52);
+    --BG1: rgb(36, 39, 39);
+    --BG2: rgb(52, 55, 57);
+    --Accent: rgba(58, 159, 242, 0.489);
+    --Accent2: rgba(26, 138, 230, 0.857);
+
 }
 
 /*Content*/
@@ -64,10 +67,86 @@ main {
 }
 
 #about {
-    border: 2px solid red;
     height: 50%;
     width: 100%;
     margin: 1.5%;
+    flex-direction: column;
+}
+
+#about-top {
+    height: 50%;
+    width: 100%;
+}
+ 
+#hero-cont {
+    width: 50%;
+    height: 100%;
+}
+
+#hero {
+    margin: 10%;
+    border-radius: 50%;
+    height: 85%;
+    width: 85%;
+}
+
+#badge-cont {
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+}
+
+.badge {
+    display: flex;
+    height: 50%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+}
+
+#GHicon {
+    width: 70%;
+}
+
+#LIicon {
+    width: 70%;
+}
+
+#about-btm {
+    height: 50%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.title {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+h3 {
+    margin-left: 2%;
+    color: white;
+}
+
+.paragraph {
+    height: 80%;
+    width: 100%;
+}
+
+#p1 {
+    margin: 2%;
+    padding: 2%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 0.25rem;
+    box-shadow: .5rem 0.5rem .5rem rgba(245, 245, 245, 0.397);
 }
 
 #projects {
