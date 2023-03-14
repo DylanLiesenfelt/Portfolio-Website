@@ -1,0 +1,171 @@
+/*Globals*/
+* {
+margin: 0;
+color: white;
+font-family: monospace;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root {
+    --BG1: rgba(45, 49, 49, 0.357);
+    --BG2: rgb(52, 55, 57);
+    --BG3: rgba(52, 55, 57, 0.47);
+
+}
+
+/* Mobile First */
+
+/*Content*/
+body {
+    flex-direction: column;    
+    height: 110vh;
+    width: 100%;
+    background-image: url(./images/vapordesert.png);
+    background-size: 450px 950px;
+}
+
+
+/* ------------------------------ Top --------------------------------- */
+header {
+    background-color: var(--BG2);
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top: 0;
+}
+
+nav {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    box-shadow: 0 7px 20px 5px #f05485ef;
+}
+
+#nav-cont {
+    height: 93%;
+    width: 100%;
+}
+
+#lightbar {
+    background-image: linear-gradient(#e74b7cea, #efcad6f3, #e74b7cea);
+    height: 7%;
+    width: 100%;
+}
+
+#logo-box {
+    height: 100%;
+    width: 40%;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 5%;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    
+}
+
+#icon-cont {
+    justify-content: space-evenly;
+    width: 60%;
+    height: 90%;
+    margin-right: 2.5%;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 20%;
+}
+
+.icon-img {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* --------------------------------- Middle --------------------------- */
+main {
+    height: 100vh;
+    width: 100%;
+}
+
+#main-cont {
+    margin-top: 20%;
+    height: 80%;
+    width: 90%;
+    border-radius: .2rem;
+    background-color: var(--BG1);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 1rem rgba(255, 255, 255, 0.553);
+    z-index: -1;
+    flex-direction: column;
+}
+
+#title-box {
+    height: 10%;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+h3 {
+    margin-left: 5%;
+    font-size: 1.52rem;
+}
+
+#content-cont {
+    height: 90%;
+    width: 100%;
+}
+
+#content-box {
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5%;
+}
+
+
+/* --------------------------------- Bottom --------------------------- */
+footer {
+    background-color: var(--BG2);
+    height: 10vh;
+    width: 100%;
+}
+
+#foot-box {
+    height: 80%;
+    width: 95%;
+    flex-direction: row;
+}
+
+#foot-list {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.linktag {
+    font-size: 0.75rem;
+    width: 100%;
+    margin: 5%;
+    align-self: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Desktop styling*/
+@media only screen and (min-width: 768px) {
+}
