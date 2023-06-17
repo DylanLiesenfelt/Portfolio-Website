@@ -62,6 +62,17 @@ header {
     margin: 1rem;
 }
 
+#heroWrap {
+    height: 100%;
+}
+
+#hero {
+    background-color: var(--secondary);
+    height: 80%;
+    width: 40%;
+    border-radius: 50%;
+}
+
 #lightbar {
     height: 2%;
     background-image: linear-gradient(rgb(39, 209, 113), white, rgb(39, 209, 113));
