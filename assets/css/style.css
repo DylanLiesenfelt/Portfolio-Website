@@ -17,8 +17,8 @@ body{
 }
 
 :root{
-    --main: rgb(55, 61, 59);
-    --secondary: black;
+    --main: rgb(43, 47, 45);
+    --secondary: rgb(30, 32, 31);
     --accent: rgb(39, 209, 113);
 }
 /*--------- GLOBAL ----------*/
@@ -64,15 +64,47 @@ header {
 
 #lightbar {
     height: 2%;
-    background-color: var(--accent);
+    background-image: linear-gradient(rgb(39, 209, 113), white, rgb(39, 209, 113));
+    box-shadow: 0 0 20px 5px var(--accent);
+    z-index: 1;
 }
 
 /*--------- MAIN ----------*/
 main {
     height: 60%;
-    background-color: var(--secondary);
+    background-image: url(./images/0zs58d4q.bmp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+#mainTop {
+    flex-direction: row;
+    height: 50%;
+}
+
+#mainBtm {
+    flex-direction: row;
+    height: 50%;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    height: 90%;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0 0 25px 15px rgba(255, 255, 255, 0.168);
+}
+
+#card1,#card4 {
+    width: 60%;
+}
+
+#card2,#card3 {
+    width: 40%;
+}
 /*--------- FOOTER ----------*/
 footer {
     height: 5%;
