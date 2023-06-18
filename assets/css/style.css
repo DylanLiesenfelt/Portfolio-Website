@@ -145,6 +145,7 @@ footer {
 @media screen and (max-width: 450px) {
     header {
         height: 35%;
+        text-align: center;
     }
     
     #contact>h1 {
@@ -167,67 +168,39 @@ footer {
         width: 80%;
     }
     
-    #email {
-        margin: 1rem;
+    #email>img {
+        width: 10%;
+        margin-right: 0.5rem;
     }
     
-    #heroWrap {
-        height: 100%;
+    #resume>img {
+        width: 10%;
+        margin-right: 0.5rem;
     }
     
     #hero {
-        background-color: var(--secondary);
-        height: 80%;
-        width: 40%;
-        border-radius: 50%;
-    }
-    
-    #lightbar {
-        height: 2%;
-        background-image: linear-gradient(rgb(39, 209, 113), white, rgb(39, 209, 113));
-        box-shadow: 0 0 20px 5px var(--accent);
-        z-index: 1;
-    }
-    
-    /*--------- MAIN ----------*/
-    main {
         height: 60%;
-        background-image: url(./images/0zs58d4q.bmp);
-        background-repeat: no-repeat;
-        background-size: cover;
+        width: 90%;
     }
-    
+
+    /*--------- MAIN ----------*/
     #mainTop {
-        flex-direction: row;
-        height: 50%;
+        flex-direction: column;
     }
     
     #mainBtm {
-        flex-direction: row;
-        height: 50%;
+        flex-direction: column;
     }
-    
-    .card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 2rem;
-        height: 90%;
-        border-radius: 0.5rem;
-        backdrop-filter: blur(10px);
-        box-shadow: inset 0 0 25px 15px rgba(255, 255, 255, 0.168);
+
+    .card{
+        border-radius: 0;
     }
     
     #card1,#card4 {
-        width: 60%;
+        width: 100%;
     }
     
     #card2,#card3 {
-        width: 40%;
-    }
-    /*--------- FOOTER ----------*/
-    footer {
-        height: 5%;
-        background-color: var(--main);
+        width: 100%;
     }
   }
