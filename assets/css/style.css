@@ -33,12 +33,17 @@ body{
 /*--------- HEADER ----------*/
 header {
     height: 35%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.16), rgb(43, 47, 45));
     background-color: var(--main);
 }
 
 #headerContent {
     height: 98%;
     flex-direction: row;
+}
+
+#contact {
+    height: 100%;
 }
 
 #contact>h1 {
@@ -60,6 +65,21 @@ header {
 
 #email {
     margin: 1rem;
+    flex-direction: row;
+}
+
+#email>img {
+    width: 3%;
+    margin-right: 0.5rem;
+}
+
+#resume{
+    flex-direction: row;
+}
+
+#resume>img {
+    width: 3%;
+    margin-right: 0.5rem;
 }
 
 #heroWrap {
@@ -68,8 +88,8 @@ header {
 
 #hero {
     background-color: var(--secondary);
-    height: 80%;
-    width: 40%;
+    height: 90%;
+    width: 50%;
     border-radius: 50%;
 }
 
