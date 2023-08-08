@@ -1,0 +1,29 @@
+header {
+    height: 5%;
+}
+
+main {
+    height: 90%;
+    background-image: none;
+}
+
+nav{
+    outline: 1px solid wheat;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    z-index: 1;
+}
+
+#home {
+    outline: 1px solid red;
+    width: 50%;
+}
+
+#iconWrap {
+    width: 50%;
+}
+
+footer {
+    height: 5%;
+}

@@ -5,6 +5,7 @@
     padding: 0;
     font-family: monospace;
     color: var(--accent);
+    text-decoration: none;
 }
 
 body{
@@ -91,7 +92,7 @@ header {
 #hero {
     background-color: var(--secondary);
     height: 90%;
-    width: 50%;
+    width: 45%;
     border-radius: 50%;
 }
 
@@ -106,6 +107,7 @@ header {
 main {
     height: 60%;
     background-image: url(./images/0zs58d4q.bmp);
+    background-color: var(--secondary);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -125,6 +127,8 @@ main {
     align-items: center;
     justify-content: center;
     margin: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     height: 90%;
     border-radius: 0.5rem;
     backdrop-filter: blur(10px);
@@ -137,6 +141,40 @@ main {
 
 #card2,#card3 {
     width: 40%;
+}
+
+#card1Cont {
+    height: 90%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#bubbanautLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 35%;
+}
+
+#card1Para {
+    align-items: center;
+    height: 70%;
+    width: 90%;
+    padding: 1.5rem;
+}
+
+#card1Para>a {
+    font-size: 3.5rem;
+    font-weight: 1000;
+}
+
+#card1Para>p {
+    font-size: 1.7rem;
+}
+
+#bubbanautLogo {
+    width: 85%;
 }
 /*--------- FOOTER ----------*/
 footer {
@@ -185,7 +223,7 @@ footer {
     }
     
     #hero {
-        height: 60%;
+        height: 55%;
         width: 90%;
     }
 
