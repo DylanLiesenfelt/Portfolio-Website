@@ -106,10 +106,11 @@ header {
 /*--------- MAIN ----------*/
 main {
     height: 60%;
-    background-image: url(./images/0zs58d4q.bmp);
+    background-image: url(./images/background.gif);
     background-color: var(--secondary);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 0;
 }
 
 #mainTop {
