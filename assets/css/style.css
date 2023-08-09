@@ -138,45 +138,47 @@ main {
 
 #card1,#card4 {
     width: 60%;
+    padding: 0;
 }
 
 #card2,#card3 {
     width: 40%;
 }
 
-#card1Cont {
-    height: 90%;
+.cardLink {
+    display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    height: 100%;
+    width: 100%; 
 }
 
-#bubbanautLink {
+.cardL {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 100%;
     width: 35%;
 }
 
-#card1Para {
-    align-items: center;
-    height: 70%;
-    width: 90%;
-    padding: 1.5rem;
+.cardL>img {
+    width: 100%;
+    padding-left: 10%;
 }
 
-#card1Para>a {
-    font-size: 3.5rem;
-    font-weight: 1000;
+.cardR {
+    height: 100%;
+    width: 65%;
+    padding: 5%;
 }
 
-#card1Para>p {
-    font-size: 1.7rem;
+.cardR>p {  
+    margin-top: 5%;
+    font-size: 100%;
 }
 
-#bubbanautLogo {
-    width: 85%;
+.cardR>h2 {
+    font-size: 160%;
 }
+
 /*--------- FOOTER ----------*/
 footer {
     height: 5%;
