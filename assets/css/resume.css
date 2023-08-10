@@ -1,6 +1,10 @@
+body {
+    height: 110vh;
+}
+
 header {
     display: flex;
-    height: 5%;
+    height: 7%;
 }
 
 nav {
@@ -11,8 +15,8 @@ nav {
     width: 100%;
 }
 
-#homeIcon {
-    width: 50%;
+nav {
+    font-size:calc(12px + 1.5vw);
 }
 
 #homeLink {
@@ -20,6 +24,12 @@ nav {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 100%;
+}
+
+#homeLink>img{
+    min-width: 35px;
+    width: 50%;
 }
 
 main {
@@ -27,50 +37,17 @@ main {
     background-image: none;
 }
 
-#resume {
-    height: 95%;
-    width: 55%;
-    background-color: white;
-    border-radius: 0.25rem;
-    overflow-y: auto;
-    box-shadow: 10px 10px rgba(255, 255, 255, 0.13);
-}
-
-#heading {
+#resumeWrap {
+    height: 100%;
+    width: 90%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    margin: 2rem;
 }
 
-.section {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-}
-
-#navyPara, #margatePara {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-
-#broward, #natc, #monarch {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-
-#skillCont {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-}
-
-h2,h3,p,b,i,a {
-    font-family: 'Times New Roman', Times, serif;
-    color: black;
-}
-
-footer {
-    height: 5%;
+#resume {
+    width: 50vw;
+    height: 95%;
+    border-radius: 0.25rem;
+    box-shadow: 10px 10px rgba(255, 255, 255, 0.13);
 }
