@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: var(--cOrange);
+    font-family: "Open Sans", sans-serif;
+}
+
+@font-face {
+    font-family: digital;
+    src: url(../fonts/DS-DIGIT.TTF);
+}
+
+:root {
+    --cOrange: #E37A0E;
+    --cLightGrey: #303134;
+    --cDarkGrey: #202124;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    background-color: rgba(255, 210, 161, 0.279);
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    height: 10%;
+    width: 100%;
+    background-color: var(--cDarkGrey);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.442);
+}
+
+nav {
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#linkCont {
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50vw;
+    margin: 1vw;
+}
+
+#home {
+    margin-left: 1vw;
+    width: 50%;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 1vw;
+}
+
+.icon>img {
+    width: 3.5vw;
+    min-width: 64px;
+    height: 70%;
+    min-height: 64px;
+}
+
+main {
+    height: 90%;
+    width: 100%;
+    justify-content: center;
+}
+
+#content {
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+    width: 45%;
+    border-radius: 0.4rem;
+    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.294);
+    background-color: var(--cLightGrey);
+}
+
+#content>div {
+    height: 15%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+#content>div>h2 {
+    font-size: calc(20px + 1.2vw);
+}
+
+#buttonCont {
+    justify-content: space-between;
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#buttonCont>button {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#buttonCont>button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
