@@ -38,6 +38,30 @@ header {
     background-color: var(--main);
 }
 
+#headerCont {
+    height: 98%;
+    width: 100%;
+}
+
+.headerSide {
+    outline: 1px solid red;
+    height: 100%;
+    width: 50%;
+}
+
+.headerL {
+    outline: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50%;
+}
+
+#title {
+    outline: 1px solid red;
+}
+c
+
 #headerContent {
     height: 98%;
     flex-direction: row;
