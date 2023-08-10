@@ -35,7 +35,7 @@ body{
     --secondary: rgb(30, 32, 31);
     --accent: rgb(39, 209, 113);
 }
-/*--------- GLOBAL ----------*/
+
 .wrapper {
     display: flex;
     align-items: center;
@@ -52,6 +52,8 @@ header {
 }
 
 #headerCont {
+    display: flex;
+    flex-direction: row;
     height: 98%;
     width: 100%;
 }
@@ -60,8 +62,6 @@ header {
     height: 100%;
     width: 50%;
 }
-
-
 
 .headerL {
     display: flex;
@@ -111,6 +111,16 @@ header {
 
 .linkIcon>img {
     width: 5vw;
+}
+
+#headerR{
+    display: flex;
+    justify-content: center;
+}
+
+#heroWrap {
+    display: flex;justify-content: center;
+    width: 25vw;
 }
 
 #lightbar {
