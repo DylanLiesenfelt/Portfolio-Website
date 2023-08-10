@@ -83,8 +83,9 @@ main {
     justify-content: center;
     height: 50%;
     width: 45%;
+    min-width: 450px;
     border-radius: 0.4rem;
-    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.294);
+    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.3);
     background-color: var(--cLightGrey);
 }
 
@@ -93,10 +94,17 @@ main {
     width: 90%;
     display: flex;
     align-items: center;
+    margin-top: 7%;
 }
 
 #content>div>h2 {
-    font-size: calc(20px + 1.2vw);
+    font-size: calc(50px + 2vw);
+    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.613);
+}
+
+#content>div>h3 {
+    font-size: calc(8px + 2vw);
+    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.613);
 }
 
 #buttonCont {
