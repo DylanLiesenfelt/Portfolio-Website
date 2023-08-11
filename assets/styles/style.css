@@ -10,10 +10,13 @@
     src: url(../fonts/AaronMarker.ttf);
 }
 
-:root {
-    --cOrange: #E37A0E;
-    --cLightGrey: #303134;
-    --cDarkGrey: #202124;
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(180deg);
+    }
 }
 
 .container {
@@ -44,6 +47,11 @@ nav {
     justify-content: space-between;
 }
 
+#navL{
+    margin-left: 1vw;
+    width: 50%;
+}
+
 #linkCont {
     flex-direction: row;
     justify-content: flex-end;
@@ -53,8 +61,33 @@ nav {
 }
 
 #home {
-    margin-left: 1vw;
-    width: 50%;
+    margin-right: 2vw;
+}
+
+#drop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px; 
+    background-color: rgb(74, 144, 230);
+    border-radius: 5px;
+    border-color: white;
+    border-style: hidden;
+    cursor:pointer ;
+}
+
+#drop>img {
+    height: 70%;
+    width: 70%;
+}
+
+#drop:hover {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: 0;
+    transform: rotate(180deg);
 }
 
 .icon {
@@ -71,61 +104,31 @@ nav {
     min-height: 64px;
 }
 
-main {
-    height: 90%;
-    width: 100%;
-    justify-content: center;
-}
+@media screen and (max-width: 450px) {
+    header {
+        height: 15%;
+    }
 
-#content {
-    flex-direction: column;
-    justify-content: center;
-    height: 60%;
-    width: 40%;
-    min-width: 450px;
-    border-radius: 1rem;
-    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.3);
-    background-color: rgb(216, 58, 58);
-}
+    .icon>img {
+        max-width: 40px;
+        max-height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        margin: 0px 5px 0px 5px;
+    }
 
-#hello {
-    width: 100%;
-    height: 30%;
-    margin-bottom: 1vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    #home>img {
+        min-height: 50px;
+        min-width: 50px;
+    }
 
-#hello>h2 {
-    font-size: calc(6rem + 1vw);
-    color: rgb(243, 241, 235);
-}
-
-#hello>h3 {
-    font-size: calc(0.5rem + 1vw);
-    color: rgb(243, 241, 235);
-}
-
-#name {
-    background-color: rgb(243, 241, 235);
-    width: 100%;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-}
-
-#name>h2 {
-    font-size: calc(6rem + 1vw);
-    color: rgb(74, 144, 230);
-    font-family: digital;
-}
-
-#name>h3 {
-    font-size: calc(2rem + 1vw);
-    color: rgb(74, 144, 230);
-    font-family: digital;
+    #drop {
+        max-width: 35px;
+        max-height: 35px; 
+        right: 10px;
+    }
+    
+    main {
+        height: 85%;
+    }
 }
