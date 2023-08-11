@@ -85,3 +85,27 @@ main {
         font-size: calc(1.5rem + 1vw);
     }
 }
+
+@media screen and (min-width: 650px) {
+    #content {
+        min-width: 500px;
+        min-height: 280px;
+    }
+    
+    #hello>h2 {
+        font-size: calc(3rem + 1vw);
+    }
+    
+    #hello>h3 {
+        font-size: calc(1rem + 1vw);
+    }
+
+    #name>h2 {
+        font-size: calc(3rem + 1vw);
+    }
+    
+    #name>h3 {
+        font-size: calc(1.5rem + 1vw);
+    }
+
+}
