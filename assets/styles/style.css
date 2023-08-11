@@ -107,13 +107,14 @@ nav {
 @media screen and (max-width: 450px) {
     header {
         height: 15%;
+        max-height: 100px;
     }
 
     .icon>img {
-        max-width: 40px;
-        max-height: 40px;
-        min-width: 40px;
-        min-height: 40px;
+        max-width: 50px;
+        max-height: 50px;
+        min-width: 50px;
+        min-height: 50px;
         margin: 0px 5px 0px 5px;
     }
 
