@@ -188,21 +188,3 @@ main {
         width: 27vw;
     }
 }
-
-@media screen and (min-width: 650px) {
-    header {
-        height: 18%;
-    }
-
-    #drop:active #dropCont {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #dropCont {
-        width: 18vw;
-        height: 18vh;
-        flex-direction: column;
-    }
-
-}
