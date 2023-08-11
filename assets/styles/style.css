@@ -104,6 +104,11 @@ nav {
     min-height: 64px;
 }
 
+main {
+    height: 90%;
+    width: 100%;
+}
+
 @media screen and (max-width: 450px) {
     header {
         height: 15%;
