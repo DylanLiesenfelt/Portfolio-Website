@@ -2,13 +2,12 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    color: var(--cOrange);
     font-family: "Open Sans", sans-serif;
 }
 
 @font-face {
     font-family: digital;
-    src: url(../fonts/DS-DIGIT.TTF);
+    src: url(../fonts/AaronMarker.ttf);
 }
 
 :root {
@@ -35,7 +34,7 @@ body {
 header {
     height: 10%;
     width: 100%;
-    background-color: var(--cDarkGrey);
+    background-color: rgb(74, 144, 230);
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.442);
 }
 
@@ -66,9 +65,9 @@ nav {
 }
 
 .icon>img {
-    width: 3.5vw;
+    width: 2vw;
     min-width: 64px;
-    height: 70%;
+    height: 50%;
     min-height: 64px;
 }
 
@@ -81,57 +80,52 @@ main {
 #content {
     flex-direction: column;
     justify-content: center;
-    height: 50%;
-    width: 45%;
+    height: 60%;
+    width: 40%;
     min-width: 450px;
-    border-radius: 0.4rem;
+    border-radius: 1rem;
     box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.3);
-    background-color: var(--cLightGrey);
+    background-color: rgb(216, 58, 58);
 }
 
-#content>div {
-    height: 15%;
-    width: 90%;
+#hello {
+    width: 100%;
+    height: 30%;
+    margin-bottom: 1vw;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 7%;
 }
 
-#content>div>h2 {
-    font-size: calc(50px + 2vw);
-    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.613);
+#hello>h2 {
+    font-size: calc(6rem + 1vw);
+    color: rgb(243, 241, 235);
 }
 
-#content>div>h3 {
-    font-size: calc(8px + 2vw);
-    text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.613);
+#hello>h3 {
+    font-size: calc(0.5rem + 1vw);
+    color: rgb(243, 241, 235);
 }
 
-#buttonCont {
-    justify-content: space-between;
-    width: 33%;
+#name {
+    background-color: rgb(243, 241, 235);
+    width: 100%;
+    height: 60%;
     display: flex;
-    flex-direction: row;
-
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
 
-#buttonCont>button {
-    font-size: 16px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    border: 3px solid;
-    padding: 0.25em 0.5em;
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    position: relative;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+#name>h2 {
+    font-size: calc(6rem + 1vw);
+    color: rgb(74, 144, 230);
+    font-family: digital;
 }
 
-#buttonCont>button:active {
-  box-shadow: 0px 0px 0px 0px;
-  top: 5px;
-  left: 5px;
+#name>h3 {
+    font-size: calc(2rem + 1vw);
+    color: rgb(74, 144, 230);
+    font-family: digital;
 }
