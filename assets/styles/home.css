@@ -65,8 +65,12 @@ main {
         max-height: 350px;
     }
 
+    #hello {
+        padding-bottom: 1vw;
+    }
+
     #hello>h2 {
-        font-size: calc(3.5rem + 1vw);
+        font-size: calc(3rem + 1vw);
     }
     
     #hello>h3 {
