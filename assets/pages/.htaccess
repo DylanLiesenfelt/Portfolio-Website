@@ -1,2 +1,0 @@
-RewriteEngine Open
-RewriteRule ^resume.html [L]
