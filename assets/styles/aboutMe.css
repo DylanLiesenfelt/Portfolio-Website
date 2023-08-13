@@ -1,58 +1,52 @@
 main {
-    align-items: center;
     justify-content: center;
+}
+
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    width: 70vw;
+    background-color: white;
+}
+
+#heading {
+    background-color: #4a90e6;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+    color: white;
 }
 
 #content {
     display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#paraCont {
+    outline: 1px solid red;
+    display: flex;
     flex-direction: column;
-    height: 90%;
     width: 60%;
-    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.3);
-}
-
-#content>h1 {
-    background-color: rgb(74, 144, 230);
-    display: flex;
-    align-items: center;
-    padding-left: 1vw;
-    height: 10%;
-    color: white;
-}
-
-#about {
-    display: flex;
-    background-color: white;
-    height: 90%;
-    padding: 1.5vw;
 }
 
 #para {
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-    padding-right: 1vw;
+    outline: 1px solid blue;
+    height: 90%;
+    padding: 1vw;
 }
 
-#para>p {
-    text-indent: 1.2vw;
-    font-size: calc(0.7rem + 0.5vw);
+p {
+    text-indent: 1vw;
     margin-bottom: 1vw;
 }
 
 #imgCont {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
+    
 }
 
-#imgCont>div {
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#imgCont>div>img {
-    width: 60%;
+img {
+    height: 100px;
 }
