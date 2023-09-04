@@ -1,0 +1,44 @@
+#contentCont {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.135);
+    border-radius: 0.3rem;
+    box-shadow: inset 0 0 20px 10px rgba(255, 255, 255, 0.185);
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding: 0 5% 0 5%;
+}
+
+h2 {
+    font-size: calc(1vw + 2rem);
+}
+
+p {
+    padding-top: 2%;
+    font-size: 1.5rem;
+}
+
+#photoGallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 50%;
+}
+
+#photoGallery>img {
+    outline: 1px solid red;
+    height: 30%;
+    width: 30%;
+    margin: 1%;
+}
+

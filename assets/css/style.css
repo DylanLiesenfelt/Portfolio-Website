@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    height: 10%;
+    width: 100%;
+    background-color: white;
+    font-family: monospace;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+nav>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+#title {
+    justify-content: flex-start;
+    padding-left: 1%;
+}
+
+#pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+#pages>button {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    background-color: inherit;
+    border: 0;
+    font-size: 1rem;
+    font-weight: 1000;
+    font-family: monospace;
+}
+
+#pages>button:hover {
+    background-color: black;
+    color: white;
+}
+
+#pages>button:active {
+    background-color: rgb(33, 33, 33);
+}
+
+#links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50%;
+}
+
+#links>a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 1%;
+}
+
+#links>a>img {
+    height: 75%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 100%;
+    background-image: linear-gradient(to top right, rgb(89, 136, 255), rgb(215, 215, 215));
+}
+
+
+
