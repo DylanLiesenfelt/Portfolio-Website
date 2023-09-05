@@ -34,14 +34,12 @@ const galleryImages = [
 
 function displayImages() {
     const photoGallery = document.getElementById('photoGallery');
-    photoGallery.innerHTML = ''; // Clear previous images
+    photoGallery.innerHTML = ''; 
 
-    // Create and append nine image elements
     const displayedImages = [];
     for (let i = 0; i < 9; i++) {
         const remainingImages = galleryImages.filter(image => !displayedImages.includes(image));
         if (remainingImages.length === 0) {
-            // All images have been displayed, reset the array
             displayedImages.length = 0;
         }
 
@@ -60,7 +58,7 @@ function displayImages() {
     }
 }
 
-const interval = 5000; // Change images every 5 seconds
+const interval = 5000;
 setInterval(displayImages, interval);
 
 displayImages();

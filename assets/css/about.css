@@ -3,9 +3,10 @@
     flex-direction: row;
     height: 90%;
     width: 80%;
-    background-color: rgba(255, 255, 255, 0.135);
+    background-color: rgba(255, 255, 255, 0.261);
     border-radius: 0.3rem;
-    box-shadow: inset 0 0 20px 10px rgba(255, 255, 255, 0.185);
+    box-shadow: inset 0 0 20px 10px rgba(255, 255, 255, 0.456);
+    box-shadow: 10px 10px 15px 10px rgba(0, 0, 0, 0.2);
 }
 
 #about {
@@ -45,11 +46,13 @@ p {
 }
 
 #photoGallery>div {
-    height: 33.33%;
-    width: 33.33%;
+    height: 33%;
+    width: 33%;
+    padding: 0.156%;
 }
 
 img {
+    border-radius: 1rem;
     height: 100%;
     width: 100%;
 }
