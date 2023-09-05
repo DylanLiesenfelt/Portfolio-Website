@@ -1,0 +1,4 @@
+photo = document.getElementsByClassName('photo')
+
+
+

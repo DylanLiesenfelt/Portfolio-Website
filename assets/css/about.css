@@ -14,31 +14,38 @@
     flex-direction: column;
     height: 100%;
     width: 50%;
-    padding: 0 5% 0 5%;
+    padding: 0 3% 0 3%;
 }
 
 h2 {
-    font-size: calc(1vw + 2rem);
+    font-size: calc(1vw + 1.6rem);
+    font-family: monospace;
 }
 
 p {
     padding-top: 2%;
     font-size: calc(1vw + 0.5rem);
+    font-family: monospace;
+}
+
+#galleryWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
 }
 
 #photoGallery {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
     flex-wrap: wrap;
-    height: 100%;
-    width: 50%;
+    height: 90%;
+    width: 90%;
 }
 
-#photoGallery>img {
-    outline: 1px solid red;
-    height: 30%;
-    width: 30%;
-    margin: 1%;
+#photoGallery>div {
+    height: 33.33%;
+    width: 33.33%;
 }
 
