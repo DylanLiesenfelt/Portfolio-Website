@@ -3,75 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dylan Liesenfelt</title>
+    <title>Liesenfelt.net</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/about.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div id="title">
-                <h1>Liesenfelt.Net</h1>
+    <header class="container">
+        <nav id="navbar" class="container">
+            <div class="container">
+                <h1>Liesenfelt.net</h1>
             </div>
-            <div>
-                <div id="pages">
-                    <button onclick="window.location.href='./assets/pages/projects.html'">
-                        Projects
-                    </button>
-                    <button onclick="window.location.href='./assets/pages/resume.html'">
-                        Resume
-                    </button>
-                    <button onclick="window.location.href='./index.html'">
-                        About Me
-                    </button>
-
-                    <a href="./assets/"></a>
-                </div>
-                <div id="links">
-                    <a href="https://github.com/DylanLiesenfelt">
-                        <img src="./assets/images/icons/github100.png" alt="">
-                    </a>
-                    <a href="https://www.linkedin.com/in/dylanliesenfelt/">
-                        <img src="./assets/images/icons/linkedin.png" alt="">
-                    </a>
-                    <a href="https://leetcode.com/dliesenfelt/">
-                        <img src="./assets/images/icons/leetcode100.png" alt="">
-                    </a>
-                </div>
+            <div id="pageLinks" class="container">
+                <button>
+                    Resume
+                </button>
+                <button>
+                    Projects
+                </button>
+                <button>
+                    About
+                </button>
+            </div>
+            <div id="miscLinks" class="container">
+                <a href="http://">
+                    <img src="" alt="">
+                    GH
+                </a>
+                <a href="http://">
+                    <img src="" alt="">
+                    LI
+                </a>
+                <a href="http://">
+                    <img src="" alt="">
+                    LC
+                </a>
             </div>
         </nav>
     </header>
-    <main>
-        <div id="contentCont">
-            <div id="about">
-                <h2>Hey, Welcome!</h2>
-                <h2>My Name Is Dylan Liesenfelt.</h2>
-                <p>I am a <b>Software Engineer</b>, and US Navy Veteran. 
-                    Im always enjoying time with my husky and best friend, Forrest. 
-                    <br>
-                    <br>My hobbies include fishing, video games, and working out. 
-                    I like to keep a well balanced life, and enjoy the time I have here on this beautiful planet.
-                    <br>
-                    <br>
-                    While you are here check out some of my projects, located up on the navigation bar.
-                    Let me know what you think, contact info can be found on the resume page.
-                </p>
+    <main class="container">
+        <div id="cont" class="container"> 
+            <div id="tabs" class="container">
+                <button id="about" class="tabBtn">
+                    ABOUT
+                </button>
+                <button id="certs" class="tabBtn">
+                    CERTIFICATIONS
+                </button>
+                <button id="contact" class="tabBtn">
+                    CONTACT
+                </button>
+                <button id="photoGallery" class="tabBtn">
+                    PHOTO GALLERY
+                </button>
             </div>
-            <div id="galleryWrap">
-                <div id="photoGallery">
-                    <div class="photo"></div>
-                    <div class="photo"></div>
-                    <div class="photo"></div>
-                    <div class="photo"></div>
-                    <div class="photo"></div>
-                    <div class="photo"></div>
-                    <div class="photo"></div>
-                    <div class="photo"></div>
-                    <div class="photo"></div>
+            <div id="windowCont" class="container">
+                <div id="about" class="window">
+                    <div class="windowBar container">
+                        <h2>ABOUT</h2>
+                    </div>
+                    <div class="windowContent">
+                        <div id="aboutText">
+                            <h3>Welcome!</h3>
+                            <p>My name is Dylan Liesenfelt, I am a Software Engineer.</p>
+                            <p>If you would like to see pictures of my very handsome dog Forrest, please head over to the photo gallery.</p>
+                            <p>Sorry nothing is working on this page i went nuclear with my redesign</p>
+                        </div>
+                        <div id="meme">
+                            <img src="./assets/images/cspassion.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 </body>
-<script src="./assets/js/gallery.js"></script>
 </html>
