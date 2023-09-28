@@ -83,12 +83,15 @@ main {
 #aboutText {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     width: 50%;
 }
 
 #aboutText>p {
+    font-size: calc(.25rem + 1vh + 1vw);
     margin-top: 2%;
     text-indent: 3%;
+   
 }
 
 #meme {
