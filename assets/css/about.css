@@ -13,7 +13,7 @@ main {
 }
 
 #certWindow {
-    visibility: visible;
+    visibility: hidden;
 }
 
 #contactWindow {
@@ -126,7 +126,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 50%;
 }
 
 #skills>h3 {
@@ -163,7 +163,30 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: green;
     height: 100%;
-    width: 100%;
 }
+
+#certifications {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 50%;
+}
+
+#certifications>h3 {
+    width: 100%;
+    height: 10%;
+    margin-left: 5%;
+}
+
+#certifications>div {
+    height: 90%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start ;
+}
+
+#certifications>div>img {
+    margin: 12% 0 5% 0;
+}
+
