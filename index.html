@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Software Engineer, Computer Scientist, Web Developer, Programmer"> 
     <title>Liesenfelt.net</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/about.css">
@@ -151,7 +152,22 @@
                         <h2>CONTACT</h2>
                     </div>
                     <div class="windowContent" class="container">
-                        <img src="./assets/images/idk.png" alt="" srcset="">
+                        <div id="contactMeContainer" class="container">
+                            <div id="contactMe">
+                                <form action="process.php" method="post">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required><br>
+                                
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required><br>
+                                
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" rows="4" required></textarea><br>
+                                
+                                    <input type="submit" value="Submit">
+                                </form>                                
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="photoGalleryWindow" class="window">

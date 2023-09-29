@@ -190,3 +190,15 @@ li {
     margin: 12% 0 5% 0;
 }
 
+#contactMeContainer {
+    width: 100%;
+
+}
+
+#contactMe {
+    height: 90%;
+    width: 75%;
+    background-color: #0a1623;
+    color: azure;
+}
+
