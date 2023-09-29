@@ -17,7 +17,7 @@ main {
 }
 
 #contactWindow {
-    visibility: hidden;
+    visibility: visible;
 }
 
 #photoGalleryWindow {
