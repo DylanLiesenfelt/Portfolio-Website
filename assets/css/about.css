@@ -51,7 +51,6 @@ main {
     justify-content: flex-start;
     align-items: center;
     border: 0;
-    height: 5%;
     width: 90%;
     margin-top: 3%;
     padding: 5%;
@@ -59,6 +58,9 @@ main {
     color: white;
     font-weight: bolder;
     text-align: start;
+    font-size: calc(0.25vw + 0.5rem);
+    overflow: hidden; 
+    text-overflow: ellipsis;
 }
 
 .tabBtn:hover {
