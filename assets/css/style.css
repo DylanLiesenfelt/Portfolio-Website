@@ -15,9 +15,7 @@ body {
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(217deg, rgba(255, 255, 255, 0.8), rgba(255,0,0,0) 70.71%),
-                linear-gradient(127deg, rgb(21, 56, 94), rgba(0,255,0,0) 70.71%),
-                linear-gradient(336deg, rgba(7, 110, 201, 0.8), rgba(0,0,255,0) 70.71%);
+    background: linear-gradient(210deg, rgba(46, 113, 207, 0.411) 20%, rgb(16, 153, 237) 50%, rgba(33, 129, 158, 0.526) 75%)
 }
 
 .container {

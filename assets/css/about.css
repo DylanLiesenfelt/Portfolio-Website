@@ -52,6 +52,7 @@ main {
     align-items: center;
     border: 0;
     width: 90%;
+    height: 7%;
     margin-top: 3%;
     padding: 5%;
     background-color: var(--main);
