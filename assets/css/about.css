@@ -177,6 +177,7 @@ main {
 
 .blogTemplate {
     margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 #blogContent {
@@ -200,6 +201,13 @@ main {
 .blogArea {
     display: flex;
     flex-direction: row;
+}
+
+.textArea>ul {
+    margin-left: 7%;
+    margin-bottom: 2%;
+    text-indent: 1rem;
+    font-size: calc(1vw + 0.3rem);
 }
 
 .imgArea {
