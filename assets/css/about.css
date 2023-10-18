@@ -229,3 +229,35 @@ main {
     width: 100%;
     margin-bottom: 1%;
 }
+
+@media only screen and (max-width: 600px) {
+    main {
+        height: 100%;
+    }
+
+    #cont {
+        flex-direction: column;
+    }
+
+    #tabs {
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        height: 7%;
+    }
+
+    #tabs>button {
+        height: 100%;
+        margin: 0;
+        background-color: #24313f;
+        text-align: center;
+        font-size: calc(.5vw + .5rem);
+    }
+
+    .window {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 13%;
+    }
+}   

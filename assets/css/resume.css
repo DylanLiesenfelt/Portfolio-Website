@@ -12,3 +12,9 @@ object {
     height: 100%;
     width: 55%;
 }
+
+@media only screen and (max-width: 600px) {
+    object {
+        width: 100%;
+    }
+}
