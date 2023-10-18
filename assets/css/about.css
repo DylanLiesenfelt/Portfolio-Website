@@ -4,7 +4,7 @@ a {
 
 a:visited {
     text-decoration: none;
-    color: azure;
+    color: inherit;
 }
 
 main {
