@@ -191,6 +191,7 @@ main {
 
 .textArea {
     width: 60%;
+    font-size: calc(1vw + 0.75rem);
 }
 
 .textArea>p {
@@ -207,7 +208,7 @@ main {
     margin-left: 7%;
     margin-bottom: 2%;
     text-indent: 1rem;
-    font-size: calc(1vw + 0.3rem);
+    font-size: calc(0.5vw + 0.75rem);
 }
 
 .imgArea {
