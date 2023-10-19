@@ -26,11 +26,11 @@ main {
 }
 
 #contactWindow {
-    visibility: visible;
+    visibility: hidden;
 }
 
 #photoGalleryWindow {
-    visibility: hidden;
+    visibility: visible;
 }
 
 #blogWindow {
@@ -221,10 +221,13 @@ main {
 }
 
 #galleryArea {
-    outline: 1px solid  red;
+    outline: 1px solid red;
     width: 100%;
     margin-bottom: 1%;
 }
+
+
+
 
 @media only screen and (max-width: 600px) {
     main {
