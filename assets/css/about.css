@@ -178,6 +178,7 @@ main {
 .blogTemplate {
     margin-top: 1%;
     margin-bottom: 1%;
+    border-top: 5px solid black;
 }
 
 #blogContent {
