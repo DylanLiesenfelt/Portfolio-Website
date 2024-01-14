@@ -3,300 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Software Engineer, Computer Scientist, Web Developer, Programmer"> 
-    <title>Liesenfelt.net</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/about.css">
 </head>
-<body>
-    <header class="container">
-        <nav id="navbar" class="container">
-            <div id="title" class="container">
-                <h1>Liesenfelt.net</h1>
+<body class="flex">
+    <header class="flex">
+        <div id="title" class="flex">
+            <h1>Liesenfelt.Net</h1>
+        </div>
+        <div id="linkCont" class="flex">
+            <div id="pageLinks">
+                 
             </div>
-            <div id="pageLinks" class="container">
-                <button onclick="window.location.href='./assets/pages/resume.html'">
-                    Resume
-                </button>
-                <button onclick="window.location.href='./assets/pages/projects.html'">
-                    Projects
-                </button> 
-                <button onclick="window.location.href='./index.html'">
-                    About
-                </button>
-            </div>
-            <div id="miscLinks" class="container">
+            <div id="siteLinks">
                 <a href="https://github.com/DylanLiesenfelt">
-                    <img src="./assets/images/icons/gitHub100.png" alt="">
+                
                 </a>
-                <a href="https://www.linkedin.com/in/dylanliesenfelt">
-                    <img src="./assets/images/icons/linkedIn100.png" alt="">
+                <a href="https://www.linkedin.com/in/dylanliesenfelt/">
+
                 </a>
-                <a href="https://leetcode.com/dliesenfelt/">
-                    <img src="./assets/images/icons/leetCode100.png" alt="">
+                <a href="https://www.tiktok.com/@dylanliesenfelt.code">
+
                 </a>
             </div>
-        </nav>
+        </div>
     </header>
-    <main class="container">
-        <div id="cont" class="container"> 
-            <div id="tabs" class="container">
-                <button id="about" class="tabBtn">ABOUT</button>
-                <button id="blog" class="tabBtn">BLOG</button>
-                <button id="certs" class="tabBtn">CERTS</button>
-                <button id="contact" class="tabBtn">CONTACT</button>
-                <button id="photoGallery" class="tabBtn">PHOTO GALLERY</button>
+    <main class="flex">
+        <div id="mainCont" class="flex">
+            <div id="game" class="flex">
+
             </div>
-            <div id="windowCont" class="container">
-                <div id="aboutWindow" class="window">
-                    <div class="windowBar container">
-                        <h2>ABOUT</h2>
-                    </div>
-                    <div class="windowContent">
-                        <div id="aboutText">
-                            <h3>Welcome!</h3>
-                            <p>My name is <b>Dylan Liesenfelt</b> and I am a <b>Software Engineer</b>. 
-                            I am also a Veteran of the US Navy, where I served as an Aviation Electrician's Mate for H-60 platform helicopters.</p>
-                            <p>During my time as an electrician, I learned that I had a talent for problem solving. 
-                            So when it came time for my transition out of the military, I could not think of a field more compatible and challenging to me than Computer Science.</p>
-                            <p>Thanks for making it to my site, have a look around, and if you want to see some pictures of the goodiest, most handsome doggo, head over to the photo gallery to see my Husky, Forrest.</p>
-                        </div>
-                        <div id="meme">
-                            <img src="./assets/images/cspassion.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div id="blogWindow" class="window">
-                    <div class="windowBar container">
-                        <h2>BLOG</h2>
-                    </div>
-                    <div class="windowContent">
-                        <div id="blogContent">
-                            <div class="blogTemplate">
-                                <h4>October 22, 2023</h4>
-                                <div class="blogArea">
-                                    <div class="textArea">
-                                        <p>
-                                            Man, I’ve done a lot the past couple of days.
-                                            <br>
-                                            My last blog was really like Oct 19-20, this one is like 21-22, that’s probably how this is going to go, every other day or so.
-                                        </p>
-                                        <p>
-                                            RSD is going swimmingly, it’s starting to look like an actual game.
-                                        </p>
-                                        <br>
-                                        <ul>
-                                            <li>
-                                                Made a function to select enemy from the enemy array and pass that over to the html to show enemy and info,
-                                                  assigned all the variables now I believe, and wrote code for the initial start of game.
-                                            </li>
-                                            <br>
-                                            <li>
-                                                Next is to make combat functions, Leveling and skill functions, build more rooms and a room load function,
-                                                 as well as build more enemies. Then loot and loot functionality. 
-                                            </li>
-                                            <br>
-                                            <li>
-                                                After all that game will be ready for beta 0.1.0. So not too far away. 
-                                                Then once in beta ill start figuring out the non-combat skills, clean up the artwork and UI.
-                                            </li>
-                                        </ul>
-                                        <br>
-                                        <p>
-                                            Since RSD is now an actual “functioning” thing I made the project page and a project card for it.
-                                        </p>
-                                        <br>
-                                        <p>
-                                            That’s it code wise want to start Unit 5 for COP1000c Tuesday, after the FLCE, almost done with my 
-                                            Spanish homework and test, I do got to double check public speaking to see if midterm came out, and stats I got nothing for like 2 more weeks. 
-                                        </p>
-                                        <br>
-                                        <p>Fixed my car, AutoZone shipped my new starter pretty fast, had to walk there yesterday though because I needed jack stands,
-                                             because I do not trust my life with a tire jack from 1997. But it’s all Gucci now the old Saturn is back to mint condition
-                                             hopefully that the last of problems for a while. 
-                                        </p>
-                                        <br>
-                                        <p>
-                                            <b>Let’s Go Dolphins!</b>
-                                        </p>
-                                    </div>
-                                    <div class="imgArea">
-                                        <h3>Meme of the Day:</h3>
-                                        <img src="https://uploads-ssl.webflow.com/5f3c19f18169b62a0d0bf387/60d33be9e145cb9e6c28fa8f_2xb2f2VxehbkWOhOVqOghOYg4ifSVtTDD4XTatQRAUeVQJZidqxyydLvkwASiplALthYScZlW13PNFsd66-DV719GoSyzFQ-d6VsdoDNn44IAXGtu8xQV4W1mmhp9SBmd9A0dO2L.png" alt="linkedin recruiter hands java Developera paper, the paper reads 'Are you interested in a postion as a javascript developer? java developer has surprosed and disgusted face">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blogTemplate">
-                                <h4>October 19, 2023</h4>
-                                <div class="blogArea">
-                                    <div class="textArea">
-                                        <p>
-                                            Whew what a day, of course I’m heading to work, and my car doesn’t start! No crank at all, had to uber.
-                                             Get home and read for power at the starter solenoid terminal, 11vdc, starter bad, there goes another $100 or so,
-                                              got to walk to AutoZone tomorrow and pick one up.
-                                            <br>  
-                                            <br>
-                                            But enough of that, what did I do today.
-                                        </p>
-                                        <br>
-                                        <ul>
-                                            <li>
-                                                Tried to do some work on the contact section of this site, turns out AWS amplify does not take PHP scripts,
-                                                 and I don’t know anything about setting up lambda functions and SES (got to start work on those AWS certs). 
-                                                 Then I started work on the gallery, made an array of the images got distracted and forgot to do more work on it
-                                            </li>
-                                            <br>
-                                            <li>
-                                                RSD I’m just knocking chunk by chunk out. Added a game clock and displayed it in the UI,
-                                                 added most of the variables for the UI elements missing only a few, I think. Made player
-                                                  variables and pushed their values to the elements to update the displayed value on the UI.
-                                                 But yeah, nothing to crazy mostly grunt work, little more of that to go and I can start building functions for game mechanics. 
-                                            </li>
-                                        </ul>
-                                        <br>
-                                        <p>
-                                            Won’t be able to do to much tomorrow, got to fix my car, go to work, and I still need to do my Spanish homework 
-                                            and all that other stuff II talked about the other day. So maybe just finishing assigning variables won’t get any
-                                             real work done till the following weekend. But wait, I signed up for a cybersecurity CTF so ill be busy doing that next next Saturday.
-                                             I’m definitely busy nowadays. 
-                                        </p>
-                                        <br>
-                                    </div>
-                                    <div class="imgArea">
-                                        <h3>Meme of the Day:</h3>
-                                        <img src="https://i.chzbgr.com/full/9812673792/h91DDCA6E/tie-spend-5-hours-trying-connect-back-end-front-first-time-wtf-why-isnt-this-working-forgot-s-https" alt="Title: Spend 5 hours trying to connect frontend to backend for the first time. wtf why isnt it working. I forgot the S in H T T P S">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blogTemplate">
-                                <h4>October 18, 2023</h4>
-                                <div class="blogArea">
-                                    <div class="textArea">
-                                        <p>Did a good amount of grunt work in the past day and half.</p>
-                                        <ul>
-                                            <li>
-                                                On this site, I finally added media query for mobile viewers. 
-                                                Only did some basic layout work still need to fix styling for tab windows on home page.
-                                            </li>
-                                            <li>
-                                                Knocked out huge chunk of RSD, HTML and CSS should all be done for now UI is essentially complete,
-                                                 next is all JS for a while. Basically, started from scratch since the original was made without electron in mind,
-                                                 didn’t get far at all last time with the UI so no biggy. I think it looks good so far. Had to delete electron and re-implement,
-                                                 need to learn more about it.  
-                                            </li>
-                                            <li>
-                                                COP1000C Unit 4 complete, like I said before it was all about loops, looking at doing unit 5 this weekend to get ahead again.
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            But that’s it for now, probably just some small work here and there on RSD. If I can, I totally forgot I’m working Saturday,
-                                             and I have Spanish homework to do, and I want to jump ahead on unit 5 for COP100C. 
-                                            But after this week things will be slow again till NOV 5th time frame. Ugh I just remembered I got to take the FLCE on Tuesday,
-                                             and I have to do my public speaking midterm. -_-. I’m going to knock a lot of this out tomorrow at work while I can since that won’t happen Friday.  Later!
-                                        </p>
-                                    </div>
-                                    <div class="imgArea">
-                                        <h3>Meme of the Day:</h3>
-                                        <img src="https://i.chzbgr.com/full/9812662528/hD293043C/someone-literally-bought-domain-do-this-guthibcom-spelled-wrong" alt=" Title: Someone litterally bought a domain to do this, searchbar: guthib.com, website page: You spelled it wrong">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blogTemplate">
-                                <h4>October 17th, 2023</h4>
-                                <div class="blogArea">
-                                    <div class="textArea">
-                                        <p>I forgot to update my blog, I am sorry, but I’ve done a couple things.</p>
-                                        <p>
-                                            Random Story Dungeon (RSD) is now an electron app, I think I’m going to keep it that way instead 
-                                            of web page. Haven’t done any actual work on the project's code, but planning wise I have done some work. 
-                                            I added information to the ReadMe, some more planning is needed before I go further, but some 
-                                            good work is coming.
-                                        </p>
-                                        <p>This website I have cleaned up some things.</p>
-                                        <ul>
-                                            <li>
-                                                I got rid of the skills section in the skills/certs section, its now just Certifications,
-                                                 I think that makes more sense, my projects will show what my skills are along with my resume.
-                                            </li>
-                                            <li>
-                                                “Started” work on the photo gallery, only added the photos and created the JS file to hold the functionality. 
-                                                That is probably the next thing i'll work on, and changed the site background.
-                                            </li>
-                                            <li>
-                                                I do need to implement the nav bar links, and start working on the contact page.
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            School is another easy week, COP1000C unit 4 this week is all about loops so pretty easy, 
-                                            but has fortified my loop understanding not only with python but other scripting languages, 
-                                            so pretty solid there. The chapter project should be getting done tonight and going up on 
-                                            GitHub. Things are back to being slow besides the next two weeks for work on saturday so 
-                                            hopefully I can get farther ahed hoping to finsh COP1000c by end of month or early November.
-                                        </p>
-                                    </div>
-                                    <div class="imgArea">
-                                        <h3>Meme of the Day:</h3>
-                                        <img src="https://i.redd.it/1k43u1464rub1.jpg" alt="Meme of the Day: Disgusted Drake Face: Comments to describe the program vs Pleased Drake face: Comments to temporaily remove part of code">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blogTemplate">
-                                <h4>October 14th, 2023</h4>
-                                <div class="blogArea">
-                                    <div class="textArea">
-                                        <p>Well well well, I guess I’m starting a blog. This blog will be a place where I write down what I’ve learned, what I am working on, and future plans/goals.</p>
-                                        <p>Right now, I’m working on a vanilla HTML, CSS, and JS choose your own adventure game. Thinking of adding ChatGPT API to append the story, and then random rolls will affect monster spawn, loot, and combat. Might just have an array of preset rooms but the GPT element could add some variety. Maybe make it into a desktop app using electron not sure.</p>
-                                        <p>After I finish that I want to make a MEAN and MERN app, and two more using Flutter and tailwind to check them out.</p>
-                                        <p>I also want to start working on some certs, like security+, a Python cert, and some AWS and Google certs. Want to start learning Java also.</p>
-                                        <p>A lot on my plate but let's get it done!</p>
-                                    </div>
-                                    <div class="imgArea">
-                                        <h3>Meme of the Day:</h3>
-                                        <img src="https://i.redd.it/d4rsi4hiv6ub1.png" alt="Meme of the day: Started C# course and coded my first tic-tac-toe game today. Proud Baby face. Gaming Industry here I come!">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="certWindow" class="window">
-                    <div class="windowBar container">
-                        <h2>CERTIFICATIONS</h2>
-                    </div>
-                    <div class="windowContent">
-                        <h3>Certifications</h3>
-                        <div class="container">
-                            <img src="./assets/images/idk.png" alt="">
-                            <p>I'm working on it ¯\_(ツ)_/¯</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="contactWindow" class="window">
-                    <div class="windowBar container">
-                        <h2>CONTACT</h2>
-                    </div>
-                    <div class="windowContent">
-                        <div id="contactMeContainer" class="container">
-                            <img src="./assets/images/idk.png" alt="Im working on it" srcset="">
-                            <p>For now E-Mail me at <a href="mailto:dylanJames.code@gmail.com">DylanJames.Code@gmail.com</a></p>                       
-                        </div>
-                    </div>
-                </div>
-                <div id="photoGalleryWindow" class="window">
-                    <div class="windowBar container">
-                        <h2>PHOTO GALLERY</h2>
-                    </div>
-                    <div class="windowContent">
-                        <div id="galleryArea">
-                            
-                            
-                        </div>
-                    </div>
-                </div>                
+            <div id="about" class="flex">
+
             </div>
         </div>
     </main>
-    <script src="./assets/js/tabs.js"></script>
-    <script src="./assets/js/gallery.js"></script>
 </body>
 </html>
