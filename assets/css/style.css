@@ -10,21 +10,26 @@
 }
 
 .icon {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    height: 70px;
+    width: 70px;
 }
 
 body {
-    outline: 1px solid greenyellow;
     height: 100vh;
     width: 100%;
     flex-direction: column;
 }
 
 header {
-    background-color: b`;
+    background-color: black;
     height: 12%;
     width: 100%;
     flex-direction: row;
+    color: white;
 }
 
     #title {
@@ -40,8 +45,29 @@ header {
     }
 
         #pageLinks {
-            outline: 1px solid red;
+            outline: 1px solid yellow;
+            height: 100%;
+            width: 50%;
         }
+
+        #siteLinks {
+            justify-content: space-evenly;
+            outline: 1px solid green;
+            height: 100%;
+            width: 50%;
+        }
+
+            #githubLink {
+                background-image: url(/assets/icons/icons8-github-100.png);
+            }
+
+            #linkedinLink {
+                background-image: url(/assets/icons/icons8-linkedin-100.png);
+            }
+
+            #tiktokLink {
+                background-image: url(/assets/icons/icons8-tiktok-100.png);
+            }
 
 main {
     outline: 1px solid blue;
