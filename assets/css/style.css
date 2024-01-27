@@ -10,86 +10,77 @@
 }
 
 .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 80%;
+    width: 50%;
+    justify-content: space-between;
+    background-position: center;
     background-size: contain;
-    height: 70px;
-    width: 70px;
+    background-repeat: no-repeat;
 }
 
 body {
     height: 100vh;
     width: 100%;
     flex-direction: column;
+    background-color: rgb(56, 56, 56);
 }
+
+
+/*=============================================
+=                   Header                  =
+=============================================*/
 
 header {
-    background-color: black;
-    height: 12%;
-    width: 100%;
-    flex-direction: row;
-    color: white;
-}
-
-    #title {
-        outline: 1px solid pink;
-        height: 100%;
-        width: 30%;
-    }
-
-    #linkCont {
-        outline: 1px solid blue;
-        height: 100%;
-        width: 70%;
-    }
-
-        #pageLinks {
-            outline: 1px solid yellow;
-            height: 100%;
-            width: 50%;
-        }
-
-        #siteLinks {
-            justify-content: space-evenly;
-            outline: 1px solid green;
-            height: 100%;
-            width: 50%;
-        }
-
-            #githubLink {
-                background-image: url(/assets/icons/icons8-github-100.png);
-            }
-
-            #linkedinLink {
-                background-image: url(/assets/icons/icons8-linkedin-100.png);
-            }
-
-            #tiktokLink {
-                background-image: url(/assets/icons/icons8-tiktok-100.png);
-            }
-
-main {
-    outline: 1px solid blue;
-    height: 88%;
+    height: 10%;
     width: 100%;
     flex-direction: column;
+    background-color: rgb(36, 36, 36);
 }
 
-    #mainCont {
-        outline: 1px solid orange;
-        height: 100%;
-        width: 80%;
-        flex-direction: column;
-    }
+nav {
+    height: 95%;
+    width: 100%;
+    flex-direction: row;
+}
 
-        #game {
-            outline: 1px solid green;
-            height: 30%;
-            width: 100%;
-        }
+#nav-title {
+    height: 100%;
+    width: 40%;
+}
 
-        #about {
-            height: 70%;
-            width: 100%;
-        }
+#nav-page-links {
+    height: 100%;
+    width: 20%;
+}
+
+#nav-outside-links {
+    height: 100%;
+    width: 40%;
+}
+
+
+#nav-lightbar {
+    background-image: linear-gradient(rgb(0, 100, 180) , rgba(255, 255, 255, 0.75), rgb(0, 100, 180));
+    box-shadow: 0 0 10px 5px rgba(0, 99, 180, 0.7);
+    height: 5%;
+    width: 100%;
+    z-index: 1;
+}
+
+#linkedin-link {
+    background-image: url(../icons/icons8-linkedin-100.png);
+}
+
+#github-link {
+    background-image: url(../icons/icons8-github-100.png);
+}
+
+/*=============================================
+=                    Main                    =
+=============================================*/
+
+main {
+    height: 90%;
+    width: 100%;
+}
+
