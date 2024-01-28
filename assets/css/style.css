@@ -48,8 +48,9 @@
     background-color: white;
     height: 90%;
     width: 100%;
+    display: flex;
     border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
+    border-bottom-right-radius: inherit;  
 }
 
 body {
@@ -131,5 +132,65 @@ main {
     justify-content: space-evenly;
 }
 
+#about-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    height: 100%;
+}
 
+#about-left > p {
+    height: 92%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    
+    font-size: calc(3vw + 1vh);
+}
+
+#about-right{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#email-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+}
+
+#email-link {
+    height: 70%;
+    width: 60%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/assets/icons/icons8-email-100.png);
+
+}
+
+#resume-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+}
+
+#resume-link {
+    height: 60%;
+    width: 85%;
+    margin-bottom: 5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/assets/icons/icons8-resume-100.png);
+}
 
