@@ -19,39 +19,7 @@
     background-repeat: no-repeat;
 }
 
-.card {
-    height: 40%;
-    width: 95%;
-    box-shadow: 0 0 10px 7px rgba(0, 100, 180, 0.7);
-    border-radius: 0.35rem;
-}
 
-.card-header {
-    height: 10%;
-    width: 100%;
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-}
-
-.card-title {
-    height: 80%;
-    align-items: center;
-    justify-content: center;
-    margin: 3%;
-}
-
-.card-main {
-    background-color: white;
-    height: 90%;
-    width: 100%;
-    display: flex;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;  
-}
 
 body {
     height: 100vh;
@@ -83,10 +51,12 @@ nav {
     width: 50%;
 }
 
-#nav-title > h1 {
+#nav-title > a {
     font-family: helvetica;
-    font-size: calc(3.5vw + 1vh);
+    font-size: calc(3vw + 0.5vh);
     color: white;
+    padding-left: 5%;
+    text-decoration: none;
 }
 
 #nav-page-links {
@@ -116,81 +86,4 @@ nav {
     background-image: url(../icons/icons8-github-100.png);
 }
 
-/*=============================================
-=                    Main                    =
-=============================================*/
-
-main {
-    height: 90%;
-    width: 100%;
-}
-
-#main-content {
-    height: 97%;
-    width: 94%;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-#about-left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 65%;
-    height: 100%;
-}
-
-#about-left > p {
-    height: 92%;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    
-    font-size: calc(3vw + 1vh);
-}
-
-#about-right{
-    width: 35%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-#email-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 50%;
-    width: 100%;
-}
-
-#email-link {
-    height: 70%;
-    width: 60%;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(/assets/icons/icons8-email-100.png);
-
-}
-
-#resume-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 50%;
-    width: 100%;
-}
-
-#resume-link {
-    height: 60%;
-    width: 85%;
-    margin-bottom: 5%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url(/assets/icons/icons8-resume-100.png);
-}
 
