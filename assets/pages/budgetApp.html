@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/resume.css">
+    <link rel="stylesheet" href="../css/budgetApp.css">
 </head>
 <body>
     <header class="flex">
@@ -32,12 +32,21 @@
         </div>
     </header>
     <main>
-        <div id="">
+        <div id="prompt">
 
         </div>
-        <div>
-
+        <div id="calculator">
+            <form id="form" name="budget-inputs">
+                Monthly Income: <input id="income-input" name="income" type="number" required><br>
+                Monthly Expenses: <input id="expenses-input" name="income" type="number" required><br><br>
+                <button type="button" onclick="calculate()">Calculate</button>
+                
+            </form>
+            <div>
+                Adjusted Daily Budget: <p id="budget-output"></p>
+            </div>
         </div>
     </main>
+    <script src="../scripts/budgetApp.js"></script>
 </body>
 </html>
