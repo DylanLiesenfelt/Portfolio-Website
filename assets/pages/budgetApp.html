@@ -32,18 +32,49 @@
         </div>
     </header>
     <main>
-        <div id="prompt">
-
-        </div>
-        <div id="calculator">
-            <form id="form" name="budget-inputs">
-                Monthly Income: <input id="income-input" name="income" type="number" required><br>
-                Monthly Expenses: <input id="expenses-input" name="income" type="number" required><br><br>
-                <button type="button" onclick="calculate()">Calculate</button>
-                
+        <div id="daily-adjusted-budget-calculator" class="tool">
+            <form>
+                Monthly Income: <input id="DAB-income" type="number" required><br>
+                Monthly Expenses: <input id="DAB-expenses" type="number" required><br><br>
+                <button type="button" onclick="dailyAdjustedBudget()">Calculate</button>
             </form>
             <div>
-                Adjusted Daily Budget: <p id="budget-output"></p>
+                <br>Daily Adjusted Budget: <p id="DAB-output" class="output">$ --- </p>
+            </div>
+        </div>
+        <div id="monthly-payment-calculator" class="tool">
+            <form>
+                Principal Amount: <input id="MP-principal" type="number"><br>
+                Interest Rate(%): <input id="MP-rate" type="number"><br>
+                Number of Months: <input id="MP-months"><br><br>
+                <button type="button" onclick="monthlyPayment()">Calculate</button>
+            </form>
+            <div>
+                <br>Monthly Payment: <p id="MP-output" class="output">$ --- </p>
+            </div>
+        </div>
+        <div id="compund-interest-calculator" class="tool">
+            <form>
+
+            </form>
+            <div>
+
+            </div>
+        </div>
+        <div id="rule72-calculator" class="tool">
+            <form>
+
+            </form>
+            <div>
+
+            </div>
+        </div>
+        <div id="credit-card-payoff-calculator" class="tool">
+            <form>
+
+            </form>
+            <div>
+
             </div>
         </div>
     </main>

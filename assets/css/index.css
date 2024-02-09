@@ -42,6 +42,10 @@
 }
 
 .project-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     outline: 1px solid green;
     height: 60%;
     width: 20%;
@@ -127,4 +131,19 @@ main {
 
 #project-main {
     flex-direction: column;
+}
+
+.project-link > h4 {
+    text-decoration: none;
+    font-size: calc(1vw + 1vh);
+    color: black;
+}
+
+.project-link > h4::after {
+    li
+}   
+
+.project-link > img {
+    height: 50%;
+
 }
