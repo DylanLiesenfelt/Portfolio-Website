@@ -22,10 +22,8 @@ function monthlyPayment() {
     let rate = MP_Rate.value / 100 / 12;
     let months = MP_Months.value;
     let output = principal * (rate * Math.pow(1 + rate, months)) / (Math.pow(1 + rate, months) - 1);
-    MP_Output.innerText = "$" + output.toFixed(2); 
-    console.log(principal, rate, months, output)
+    MP_Output.innerText = "$" + output.toFixed(2);
 }
-
 //Compound interest = p(1 + (r/n))^(nt)
 
 //Rule of 72 = 72/r aprox how long it will take to double an investment
