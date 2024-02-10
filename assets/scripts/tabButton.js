@@ -1,46 +1,59 @@
-const about = document.getElementById('about-tab');
-const project = document.getElementById('project-tab');
-const resume = document.getElementById('resume-tab');
+const aboutTab = document.getElementById('about-tab');
+const about = document.getElementById('about')
 
+const projectTab = document.getElementById('project-tab');
+const project = document.getElementById('project')
+
+const resumeTab = document.getElementById('resume-tab');
+const resume = document.getElementById('resume')
 
 function selectAbout() {
-    about.style.backgroundColor = 'rgb(36, 36, 36)';
-    about.style.zIndex = '0';
-    about.style.outline = 'none';
+    aboutTab.style.backgroundColor = 'rgb(36, 36, 36)';
+    aboutTab.style.zIndex = '0';
+    aboutTab.style.outline = 'none';
+    about.style.visibility = 'visible';
 
-    project.style.backgroundColor = 'rgb(70, 70, 70)';
-    project.style.zIndex = '1';
-    project.style.outline = '1px solid gray';
+    projectTab.style.backgroundColor = 'rgb(70, 70, 70)';
+    projectTab.style.zIndex = '1';
+    projectTab.style.outline = '1px solid gray';
+    project.style.visibility = 'hidden';
 
-    resume.style.backgroundColor = 'rgb(70, 70, 70)';
-    resume.style.zIndex = '1';
-    resume.style.outline = '1px solid gray';
+    resumeTab.style.backgroundColor = 'rgb(70, 70, 70)';
+    resumeTab.style.zIndex = '1';
+    resumeTab.style.outline = '1px solid gray';
+    resume.style.visibility = 'hidden';
 };
 
 function selectResume() {
-    about.style.backgroundColor = 'rgb(70, 70, 70)';
-    about.style.zIndex = '1';
-    about.style.outline = '1px solid gray';
+    aboutTab.style.backgroundColor = 'rgb(70, 70, 70)';
+    aboutTab.style.zIndex = '1';
+    aboutTab.style.outline = '1px solid gray';
+    about.style.visibility = 'hidden';
 
-    project.style.backgroundColor = 'rgb(70, 70, 70)';
-    project.style.zIndex = '1';
-    project.style.outline = '1px solid gray';
+    projectTab.style.backgroundColor = 'rgb(70, 70, 70)';
+    projectTab.style.zIndex = '1';
+    projectTab.style.outline = '1px solid gray';
+    project.style.visibility = 'hidden';
 
-    resume.style.backgroundColor = 'rgb(36, 36, 36)';
-    resume.style.zIndex = '0';
-    resume.style.outline = 'none';
+    resumeTab.style.backgroundColor = 'rgb(36, 36, 36)';
+    resumeTab.style.zIndex = '0';
+    resumeTab.style.outline = 'none';
+    resume.style.visibility = 'visible';
 };
 
 function selectProject() {
-    about.style.backgroundColor = 'rgb(70, 70, 70)';
-    about.style.zIndex = '1';
-    about.style.outline = '1px solid gray';
+    aboutTab.style.backgroundColor = 'rgb(70, 70, 70)';
+    aboutTab.style.zIndex = '1';
+    aboutTab.style.outline = '1px solid gray';
+    about.style.visibility = 'hidden';
 
-    project.style.backgroundColor = 'rgb(36, 36, 36)';
-    project.style.zIndex = '0';
-    project.style.outline = 'none';
+    projectTab.style.backgroundColor = 'rgb(36, 36, 36)';
+    projectTab.style.zIndex = '0';
+    projectTab.style.outline = 'none';
+    project.style.visibility = 'visible'
 
-    resume.style.backgroundColor = 'rgb(70, 70, 70)';
-    resume.style.zIndex = '1';
-    resume.style.outline = '1px solid gray';
+    resumeTab.style.backgroundColor = 'rgb(70, 70, 70)';
+    resumeTab.style.zIndex = '1';
+    resumeTab.style.outline = '1px solid gray';
+    resume.style.visibility = 'hidden';
 };

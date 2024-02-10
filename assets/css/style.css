@@ -49,11 +49,11 @@ nav {
     width: 50%;
 }
 
-#nav-title > a {
+#nav-title > h1 {
     font-family: helvetica;
-    font-size: calc(3vw + 0.5vh);
+    color: white;
+    font-size: calc(4vw + 1vh);
     padding-left: 5%;
-    text-decoration: none;
 }
 
 #nav-page-links {
@@ -83,3 +83,87 @@ nav {
     background-image: url(../icons/icons8-github-100.png);
 }
 
+
+/*=============================================
+=            MAIN            =
+=============================================*/
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+#main-container {
+    flex-direction: column;
+    height: 92%;
+    width: 85%;
+}
+
+#main-navbar {
+    height: 10%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.tab {
+    height: 60%;
+    width: 20%;
+    color: white;
+    font-family: helvetica;
+    border: none;
+    background-color: rgb(70, 70, 70);
+    font-size: calc(1vh + 1vw);
+}
+
+.tab:hover {
+    background-color: gray;
+}
+
+#about-tab {
+    background-color: rgb(36, 36, 36);
+}
+
+
+#project-tab {
+    outline: 1px solid gray;
+}
+
+#resume-tab {
+    outline: 1px solid gray;
+}
+
+#main-lightbar {
+    height: 0.7%;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 100, 180) , rgba(255, 255, 255, 0.75), rgb(0, 100, 180));
+    box-shadow: 0 0 10px 5px rgba(0, 100, 180, 0.7);
+    z-index: 21;
+}
+
+#main-content-container {
+    background-color: rgb(36, 36, 36);
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    position: fixed;
+    height: 75.5%;
+    width: 85%;
+}
+
+#about {
+   
+    
+}
+
+#project {
+    
+    visibility: hidden;
+}
+
+#resume {
+    
+    visibility: hidden;
+}
