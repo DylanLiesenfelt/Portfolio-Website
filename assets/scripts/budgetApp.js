@@ -8,6 +8,7 @@ function dailyAdjustedBudget() {
     let expenses = parseFloat(DAB_Expenses.value);
     let budget = (income - expenses)/30;
     DAB_Output.innerText = '$ ' + budget.toFixed(2);
+    con
 }
 
 //Monthly Payment Calculator

@@ -1,0 +1,108 @@
+main {
+    height: 90%;
+    width: 100%;
+}
+
+#calculator-container {
+    flex-direction: column;
+    height: 92%;
+    width: 85%;
+}
+
+#calculator-navbar {
+    height: 10%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.tab {
+    height: 60%;
+    width: 20%;
+    color: white;
+    font-family: helvetica;
+    border: none;
+    background-color: rgb(70, 70, 70);
+    font-size: calc(1vh + 0.75vw);
+    outline: 1px solid gray;
+    padding: 1%;
+}
+
+#budget-tab {
+    background-color: rgb(36, 36, 36);
+    outline: none;
+    z-index: -1;
+}
+
+#calculator-lightbar {
+    height: 0.7%;
+    width: 100%;
+    background-image: linear-gradient(rgb(0, 100, 180) , rgba(255, 255, 255, 0.75), rgb(0, 100, 180));
+    box-shadow: 0 0 10px 5px rgba(0, 100, 180, 0.7);
+    z-index: 21;
+}
+
+#calculator-content {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(36, 36, 36)
+}
+
+.calculator {
+    position: absolute;
+    height: 71%;
+    width: 85%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10%;
+    color: white;
+}
+
+.input-wrap {
+    display: flex;
+    height: 10%;
+    width: 60%;
+    margin: 3%;
+    flex-direction: column;
+    justify-content: center;
+    font-size: calc(1.5vh + 1.5vw);
+}
+
+.input-wrap > h4 {
+    margin-bottom: 3%;
+}
+
+.calculate-button {
+    margin: 5%;
+    border-radius: 0;
+    height: 7%;
+    width: 23%;
+    background-color: white;
+    color: black;
+    font-size: calc(1vh + 1vw);
+}
+
+.calculate-button:hover {
+    background-color: rgb(197, 203, 209);
+}
+
+.calculate-button:active {
+    background-color: rgb(79, 89, 90);
+    color: white;
+    border-color: rgb(8, 102, 224);
+}
+
+
+/*----------  DAB CALCULATOR  ----------*/
+#DAB-output {
+    text-align: center;
+    color: green;
+    height: 10%;
+    width: 50%;
+    font-size: calc(3.5vh + 2vw);
+    margin-top: 7%;
+}
+
+
+
+

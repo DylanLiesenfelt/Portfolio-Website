@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/budgetApp.css">
+    <title>Finance Tools</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/financeTools.css">
 </head>
 <body>
     <header class="flex">
         <nav class="flex"> 
-            <div id="nav-title" class="flex">
-                <a href="/index.html">
-                    <h1>Dylan Liesenfelt</h1>
-                </a>
-            </div>
+            <a href="/index.html" id="nav-title" class="flex">
+                <h1>Dylan Liesenfelt</h1>
+            </a>
             <div id="nav-page-links" class="flex">
                 
             </div>
@@ -31,50 +29,31 @@
 
         </div>
     </header>
-    <main>
-        <div id="daily-adjusted-budget-calculator" class="tool">
-            <form>
-                Monthly Income: <input id="DAB-income" ><br>
-                Monthly Expenses: <input id="DAB-expenses"><br><br>
-                <button type="button" onclick="dailyAdjustedBudget()">Calculate</button>
-            </form>
-            <div>
-                <br>Daily Adjusted Budget: <p id="DAB-output" class="output">$ --- </p>
-            </div>
-        </div>
-        <div id="monthly-payment-calculator" class="tool">
-            <form>
-                Principal Amount: <input id="MP-principal"><br>
-                Interest Rate(%): <input id="MP-rate"><br>
-                Number of Months: <input id="MP-months"><br><br>
-                <button type="button" onclick="monthlyPayment()">Calculate</button>
-            </form>
-            <div>
-                <br>Monthly Payment: <p id="MP-output" class="output">$ --- </p>
-            </div>
-        </div>
-        <div id="compund-interest-calculator" class="tool">
-            <form>
-
-            </form>
-            <div>
+    <main class="flex">
+        <div id="calculator-container" class="flex">
+            <nav id="calculator-navbar" class="flex">
+                <button id="budget-tab" class="tab">Daily Budget</button>
+                <button class="tab">Monthly Payment</button>
+                <button class="tab">Compound Interest</button>
+                <button class="tab">Rule Of 72</button>
+                <button class="tab">Credit Card Repayment</button>
+            </nav>
+            <div id="calculator-lightbar">
 
             </div>
-        </div>
-        <div id="rule72-calculator" class="tool">
-            <form>
-
-            </form>
-            <div>
-
-            </div>
-        </div>
-        <div id="credit-card-payoff-calculator" class="tool">
-            <form>
-
-            </form>
-            <div>
-
+            <div id="calculator-content" class="flex">
+                <form id="DAB-calculator" class="flex calculator">
+                    <div class="input-wrap">
+                        <h4>Monthly Income:</h4>
+                        <input id="DAB-income">
+                    </div>
+                    <div class="input-wrap">
+                        <h4>Monthly Expenses:</h4>
+                        <input id="DAB-expenses">
+                    </div>
+                    <button onclick="dailyAdjustedBudget()" type="button" class="calculate-button"><b>Calculate</b></button>
+                    <p id="DAB-output" class="flex">$ ---</p>
+                </form>
             </div>
         </div>
     </main>

@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    height: 80%;
+    width: 50%;
+    justify-content: space-between;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(56, 56, 56);
+}
+
+
+/*=============================================
+=                   Header                  =
+=============================================*/
+
+header {
+    height: 10%;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(36, 36, 36);
+}
+
+nav {
+    height: 95%;
+    width: 100%;
+    flex-direction: row;
+}
+
+#nav-title {
+    height: 100%;
+    width: 50%;
+}
+
+#nav-title > h1 {
+    font-family: helvetica;
+    color: white;
+    font-size: calc(4vw + 1vh);
+    padding-left: 5%;
+}
+
+#nav-page-links {
+    height: 100%;
+    width: 10%;
+}
+
+#nav-outside-links {
+    height: 100%;
+    width: 40%;
+}
+
+
+#nav-lightbar {
+    background-image: linear-gradient(rgb(0, 100, 180) , rgba(255, 255, 255, 0.75), rgb(0, 100, 180));
+    box-shadow: 0 0 10px 5px rgba(0, 100, 180, 0.7);
+    height: 5%;
+    width: 100%;
+    z-index: 1;
+}
+
+#linkedin-link {
+    background-image: url(../icons/icons8-linkedin-100.png);
+}
+
+#github-link {
+    background-image: url(../icons/icons8-github-100.png);
+}
+
+
