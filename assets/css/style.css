@@ -173,6 +173,7 @@ main {
     width: 90%;
     margin-top: 5%;
     color: white;
+    position: inherit;
 }
 
 #email-link {
@@ -184,8 +185,10 @@ main {
     flex-direction: column;
     text-decoration: none;
     color: white;
+    position: inherit;
 }
 
 #email-link > img {
     height: 50%;
+    position: inherit;
 }
