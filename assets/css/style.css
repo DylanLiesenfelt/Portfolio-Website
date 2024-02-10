@@ -155,17 +155,21 @@ main {
 
 #about {
    flex-direction: column;
-    
+   visibility: hidden;
 }
 
 #project {
-    
     visibility: hidden;
+    
 }
 
 #resume {
-    
-    visibility: hidden;
+    background-color: white;
+}
+
+#resume > object {
+    height: 100%;
+    width: 100%;
 }
 
 #about-text-container {
@@ -188,4 +192,32 @@ main {
 
 #email-link > img {
     height: 50%;
+}
+
+#project-container {
+    height: 95%;
+    width: 90%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.project-button {
+    height: 75px;
+    width: 75px;
+    margin: 2%;
+}
+
+.project-link {
+    text-decoration: none;
+    color: black;
+    flex-direction: column;
+    height: 99%;
+    width: 99%;
+}
+
+.project-link > img {
+    height: 50%;
+    width: 50%;
 }
