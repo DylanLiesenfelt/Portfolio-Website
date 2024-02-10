@@ -155,7 +155,6 @@ main {
 
 #about {
    flex-direction: column;
-   visibility: hidden;
 }
 
 #project {
@@ -165,6 +164,7 @@ main {
 
 #resume {
     background-color: white;
+    visibility: hidden;
 }
 
 #resume > object {
@@ -207,6 +207,10 @@ main {
     height: 75px;
     width: 75px;
     margin: 2%;
+    border-radius: .15rem;
+    border: none;
+    box-shadow: inset 0 0 5px 5px rgba(51, 51, 51, 0.432);
+    background-color: white;
 }
 
 .project-link {
