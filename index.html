@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dylan Liesenfelt</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
@@ -28,74 +28,32 @@
             </div>
         </nav>
         <div id="nav-lightbar" class="flex">
-
+             
         </div>
     </header>
     <main class="flex">
-        <div id="main-content" class="flex">
-            <div id="about-card" class="card">
-                <div class="card-header">
-                    <h3 class="card-title">About</h3>
-                </div>
-                <div id="about-main" class="card-main">
-                    <div id="about-left">
-                        <p>
-                            Hello, my name is Dylan Liesenfelt. <br>
-                             I am a software engineer from Florida. <br>
-                             Navy veteran of 8 years, and currently 
-                             working on my degree in Computer Science.
-                        </p>
-                    </div>
-                    <div id="about-right">
-                        <div id="email-container">
-                            <a id="email-link" href="mailto:dylanjames.code@gmail.com"></a>
-                            <h4>Email</h4>
-                        </div>
-                        <div id="resume-container">
-                            <a id="resume-link"href="./assets/pages/resume.html"></a>
-                            <h4>Resume</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="project-card" class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Projects</h3>
-                </div>
-                <div id="project-main" class="card-main">
-                    <div class="project-layer">
-                        <a href="./assets/pages/financeTools.html" id="finance-calculators-link" class="project-link">
-                            <h4>Finance</h4>
-                            <img src="./assets/icons/icons8-piggy-bank-100.png">
-                            <h4>Calculators</h4>
-                        </a>
-                        <div class="project-link">
+        <div id="main-container" class="flex">
+            <nav id="main-navbar" class="flex">
+                <button id="about-tab" class="flex tab" onclick="selectAbout()">
+                    <b>About</b>
+                </button>
+                <button id="project-tab" class="flex tab" onclick="selectProject()">
+                    <b>Projects</b>     
+                </button>
+                <button id="resume-tab" class="flex tab" onclick="selectResume()">
+                    <b>Resume</b>
+                </button> 
+            </nav>
+            <div id="main-lightbar" class="flex">
 
-                        </div>
-                        <div class="project-link">
-                            
-                        </div>
-                        <div class="project-link">
-                            
-                        </div>
-                    </div>
-                    <div class="project-layer">
-                        <div class="project-link">
-                            
-                        </div>
-                        <div class="project-link">
-                            
-                        </div>
-                        <div class="project-link">
-                            
-                        </div>
-                        <div class="project-link">
-                            
-                        </div>
-                    </div>
+            </div>
+            <div id="main-content-container" class="flex">
+                <div id="about" class="flex content">
+
                 </div>
             </div>
         </div>
     </main>
+    <script src="./assets/scripts/tabButton.js"></script>
 </body>
 </html>
