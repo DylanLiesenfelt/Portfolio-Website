@@ -148,7 +148,7 @@ main {
 }
 
 .content {
-    position: fixed;
+    position: absolute;
     height: 75.5%;
     width: 85%;
 }
@@ -173,7 +173,6 @@ main {
     width: 90%;
     margin-top: 5%;
     color: white;
-    position: inherit;
 }
 
 #email-link {
@@ -185,10 +184,8 @@ main {
     flex-direction: column;
     text-decoration: none;
     color: white;
-    position: inherit;
 }
 
 #email-link > img {
     height: 50%;
-    position: inherit;
 }
