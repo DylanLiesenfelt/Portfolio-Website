@@ -154,7 +154,7 @@ main {
 }
 
 #about {
-   
+   flex-direction: column;
     
 }
 
@@ -166,4 +166,26 @@ main {
 #resume {
     
     visibility: hidden;
+}
+
+#about-text-container {
+    height: 100%;
+    width: 90%;
+    margin-top: 5%;
+    color: white;
+}
+
+#email-link {
+    height: 20%;
+    width: 50%;
+    font-size: calc(1vh + 0.5vw);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+}
+
+#email-link > img {
+    height: 50%;
 }
