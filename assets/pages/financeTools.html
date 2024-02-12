@@ -33,15 +33,15 @@
         <div id="calculator-container" class="flex">
             <nav id="calculator-navbar" class="flex">
                 <button id="budget-tab" class="tab">Daily Budget</button>
-                <button class="tab">Monthly Payment</button>
-                <button class="tab">Compound Interest</button>
-                <button class="tab">Rule Of 72</button>
-                <button class="tab">Credit Card Repayment</button>
+                <button id="monthly-payment-tab" class="tab">Monthly Payment</button>
+                <button id="compound-tab" class="tab">Compound Interest</button>
+                <button id="rule72-tab" class="tab">Rule Of 72</button>
+                <button id="credit-card-tab" class="tab">Credit Card Repayment</button>
             </nav>
             <div id="calculator-lightbar">
 
             </div>
-            <div id="calculator-content" class="flex">
+            <div id="calculator-content" class="flex calculator-wrap">
                 <form id="DAB-calculator" class="flex calculator">
                     <div class="input-wrap">
                         <h4>Monthly Income:</h4>
@@ -58,5 +58,6 @@
         </div>
     </main>
     <script src="../scripts/budgetApp.js"></script>
+    <script src="../scripts/tabButtonFinanceTools.js"></script>
 </body>
 </html>
