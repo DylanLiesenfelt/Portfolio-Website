@@ -1,5 +1,5 @@
 const BUDGET_TAB = document.getElementById('budget-tab');
-const MONTHLY_TAB = document.getAnimations('monthly-payment-tab');
+const MONTHLY_TAB = document.getElementById('monthly-payment-tab');
 const COMPOUND_TAB = document.getElementById('compound-tab');
 const RULE72_TAB = document.getElementById('rule72-tab');
 const CREDIT_CARD_TAB = document.getElementById('credit-card-tab');
@@ -19,6 +19,8 @@ function selectBudget() {
     
     CREDIT_CARD_TAB.style.backgroundColor = "rgb(70, 70, 70)";
     CREDIT_CARD_TAB.style.outline = "1px solid gray ";
+
+    console.log('click')
 }
 
 function selectMonthly() {
@@ -38,7 +40,7 @@ function selectMonthly() {
     CREDIT_CARD_TAB.style.outline = "1px solid gray ";
 }
 
-function selectCompund() {
+function selectCompound() {
     BUDGET_TAB.style.backgroundColor = "rgb(70, 70, 70)";
     BUDGET_TAB.style.outline = '1px solid gray';
     
