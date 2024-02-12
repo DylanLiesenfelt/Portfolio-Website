@@ -31,7 +31,7 @@ main {
 #budget-tab {
     background-color: rgb(36, 36, 36);
     outline: none;
-    z-index: -1;
+    
 }
 
 #calculator-lightbar {
@@ -56,6 +56,11 @@ main {
     justify-content: flex-start;
     padding-top: 10%;
     color: white;
+    visibility: hidden;
+}
+
+#DAB-calculator {
+    visibility: visible;
 }
 
 .input-wrap {
@@ -65,7 +70,7 @@ main {
     margin: 3%;
     flex-direction: column;
     justify-content: center;
-    font-size: calc(1.5vh + 1.5vw);
+    font-size: calc(1.5vh + 1vw);
 }
 
 .input-wrap > h4 {
@@ -89,18 +94,16 @@ main {
 .calculate-button:active {
     background-color: rgb(79, 89, 90);
     color: white;
-    border-color: rgb(8, 102, 224);
+    border-color: rgba(10, 99, 225, 0.445);
 }
 
 
-/*----------  DAB CALCULATOR  ----------*/
-#DAB-output {
+.output {
     text-align: center;
     color: green;
     height: 10%;
     width: 50%;
     font-size: calc(3.5vh + 2vw);
-    margin-top: 7%;
 }
 
 

@@ -52,7 +52,29 @@
                         <input id="DAB-expenses">
                     </div>
                     <button onclick="dailyAdjustedBudget()" type="button" class="calculate-button"><b>Calculate</b></button>
-                    <p id="DAB-output" class="flex">$ ---</p>
+                    <div class="input-wrap">
+                        <h4>Your Daily Budget:</h4>
+                    </div>
+                    <p id="DAB-output" class="flex output">$ ---</p>
+                </form>
+                <form id="monthly-calculator" class="flex calculator">
+                    <div class="input-wrap">
+                        <h4>Principal Amount:</h4>
+                        <input id="MP-principal">
+                    </div>
+                    <div class="input-wrap">
+                        <h4>Anaual Rate (APY):</h4>
+                        <input id="MP-rate">
+                    </div>
+                    <div class="input-wrap">
+                        <h4>Term of Loan (Months):</h4>
+                        <input id="MP-months">
+                    </div>
+                    <button onclick="monthlyPayment()" type="button" class="calculate-button"><b>Calculate</b></button>
+                    <div class="input-wrap">
+                        <h4>Your Monthly Payment:</h4>
+                    </div>
+                    <p id="MP-output" class="flex output">$ ---</p>
                 </form>
             </div>
         </div>
