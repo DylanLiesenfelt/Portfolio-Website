@@ -77,9 +77,15 @@ main {
     margin-bottom: 3%;
 }
 
+input {
+    border-radius: .5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 5px double rgb(0, 100, 180);
+}
+
 .calculate-button {
     margin: 5%;
-    border-radius: 0;
+    border-radius: .25rem;
     height: 7%;
     width: 23%;
     background-color: white;
