@@ -5,6 +5,7 @@ const MONTHLY_TAB = document.getElementById('monthly-payment-tab');
 const MONTHLY_CALCULATOR = document.getElementById('monthly-calculator');
 
 const COMPOUND_TAB = document.getElementById('compound-tab');
+const COMPOUND_CALCULATOR = document.getElementById('compound-calculator')
 
 const RULE72_TAB = document.getElementById('rule72-tab');
 
@@ -22,6 +23,7 @@ function selectBudget() {
     
     COMPOUND_TAB.style.backgroundColor = "rgb(70, 70, 70)";
     COMPOUND_TAB.style.outline = "1px solid gray ";
+    COMPOUND_CALCULATOR.style.visibility = 'hidden';
 
     RULE72_TAB.style.backgroundColor = "rgb(70, 70, 70)";
     RULE72_TAB.style.outline = "1px solid gray ";
@@ -44,6 +46,7 @@ function selectMonthly() {
     
     COMPOUND_TAB.style.backgroundColor = "rgb(70, 70, 70)";
     COMPOUND_TAB.style.outline = "1px solid gray ";
+    COMPOUND_CALCULATOR.style.visibility = 'hidden';
 
     RULE72_TAB.style.backgroundColor = "rgb(70, 70, 70)";
     RULE72_TAB.style.outline = "1px solid gray ";
@@ -63,6 +66,7 @@ function selectCompound() {
 
     COMPOUND_TAB.style.backgroundColor = "rgb(36, 36, 36)";
     COMPOUND_TAB.style.outline = "none";
+    COMPOUND_CALCULATOR.style.visibility = 'visible';
 
     RULE72_TAB.style.backgroundColor = "rgb(70, 70, 70)";
     RULE72_TAB.style.outline = "1px solid gray ";
@@ -82,6 +86,7 @@ function selectRule72() {
 
     COMPOUND_TAB.style.backgroundColor = "rgb(70, 70, 70)";
     COMPOUND_TAB.style.outline = "1px solid gray ";
+    COMPOUND_CALCULATOR.style.visibility = 'hidden';
 
     RULE72_TAB.style.backgroundColor = "rgb(36, 36, 36)";
     RULE72_TAB.style.outline = "none";
@@ -101,6 +106,7 @@ function selectCreditCard() {
 
     COMPOUND_TAB.style.backgroundColor = "rgb(70, 70, 70)";
     COMPOUND_TAB.style.outline = "1px solid gray ";
+    COMPOUND_CALCULATOR.style.visibility = 'hidden';
 
     RULE72_TAB.style.backgroundColor = "rgb(70, 70, 70)";
     RULE72_TAB.style.outline = "1px solid gray ";

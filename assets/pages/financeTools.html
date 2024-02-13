@@ -76,6 +76,35 @@
                     </div>
                     <p id="MP-output" class="flex output">$ ---</p>
                 </form>
+                <form id="compound-calculator" class="flex calculator">
+                    <div class="input-wrap">
+                        <h4>Initial Investment:</h4>
+                        <input id="COMP-principal">
+                    </div>
+                    <div class="input-wrap">
+                        <h4>Monthly Contribution:</h4>
+                        <input id="COMP-contributions">
+                    </div>
+                    <div class="input-wrap">
+                        <h4>Length of Investment:</h4>
+                        <input id="COMP-term">
+                    </div>
+                    <div class="input-wrap">
+                        <h4>Expected Anual Return Rate:</h4>
+                        <input id="COMP-rate">
+                    </div>
+                    <div class="input-wrap">
+                        <p>Compound Frequency:</p>
+                    </div>
+                    <div id="compound-button-wrap" class="flex">
+                        <button type="button" onclick="compoundMonthly()" class="calculate-button">Monthly</button>
+                        <button type="button" onclick="compoundYearly()" class="calculate-button">Anually</button>
+                    </div>
+                    <div class="input-wrap">
+                        <h4></h4>
+                    </div>
+                    <p id="COMP-output" class="flex output">$ ---</p>
+                </form>
             </div>
         </div>
     </main>

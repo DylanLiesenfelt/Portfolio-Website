@@ -25,7 +25,39 @@ function monthlyPayment() {
     let output = principal * (rate * Math.pow(1 + rate, months)) / (Math.pow(1 + rate, months) - 1);
     MP_Output.innerText = "$" + output.toFixed(2);
 }
+
 //Compound interest = p(1 + (r/n))^(nt)
+const COMP_PRINCIPAL = document.getElementById('COMP-principal');
+const COMP_CONTRIBUTIONS = document.getElementById('COMP-contributions');
+const COMP_TERM = document.getElementById('COMP-term');
+const COMP_RATE = document.getElementById('COMP-rate');
+const COMP_OUTPUT = document.getElementById('COMP-output');
+
+function compoundMonthly() {
+    let principal = COMP_PRINCIPAL.value;
+    let rate = COMP_RATE.value / 12 / 100;
+    let contributions = COMP_CONTRIBUTIONS.value
+    const compound = 12;
+    let time = COMP_TERM.value;
+
+    let amount = (principal * Math.pow((1 + rate/compound), (compound * time))) + (((contributions * Math.pow((1 + rate/compound), (compound * time))-1))/(rate/compound));
+    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+    
+    console.log(principal, contributions, rate, time, amount);
+}
+
+function compoundYearly() {
+    let principal = COMP_PRINCIPAL.value;
+    let rate = COMP_RATE.value / 100;
+    let contributions = COMP_CONTRIBUTIONS.value
+    const compound = 1;
+    let time = COMP_TERM.value;
+
+    let amount = (principal * Math.pow((1 + rate/compound), (compound * time))) + (((contributions * Math.pow((1 + rate/compound), (compound * time))-1))/(rate/compound))
+    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+
+    console.log(principal, rate, contributions, time, amount);
+}
 
 //Rule of 72 = 72/r aprox how long it will take to double an investment
 

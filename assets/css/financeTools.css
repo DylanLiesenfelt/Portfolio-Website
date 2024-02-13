@@ -23,7 +23,7 @@ main {
     font-family: helvetica;
     border: none;
     background-color: rgb(70, 70, 70);
-    font-size: calc(1vh + 0.75vw);
+    font-size: calc(0.75vh + 0.75vw);
     outline: 1px solid gray;
     padding: 1%;
 }
@@ -112,6 +112,15 @@ input {
     font-size: calc(3.5vh + 2vw);
 }
 
+#compound-button-wrap {
+    height: 10%;
+    width: 80%;
+    margin-top: -5%;
+}
 
+#compound-button-wrap > button {
+    height: 70%;
+    width: 26%;
+}
 
 
