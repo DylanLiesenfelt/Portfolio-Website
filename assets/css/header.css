@@ -50,7 +50,7 @@ nav {
     width: 50%;
 }
 
-#nav-title > h1 {
+#nav-title>h1 {
     font-family: helvetica;
     color: white;
     font-size: calc(4vw + 1vh);
@@ -70,7 +70,7 @@ nav {
 
 
 #nav-lightbar {
-    background-image: linear-gradient(rgb(0, 100, 180) , rgba(255, 255, 255, 0.75), rgb(0, 100, 180));
+    background-image: linear-gradient(rgb(0, 100, 180), rgba(255, 255, 255, 0.75), rgb(0, 100, 180));
     box-shadow: 0 0 10px 5px rgba(0, 100, 180, 0.7);
     height: 5%;
     width: 100%;
@@ -86,3 +86,27 @@ nav {
 }
 
 
+/*=============================================
+=            NON MOBILE DEVICE            =
+=============================================*/
+
+
+@media only screen and (min-width: 600px) {
+
+    #nav-title {
+        justify-content: flex-start;
+    }
+
+    #nav-title>h1 {
+        font-size: calc(3vh + 1vw);
+    }
+
+    #nav-outside-links {
+        justify-content: flex-end;
+    }
+
+    #nav-outside-links>a {
+        width: 15%;
+    }
+
+}

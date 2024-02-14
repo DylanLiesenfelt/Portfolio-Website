@@ -134,3 +134,41 @@ main {
     height: 50%;
     width: 50%;
 }
+
+
+/*=============================================
+=            non mobile            =
+=============================================*/
+@media only screen and (min-width: 600px) {
+
+    #main-container {
+        width: 60%;
+    }
+    
+    #main-navbar>button {
+        height: 75%;
+        width: 15%;
+    }
+
+    #project-container {
+       width: 68%;
+    }
+
+    .project-button {
+        height: 200px;
+        width: 200px;
+    }
+
+    .project-link > img {
+        padding: 10%;
+    }
+
+    #resume {
+        width: 60%;
+    }
+
+    #resume > object {
+        
+    }
+
+}
