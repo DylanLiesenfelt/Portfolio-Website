@@ -52,10 +52,10 @@
                         <input id="DAB-expenses">
                     </div>
                     <button onclick="dailyAdjustedBudget()" type="button" class="calculate-button"><b>Calculate</b></button>
-                    <div class="input-wrap">
+                    <div class="output-wrap">
                         <h4>Your Daily Budget:</h4>
+                        <p id="DAB-output" class="flex output">$ ---</p>
                     </div>
-                    <p id="DAB-output" class="flex output">$ ---</p>
                 </form>
                 <form id="monthly-calculator" class="flex calculator">
                     <div class="input-wrap">
@@ -71,10 +71,10 @@
                         <input id="MP-months">
                     </div>
                     <button onclick="monthlyPayment()" type="button" class="calculate-button"><b>Calculate</b></button>
-                    <div class="input-wrap">
+                    <div class="output-wrap">
                         <h4>Your Monthly Payment:</h4>
+                        <p id="MP-output" class="flex output">$ ---</p>
                     </div>
-                    <p id="MP-output" class="flex output">$ ---</p>
                 </form>
                 <form id="compound-calculator" class="flex calculator">
                     <div class="input-wrap">
@@ -93,17 +93,16 @@
                         <h4>Expected Anual Return Rate:</h4>
                         <input id="COMP-rate">
                     </div>
-                    <div class="input-wrap">
-                        <p>Compound Frequency:</p>
-                    </div>
                     <div id="compound-button-wrap" class="flex">
+                        <p>Compound Frequency:</p>
                         <button type="button" onclick="compoundMonthly()" class="calculate-button">Monthly</button>
                         <button type="button" onclick="compoundYearly()" class="calculate-button">Anually</button>
                     </div>
-                    <div class="input-wrap">
+                    <div class="output-wrap">
+                        
                         <h4></h4>
-                    </div>
                     <p id="COMP-output" class="flex output">$ ---</p>
+                    </div>
                 </form>
             </div>
         </div>
