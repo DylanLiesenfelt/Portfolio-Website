@@ -11,7 +11,6 @@ main {
     flex-direction: column;
     height: 92%;
     width: 85%;
-    outline: 1px solid red;
 }
 
 #main-navbar {
