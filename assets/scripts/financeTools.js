@@ -32,7 +32,7 @@ const COMP_TERM = document.getElementById('COMP-term');
 const COMP_RATE = document.getElementById('COMP-rate');
 const COMP_OUTPUT = document.getElementById('COMP-output');
 
-function compound() {
+function compoundAnnually() {
     let principal = COMP_PRINCIPAL.value;
     let rate = COMP_RATE.value / 100;
     let time = COMP_TERM.value;
@@ -42,10 +42,55 @@ function compound() {
     COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
 }
 
-function compoundMonthly() {
-   
+function compoundSemi() {
+    let principal = COMP_PRINCIPAL.value;
+    let rate = COMP_RATE.value / 100;
+    let time = COMP_TERM.value;
+    let compound = 2;
+
+    let amount = principal * (Math.pow((1+(rate/compound)),(compound * time)));
+    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
 }
 
+function compoundQuarterly() {
+    let principal = COMP_PRINCIPAL.value;
+    let rate = COMP_RATE.value / 100;
+    let time = COMP_TERM.value;
+    let compound = 4;
+
+    let amount = principal * (Math.pow((1+(rate/compound)),(compound * time)));
+    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+}
+
+function compoundMonthly() {
+    let principal = COMP_PRINCIPAL.value;
+    let rate = COMP_RATE.value / 100;
+    let time = COMP_TERM.value;
+    let compound = 12;
+
+    let amount = principal * (Math.pow((1+(rate/compound)),(compound * time)));
+    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+}
+
+function compoundDaily() {
+    let principal = COMP_PRINCIPAL.value;
+    let rate = COMP_RATE.value / 100;
+    let time = COMP_TERM.value;
+    let compound = 365;
+
+    let amount = principal * (Math.pow((1+(rate/compound)),(compound * time)));
+    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+}
+
+function compoundContinously() {
+    let principal = COMP_PRINCIPAL.value;
+    let rate = COMP_RATE.value / 100;
+    let time = COMP_TERM.value;
+    let compound = 2.718281828;
+
+    let amount = principal * (Math.pow(compound,(rate * time)));
+    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+}
 
 
 //Rule of 72 = 72/r aprox how long it will take to double an investment
