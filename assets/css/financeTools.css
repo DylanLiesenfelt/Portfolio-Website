@@ -152,14 +152,73 @@ main {
     margin: 2%;
 }
 
-#compound-description-section {
-}
-
 
 /*=============================================
 =            non mobile            =
 =============================================*/
 @media only screen and (min-width: 600px) {
 
+    #calculator-container {
+        width: 65%;
+    }
 
+    .tab {
+      font-size: calc(0.75vh + 0.5vw);
+      height: 70%;
+    }
+
+    .input-wrap > h4 {
+        font-size: calc(1vh + 1vw);
+    }
+
+    .output-wrap > h4 {
+        font-size: calc(1vh + 1vw);
+    }
+
+
+    .calculator{
+        width: 63%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .input-section {
+        height: 65%;
+        width: 50%;
+        
+    }
+
+    .output-section {
+        height: 65%;
+        width: 50%;
+    }
+
+    .calculate-button {
+        height: 30%;
+        font-size: calc(1vh + 0.5vw);
+    }
+
+    .description-section {
+        height: 35%;
+        width: 100%;
+    
+    }
+
+    .description-section > p {
+        height: 80%;
+        width: 80%;
+    }
+
+    #compound-input-section {
+        height: 65%;
+    }
+    
+    #compound-output-section {
+        height: 65%;
+    }
+
+    #compound-buttons > button {
+        height: 25%;
+    }
 }
