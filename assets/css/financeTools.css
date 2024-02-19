@@ -117,6 +117,19 @@ main {
 
 .description-section {
     height: 25%;
+
+}
+
+.description-section > p {
+    display: flex;
+    flex-direction: column;
+    padding: 0% 2% 2% 5%;
+    height: 100%;
+    width: 100%;
+    font-size: calc(1vh + 1vw);
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: .25rem;
 }
 
 /*----------  Subsection comment block  ----------*/
