@@ -46,30 +46,92 @@
                     <div class="input-section flex">
                         <div class="input-wrap">
                             <h4>Monthly Income:</h4>
-                            <input>
+                            <input id="DAB-income">
                         </div>
                         <div class="input-wrap">
                             <h4>Monthly Expenses:</h4>
-                            <input>
+                            <input id="DAB-expenses">
                         </div>
                     </div>
                     <div class="output-section flex">
                         <div class="button-wrap flex">
-                            <button class="calculate-button">Calculate</button>
+                            <button type="button" class="calculate-button" onclick="dailyAdjustedBudget()"><b>Calculate</b></button>
                         </div>
                         <div class="output-wrap flex">
-                            <p class="output">$ ---</p>
+                            <h4>Adjusted Daily Budget:</h4>
+                            <p id="DAB-output" class="output" >$ ---</p>
                         </div>
                     </div>
                     <div class="description-section flex">
-
+                        <p>
+                            sfdhbnwjksabfjwlab
+                        </p>
                     </div>
                 </form>
-                <form id="" class="calculator">
-
+                <form id="debt-payment-calculator" class="calculator">
+                    <div class="input-section flex">
+                        <div class="input-wrap">
+                            <h4>Principal Debt: </h4>
+                            <input id="MP-principal">
+                        </div>
+                        <div class="input-wrap">
+                            <h4>Rate (APY %):</h4>
+                            <input id="MP-rate">
+                        </div>
+                        <div class="input-wrap">
+                            <h4>Loan Term (Months):</h4>
+                            <input id="MP-months">
+                        </div>
+                    </div>
+                    <div class="output-section flex">
+                        <div class="button-wrap flex">
+                            <button type="button" class="calculate-button" onclick="monthlyPayment()"><b>Calculate</b></button>
+                        </div>
+                        <div class="output-wrap flex">
+                            <h4>Monthly Payment:</h4>
+                            <p id="MP-output" class="output">$ ---</p>
+                        </div>
+                    </div>
+                    <div class="description-section flex">
+                        <p>
+                            sfdhbnwjksabfjwlab
+                        </p>
+                    </div>
                 </form>
-                <form id="" class="calculator">
-
+                <form id="compound-calculator" class="calculator">
+                    <div id="compound-input-section" class="input-section flex">
+                        <div class="input-wrap">
+                            <h4>Principal Investment:</h4>
+                            <input id="COMP-principal">
+                        </div>
+                        <div class="input-wrap">
+                            <h4>Expected Return Rate (%):</h4>
+                            <input id="COMP-rate">
+                        </div>
+                        <div class="input-wrap">
+                            <h4>Years Investing:</h4>
+                            <input id="COMP-term">
+                        </div>
+                    </div>
+                    <div id="compound-output-section" class="output-section flex">
+                        <div id="compound-buttons" class="button-wrap flex">
+                            <button type="button" class="calculate-button" onclick="compound()"><b>Annually</b></button>
+                            <button type="button" class="calculate-button" onclick=""><b>Semi-Annually</b></button>
+                            <button type="button" class="calculate-button" onclick=""><b>Quaterly</b></button>
+                            <button type="button" class="calculate-button" onclick=""><b>Monthly</b></button>
+                            <button type="button" class="calculate-button" onclick=""><b>Daily</b></button>
+                            <button type="button" class="calculate-button" onclick=""><b>Continously</b></button>
+                        </div>
+                        <div class="output-wrap flex">
+                            <h4>Monthly Payment:</h4>
+                            <p id="COMP-output" class="output">$ ---</p>
+                        </div>
+                    </div>
+                    <div id="compound-description-section" class="description-section flex">
+                        <p>
+                            sfdhbnwjksabfjwlab
+                        </p>
+                    </div>
                 </form>
                 <form id="" class="calculator">
 

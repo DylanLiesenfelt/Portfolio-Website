@@ -1,8 +1,8 @@
 const BUDGET_TAB = document.getElementById('budget-tab');
-const BUDGET_CALCULATOR = document.getElementById('DAB-calculator');
+const BUDGET_CALCULATOR = document.getElementById('budget-calculator');
 
 const MONTHLY_TAB = document.getElementById('monthly-payment-tab');
-const MONTHLY_CALCULATOR = document.getElementById('monthly-calculator');
+const MONTHLY_CALCULATOR = document.getElementById('debt-payment-calculator');
 
 const COMPOUND_TAB = document.getElementById('compound-tab');
 const COMPOUND_CALCULATOR = document.getElementById('compound-calculator')
