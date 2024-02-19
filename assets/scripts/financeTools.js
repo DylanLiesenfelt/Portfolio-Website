@@ -7,8 +7,13 @@ function dailyAdjustedBudget() {
     let income = parseFloat(DAB_Income.value);
     let expenses = parseFloat(DAB_Expenses.value);
     let budget = (income - expenses)/30;
-    DAB_Output.innerText = '$ ' + budget.toFixed(2);
-    con
+    
+    let formattedAmount = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(budget.toFixed(2));
+
+    DAB_Output.innerText = formattedAmount;
 }
 
 //Monthly Payment Calculator
@@ -23,7 +28,13 @@ function monthlyPayment() {
     let rate = MP_Rate.value / 100 / 12;
     let months = MP_Months.value;
     let output = principal * (rate * Math.pow(1 + rate, months)) / (Math.pow(1 + rate, months) - 1);
-    MP_Output.innerText = "$" + output.toFixed(2);
+    
+    let formattedAmount = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(output.toFixed(2));
+
+    MP_Output.innerText = formattedAmount;
 }
 
 //Compound interest = p(1 + (r/n))^(nt)
@@ -39,7 +50,13 @@ function compoundAnnually() {
     let compound = 1;
 
     let amount = principal * (Math.pow((1+(rate/compound)),(compound * time)));
-    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+    
+    let formattedAmount = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(amount.toFixed(2));
+
+    COMP_OUTPUT.innerText = formattedAmount;
 }
 
 function compoundSemi() {
@@ -49,7 +66,13 @@ function compoundSemi() {
     let compound = 2;
 
     let amount = principal * (Math.pow((1+(rate/compound)),(compound * time)));
-    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+    
+    let formattedAmount = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(amount.toFixed(2));
+
+    COMP_OUTPUT.innerText = formattedAmount;
 }
 
 function compoundQuarterly() {
@@ -59,7 +82,13 @@ function compoundQuarterly() {
     let compound = 4;
 
     let amount = principal * (Math.pow((1+(rate/compound)),(compound * time)));
-    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+   
+    let formattedAmount = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(amount.toFixed(2));
+
+    COMP_OUTPUT.innerText = formattedAmount;
 }
 
 function compoundMonthly() {
@@ -69,7 +98,13 @@ function compoundMonthly() {
     let compound = 12;
 
     let amount = principal * (Math.pow((1+(rate/compound)),(compound * time)));
-    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+    
+    let formattedAmount = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(amount.toFixed(2));
+
+    COMP_OUTPUT.innerText = formattedAmount;
 }
 
 function compoundDaily() {
@@ -79,7 +114,13 @@ function compoundDaily() {
     let compound = 365;
 
     let amount = principal * (Math.pow((1+(rate/compound)),(compound * time)));
-    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+
+    let formattedAmount = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(amount.toFixed(2));
+
+    COMP_OUTPUT.innerText = formattedAmount;
 }
 
 function compoundContinously() {
@@ -89,7 +130,13 @@ function compoundContinously() {
     let compound = 2.718281828;
 
     let amount = principal * (Math.pow(compound,(rate * time)));
-    COMP_OUTPUT.innerText = "$" + amount.toFixed(2);
+    
+    let formattedAmount = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(amount.toFixed(2));
+
+    COMP_OUTPUT.innerText = formattedAmount;
 }
 
 
