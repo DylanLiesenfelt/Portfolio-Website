@@ -1,5 +1,5 @@
 main {
-    height: 90%;
+    height: 100%;
     width: 100%;
 }
 
@@ -23,7 +23,7 @@ main {
     font-family: helvetica;
     border: none;
     background-color: rgb(70, 70, 70);
-    font-size: calc(1vh + 1vw);
+    font-size: calc(0.75vh + 0.5vw);
     outline: 1px solid gray;
 }
 
