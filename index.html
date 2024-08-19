@@ -4,93 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dylan Liesenfelt</title>
-    <link rel="icon" href="./assets/images/UwU.ico">
-    <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
-<body class="flex">
-    <header class="flex">
-        <nav class="flex"> 
-            <a href="/index.html" id="nav-title" class="flex">
-                <h1>Liesenfelt.Net</h1>
-            </a>
-            <div id="nav-page-links" class="flex">
-                
+<body>
+    <main>
+        <div id="display-container" class="container">
+            <div id="display" class="container">
+                <div id="about-display" class="container displays">
+                    <div id="character" class="container">
+                        <img src="./assets/images/meandbub.png" alt="">
+                    </div>
+                    <div id="about-text" class="container">
+                        <p id="about-bio">Hey there! My name is Dylan Liesenfelt I am a software engineer.
+                            This is my dog Forrest, welcome to my website! Have a look around. </p>
+                    </div>
+                </div>
+                <div id="contact-display" class="container displays">
+                    <div id="contact-container" class="container">
+                        <button id="gh-link" class="contact-links">
+                            <img src="./assets/images/GHicon.png" alt="">
+                            GitHub
+                        </button>
+                        <button id="li-link" class="contact-links">
+                            <img src="./assets/images/LIicon.png" alt="">
+                            Linkedin
+                        </button>
+                        <button id="yt-link" class="contact-links">
+                            <img src="./assets/images/YTicon.png" alt="">
+                            Youtube
+                        </button>
+                        <button id="mail-link" class="contact-links">
+                            <img src="./assets/images/EMAILicon.png" alt="">
+                            E-Mail
+                        </button>
+                    </div>
+                </div>
+                <div id="resume-display" class="container displays">
+                    <div id="resume-container" class="container">
+                        <object data="./assets/other/Dylan Liesenfelt - Resume.pdf"  ></object>
+                    </div>
+                </div>
+                <div id="projects-display" class="container displays">
+                    Under Construction
+                </div>
             </div>
-            <div id="nav-outside-links" class="flex">
-                <a href="https://www.linkedin.com/in/dylanliesenfelt/" target="_blank" id="linkedin-link" class="icon">
-
-                </a>
-                <a href="https://github.com/DylanLiesenfelt" target="_blank" id="github-link" class="icon">
-
-                </a>
-            </div>
-        </nav>
-        <div id="nav-lightbar" class="flex">
-             
         </div>
-    </header>
-    <main class="flex">
-        <div id="main-container" class="flex">
-            <nav id="main-navbar" class="flex">
-                <button id="about-tab" class="flex tab" onclick="selectAbout()">
-                    <b>About</b>
-                </button>
-                <button id="project-tab" class="flex tab" onclick="selectProject()">
-                    <b>Projects</b>     
-                </button>
-                <button id="resume-tab" class="flex tab" onclick="selectResume()">
-                    <b>Resume</b>
-                </button> 
-            </nav>
-            <div id="main-lightbar" class="flex">
-
-            </div>
-            <div id="main-content-container" class="flex">
-                <div id="about" class="content flex">
-                    <div id="about-text-container" class="flex">
-                        <p>
-                            Welcome!<br><br>
-                            My name is Dylan Liesenfelt. I am a 28-year-old Software Engineer.<br><br>
-                            I am currently working on my Bachelor's in Computer Science at Florida Atlantic University, 
-                            and received my Associate's from Broward College.<br><br>
-                            I spent eight years in the Navy as an Aviation Electrician. 
-                            As an electrician, I found I was adept at problem-solving and troubleshooting, 
-                            so when I decided to transition, I could not think of a more appropriate field than Computer Science.<br><br>
-                            Some of my hobbies include weightlifting, 3D printing and tinkering, fishing, and having fun with my dog Forrest.  
-                        </p>                        
-                        <img src="./assets/images/UwU.png" alt="My Dog Forrest A Very Cute Siberan Husky" srcset="">
-                        <a id="email-link" href="mailto:dylanjames.code@gmail.com" class="flex">
-                            <img src="./assets/icons/icons8-email-100.png" alt="email icon">
-                            <h4>dylanjames.code@gmail.com</h4>
-                        </a>
-                    </div>
-                </div>
-                <div id="project" class="content flex">
-                    <div id="project-container" class="flex">
-                        <button id="finance-tools" class="flex project-button">
-                            <a href="./assets/pages/financeTools.html" id="finance-tools-link" class="flex project-link">
-                                <h4>Finance</h4>
-                                <img src="./assets/icons/icons8-piggy-bank-100.png" alt="Piggy Bank Icon">
-                                <h4>Tools</h4>
-                            </a>
-                        </button>
-                        <button id="" class="flex project-button">
-                            Buff Buds
-                            (Coming Soon)
-                        </button>
-                        <button id="" class="flex project-button">
-                            Work Force
-                            (Coming Soon)
-                        </button>
-                    </div>
-                </div>
-                <div id="resume" class="content flex">
-                    <object data="./assets/files/Resume-Dylan Liesenfelt.pdf" type="" ></object>
-                </div>
+        <div id="control-container" class="container">
+            <div id="controls" class="container">
+                <button id="about-control" class="control">ABOUT</button>
+                <button id="contact-control" class="control">CONTACT</button>
+                <button id="resume-control" class="control">RESUME</button>
+                <button id="project-control" class="control">PROJECTS</button>
             </div>
         </div>
     </main>
-    <script src="./assets/scripts/tabButtonIndex.js"></script>
 </body>
+<script src="./assets/scripts/controls.js"></script>
 </html>
