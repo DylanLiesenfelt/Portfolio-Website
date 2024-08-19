@@ -39,7 +39,7 @@ main {
 }
 
 .control {
-    height: 42%;
+    height: 40%;
     width: 45%;
     border-radius: 0.5rem;
     border: 0.2rem solid #ffffffd2;
@@ -58,6 +58,8 @@ main {
 .control:active {
     box-shadow: 5px 5px 0.025rem 0.25rem rgba(0, 0, 0, 0.45), inset 0 0 0.25rem 0.5rem rgba(255, 255, 255, 0.75);
     border: 0.2rem solid #000000;
+    color: white;
+    font-size: calc(2vh + 3vw);
 }
 /*======================================ID========================================*/
 
@@ -68,7 +70,7 @@ main {
 
 #display {
     height: 95%;
-    width: 95%;
+    width: 100%;
 }
 
 /*About*/
@@ -76,25 +78,30 @@ main {
     height: 100%;
     width: 100%;
     flex-direction: column;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.65) 70%,rgb(0, 0, 0) 100%);
+    background-image: linear-gradient(to bottom, rgba(250, 247, 209, 0),rgba(252, 244, 131, 0.75),rgba(34, 32, 18, 0.85) 100%);
 }
 
 #character {
     height: 70%;
 }
 
+#character > img {
+    height: 90%;
+}
+
 #about-text {
     height: 30%;
     width: 95%;
     border: 10px ridge black;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(to bottom, white, rgba(0, 0, 0, 0));
 }
 
 #about-bio {
     font-family: pixel;
     text-align: center;
     font-weight: 100;
-    font-size: calc(1vh + 3vw);
+    font-size: calc(1vh + 2.75vw);
+    margin: 5%;
 }
 
 /*Controls*/
