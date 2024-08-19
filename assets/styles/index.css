@@ -137,6 +137,30 @@ main {
     aspect-ratio: 1/1;
 }
 
+/*Resume ===========================================================================*/
+
+#resume-display {
+    visibility: hidden;
+}
+
+#resume-container {
+    height: 100%;
+    width: 100%;
+}
+
+
+#resume-container > object {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*Projects =========================================================================*/
+
+#projects-display {
+    visibility: hidden;
+}
+
 /*Controls =========================================================================*/
 .control {
     height: 40%;
