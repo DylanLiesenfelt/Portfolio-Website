@@ -28,8 +28,6 @@ main {
     background-image: linear-gradient(to bottom, rgba(219, 230, 233, 0.801), rgb(130, 203, 240));
 }
 
-/*====================================CLASS=======================================*/
-
 .container {
     display: flex;
     align-items: center;
@@ -38,46 +36,26 @@ main {
     width: 100%;
 }
 
-.control {
-    height: 40%;
-    width: 45%;
-    border-radius: 0.5rem;
-    border: 0.2rem solid #ffffffd2;
-    color: black;
-    font-family: pixel;
-    font-size: calc(2vh + 2vw);
-    font-weight: 300;
-    box-shadow: 5px 5px .05rem 0.15rem rgba(0, 0, 0, 0.45), inset 0 0 0.25rem 0.5rem rgba(0, 0, 0, 0.75);
-    transition-duration: 300ms;
+/*Displays =========================================================================*/
+.displays {
+    height: inherit;
+    width: inherit;
+    flex-direction: column;
+    position: absolute;
 }
 
-.control:hover {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.control:active {
-    box-shadow: 5px 5px 0.025rem 0.25rem rgba(0, 0, 0, 0.45), inset 0 0 0.25rem 0.5rem rgba(255, 255, 255, 0.75);
-    border: 0.2rem solid #000000;
-    color: white;
-    font-size: calc(2vh + 3vw);
-}
-/*======================================ID========================================*/
-
-/*Displays*/
 #display-container {
     height: 70%;
 }
 
 #display {
-    height: 95%;
+    height: inherit;
     width: 100%;
 }
 
-/*About*/
+/*About ============================================================================*/
 #about-display {
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
+    visibility: visible;
     background-image: linear-gradient(to bottom, rgba(250, 247, 209, 0),rgba(252, 244, 131, 0.75),rgba(34, 32, 18, 0.85) 100%);
 }
 
@@ -104,7 +82,85 @@ main {
     margin: 5%;
 }
 
-/*Controls*/
+/*Contact ==========================================================================*/
+#contact-display {
+    visibility: hidden;
+}
+
+#contact-container {
+    border: 10px ridge black;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 60%;
+    width: 90%;
+    background-image: linear-gradient(to bottom, white, grey,rgb(44, 44, 44));
+}
+
+.contact-links {
+    background-color: rgb(119, 27, 119);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+    width: 37%;
+    border-radius: 0.55rem;
+    border: 0.2rem solid #ffffffd2;
+    color: black;
+    font-family: pixel;
+    font-size: calc(1.5vh + 1.5vw);
+    font-weight: 300;
+    box-shadow: 5px 5px .05rem 0.15rem rgba(0, 0, 0, 0.45), inset 0 0 0.25rem 0.5rem rgba(0, 0, 0, 0.75);
+}
+
+
+.contact-links:hover {
+    background-image: linear-gradient(to bottom, rgb(107, 44, 107), black);
+    color: rgba(255, 255, 255, 0.85);
+    border: 0.2rem solid #00000080;
+    box-shadow: 5px 5px .05rem 0.15rem rgba(0, 0, 0, 0.45), inset 0 0 0.25rem 0.5rem rgba(255, 255, 255, 0.25);
+}
+
+.contact-links:active {
+    color: rgb(255, 255, 255);
+    box-shadow: 5px 5px .05rem 0.15rem rgba(0, 0, 0, 0.45), inset 0 0 0.25rem 0.5rem rgba(255, 255, 255, 0.527);
+    font-size: calc(2vh + 2vw);
+}
+
+.contact-links > img {
+    width: 50%;
+    aspect-ratio: 1/1;
+}
+
+.contact-links > img:active {
+    width: 40%;
+    aspect-ratio: 1/1;
+}
+
+/*Controls =========================================================================*/
+.control {
+    height: 40%;
+    width: 45%;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #ffffffd2;
+    color: black;
+    font-family: pixel;
+    font-size: calc(2vh + 2vw);
+    font-weight: 300;
+    box-shadow: 5px 5px .05rem 0.15rem rgba(0, 0, 0, 0.45), inset 0 0 0.25rem 0.5rem rgba(0, 0, 0, 0.75);
+    transition-duration: 300ms;
+}
+
+.control:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.control:active {
+    box-shadow: 5px 5px 0.025rem 0.25rem rgba(0, 0, 0, 0.45), inset 0 0 0.25rem 0.5rem rgba(255, 255, 255, 0.75);
+    border: 0.2rem solid #000000;
+    color: white;
+    font-size: calc(2vh + 3vw);
+}
 #control-container {
     height: 30%;
 }

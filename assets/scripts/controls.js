@@ -31,3 +31,22 @@ document.getElementById('project-control').addEventListener('click', function() 
     resumeView.style.visibility = 'hidden'
     projectsView.style.visibility = 'visible'
 })
+
+document.getElementById('gh-link').addEventListener('click', function() {
+    window.open('https://github.com/DylanLiesenfelt')
+})
+
+document.getElementById('li-link').addEventListener('click', function() {
+    window.open('https://www.linkedin.com/in/dylanliesenfelt/')
+})
+
+document.getElementById('yt-link').addEventListener('click', function() {
+    window.open('https://www.youtube.com/@BubBits')
+})
+
+document.getElementById('mail-link').addEventListener('click', function() {
+    window.location.href = 'mailto:dylanliesenfelt@proton.me';
+})
+
+
+
