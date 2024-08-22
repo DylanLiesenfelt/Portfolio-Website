@@ -3,33 +3,58 @@ contactView = document.getElementById('contact-display')
 resumeView = document.getElementById('resume-display')
 projectsView = document.getElementById('projects-display')
 
+aboutControl = document.getElementById('about-control')
+contactControl = document.getElementById('contact-control')
+resumeControl = document.getElementById('resume-control')
+projectControl = document.getElementById('project-control')
 
-document.getElementById('about-control').addEventListener('click', function() {
+
+aboutControl.addEventListener('click', function() {
     aboutView.style.visibility = 'visible'
     contactView.style.visibility = 'hidden'
     resumeView.style.visibility = 'hidden'
     projectsView.style.visibility = 'hidden'
+
+    aboutControl.style.color = 'white';
+    contactControl.style.color = 'black';
+    resumeControl.style.color = 'black';
+    projectControl.style.color = 'black';
 })
 
-document.getElementById('contact-control').addEventListener('click', function() {
+contactControl.addEventListener('click', function() {
     aboutView.style.visibility = 'hidden'
     contactView.style.visibility = 'visible'
     resumeView.style.visibility = 'hidden'
     projectsView.style.visibility = 'hidden'
+
+    aboutControl.style.color = 'black';
+    contactControl.style.color = 'white';
+    resumeControl.style.color = 'black';
+    projectControl.style.color = 'black';
 })
 
-document.getElementById('resume-control').addEventListener('click', function() {
+resumeControl.addEventListener('click', function() {
     aboutView.style.visibility = 'hidden'
     contactView.style.visibility = 'hidden'
     resumeView.style.visibility = 'visible'
     projectsView.style.visibility = 'hidden'
+
+    aboutControl.style.color = 'black';
+    contactControl.style.color = 'black';
+    resumeControl.style.color = 'white';
+    projectControl.style.color = 'black';
 })
 
-document.getElementById('project-control').addEventListener('click', function() {
+projectControl.addEventListener('click', function() {
     aboutView.style.visibility = 'hidden'
     contactView.style.visibility = 'hidden'
     resumeView.style.visibility = 'hidden'
     projectsView.style.visibility = 'visible'
+
+    aboutControl.style.color = 'black';
+    contactControl.style.color = 'black';
+    resumeControl.style.color = 'black';
+    projectControl.style.color = 'white';
 })
 
 document.getElementById('gh-link').addEventListener('click', function() {
