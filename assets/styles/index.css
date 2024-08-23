@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: pixel;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+@font-face {
+    font-family: pixel;
+    src: url(../fonts/upheavtt.ttf);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: 7%;
+    width: 100%;
+    background-color: #222034;
+    color: white;
+    box-shadow: 0px 12px 15px rgba(166, 255, 0);
+    z-index: 1;
+}
+
+main {
+    background-image: url(../images/bg.gif);
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    flex-direction: column;
+    height: 75%;
+    width: 85%;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+nav {
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn {
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: calc(1.5vh + 1.5vw);
+    transition-duration: 500ms;
+}
+
+.nav-btn:hover {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+.nav-btn:active {
+    color: white;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+}
+
+#display {
+    height: 100%;
+    width: 100%;
+}
+
+.view {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    visibility: visible;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#about-content {
+    width: 90%;
+    aspect-ratio: 1/1.2;
+}
+
+#about-content > p  {
+    font-family: monospace;
+    box-shadow: 0 0 20px 20px rgba(170, 250, 115, 0.25);
+    background-color: rgba(170, 250, 115, 0.25);
+    font-size: calc(1.3vh + 1.3vw);
+    font-weight: bold;
+}
+
+#link-container {
+    width: 90%;
+}
+
+.link-btn {
+    width: 25%;
+    aspect-ratio: 1/1;
+    background-color: black;
+    border: none;
+    background: none ;
+}
+
+.link-btn:active {
+    background-image: radial-gradient(circle 40px, rgba(170, 250, 115, 0.4), rgba(0, 0, 0, 0));
+}
+
+.link-btn > img {
+    height: 50%;
+    aspect-ratio: 1/1;
+}
+
+
+
