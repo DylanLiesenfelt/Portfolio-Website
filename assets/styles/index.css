@@ -87,6 +87,13 @@ nav {
     justify-content: space-evenly;
 }
 
+#about {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    visibility: hidden;
+}
+
 #about-content {
     width: 82%;
     height: 85%;
@@ -121,6 +128,70 @@ nav {
     height: 50%;
     aspect-ratio: 1/1;
 }
+
+#projects {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.project-card {
+    height: 20%;
+    width: 100%;
+    flex-direction: column;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.card-top {
+    height: 50%;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.icon {
+    height: 90%;
+    aspect-ratio: 1/1;
+    margin-left: 2.5%;
+}
+
+.card-top > h3 {
+    font-size: calc(2vh + 2.5vw);
+}
+
+.github-link {
+    background-color:rgba(255, 255, 255, 0);
+    height: 90%;
+    aspect-ratio: 1/1;
+    margin-right: 2.5%;
+    background-image: url(/assets/images/GHicon.png);
+    background-size: contain;
+    border: none;
+}
+
+.card-btm {
+    height: 50%;
+    flex-direction: row;
+}
+
+.description {
+    height: 100%;
+    width: 75%;
+}
+
+.tech-container {
+    width: 25%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.tech-icon {
+    height: 50%;
+    aspect-ratio: 1/1;
+}
+
 
 
 
