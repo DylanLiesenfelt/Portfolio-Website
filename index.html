@@ -3,70 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liesenfelt.net</title>
-    <link rel="stylesheet" href="./assets/styles/index.css">
+    <title>Dylan Liesenfelt</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 <body>
     <header class="container">
-    <h1>Dylan Liesenfelt</h1>
-    </header>
-    <main class="container">
-        <div id="content" class="container">
-            <nav class="container">
-                <button id="nav-about" class="nav-btn">About</button>
-                <button id="nav-project" class="nav-btn">Projects</button>
-                <button id="nav-resume" class="nav-btn">Resume</button>
-            </nav>
-            <div id="display" class="container">
-                <div id="about" class="container view">
-                    <div id="about-content" class="container">
-                        <p>Welcome! My name is Dylan Liesenfelt. <br> <br> I am Computer Science Undergraduate at Florida Atlantic University.
-                        <br> <br> In 2022 I was Honorably discharged from the US Navy after 8 years of service.
-                        I returned home to south Florida, and put my GI bill to use. I started pursuing my goal
-                        of furthering my education and expanding my interest in programming.
-                        <br> <br> I made this webpage to document my journey. Please have a look around!</p>
-                    </div>
-                    <div id="link-container" class="container">
-                        <button id="gh-link" class="link-btn">
-                            <img src="./assets/images/GHicon.png" alt="GitHub Link">
-                        </button>
-                        <button id="li-link" class="link-btn">
-                            <img src="./assets/images/LIicon.png" alt="Linkedin Link">
-                        </button>
-                        <button id="yt-link" class="link-btn">
-                            <img src="./assets/images/YTicon.png" alt="YouTube Link">
-                        </button>
-                        <button class="link-btn" onclick="">
-                            <img src="./assets/images/EMAILicon.png" alt="">
-                        </button>
-                    </div>
-                </div>
-                <div id="projects" class="container view">
-                    <div class="project-card container">
-                        <div class="card-top container">
-                            <img src="./assets/images/wetHeat.png" alt="" class="icon">
-                            <h3>Wet Heat</h3>
-                            <button class="github-link">
-                                
-                            </button>
-                        </div>
-                        <div class="card-btm container">
-                            <p class="description">
-                                Table top RPG inspired Dungeon Crawler set in South Florida
-                            </p>
-                            <div class="tech-container container">
-                                <img src="./assets/images/icons8-html-100.png" alt="" class="tech-icon">
-                                <img src="./assets/images/icons8-css-100.png" alt="" class="tech-icon">
-                                <img src="./assets/images/icons8-javascript-100(1).png" alt="" class="tech-icon">
-                                <img src="./assets/images/icons8-python-100.png" alt="" class="tech-icon">
-                                <img src="./assets/images/pngaaa.com-4796421.png" alt="" class="tech-icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <nav class="container">
+            <div id="badge" class="container">
+                <img src="./assets/images/icons/icons8-wolf-100.png" alt="">
+                <h1>Dylan Liesenfelt</h1>
+                <h3>Software Engineer</h3>
             </div>
+            <div id="views-container" class="container">
+                <button class="view-btn">ABOUT</button>
+                <button class="view-btn">PROJECTS</button>
+                <button class="view-btn">RESUME</button>
+            </div>
+            <div id="link-container" class="container">
+                <button><img src="./assets/images/icons/icons8-github-100.png" alt=""></button>
+                <button><img src="./assets/images/icons/LIicon.png" alt=""></button>
+                <button><img src="./assets/images/icons/EMAILicon.png" alt=""></button>
+            </div>
+        </nav>
+        <div id="tab-container" class="container">
+            <button id="tab">
+                <img src="./assets/images/icons/icons8-arrow-right-100.png" alt="">
+            </button>
+        </div>
+    </header>
+    <main>
+        <div id="about" class="view container">
+            <h3>ABOUT</h3>
+        </div>
+        <div id="projects" class="view container">
+            <h3>PROJECTS</h3>
+        </div>
+        <div id="resume" class="view container">
+            <h3>RESUME</h3>
         </div>
     </main>
 </body>
-<script src="./assets/scripts/navigate.js"></script>
+<script src="./assets/scripts/header.js"></script>
 </html>
