@@ -185,18 +185,21 @@ main {
     }
 
     #link-container {
-        height: 59%;
-        align-items: flex-end;
+        height: 40%;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
     }
 
         #link-container > a {
-            width: 33%;
+            width: 50%;
             aspect-ratio: 1/1;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: inherit;
             border: none;
+            margin-bottom: 20%;
         }
 
         #link-container > a > img {
