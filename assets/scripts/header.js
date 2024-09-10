@@ -5,16 +5,13 @@ let isCollapsed = false;
 
 TAB.addEventListener('click', function() {
     if (isCollapsed) {
-        NAV.style.width = '70px';
-        NAV.style.visibility = 'visible';
-
+        NAV.style.width = '100px';
     } else {
         NAV.style.width = '0px';
-        NAV.style.visibility = 'hidden';
     }
     isCollapsed = !isCollapsed;
-    console.log('click')
 });
+
 
 
 const ABOUT = document.getElementById('about')
@@ -42,7 +39,10 @@ RESUMEBTN.addEventListener('click', function() {
     ABOUT.style.visibility = 'hidden'
 })
 
-let currentDate = Date.now
+document.querySelectorAll('#link-container button').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Button clicked!');
+    });
+});
 
-console.log(currentDate)
 
