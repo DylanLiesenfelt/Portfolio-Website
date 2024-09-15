@@ -215,3 +215,25 @@ main {
 
 
 
+
+
+@media (min-width: 900px) {
+    * {
+        overflow: hidden;
+    }
+
+    #tab-container {
+        visibility: hidden;
+    }
+
+    .view {
+        left: 100px;
+        z-index: 0;
+    }
+
+    article {
+        width: 80%;
+        font-size: calc(1vh + 1vw);
+        margin-left: 1%;
+    }
+}
