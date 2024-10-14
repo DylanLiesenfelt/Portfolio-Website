@@ -98,3 +98,23 @@ section > footer > ul > li > a > img {
 section > footer > ul > li > a > img:hover {
     width: 55px;
 }
+
+#learning-section > div {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    font-size: 1.5rem;
+}
+
+#learning-section > div > ul {
+    list-style: circle;
+    padding-top: 3%;
+}
+
+#learning-section > div > ul > li {
+    transition-duration: 500ms;
+}
+
+#learning-section > div > ul > li:hover {
+    font-size: larger;
+}
