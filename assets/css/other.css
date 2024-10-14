@@ -1,0 +1,69 @@
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+:root {
+    --darkmain: rgb(35, 35, 35);
+    --dark2: rgb(75, 75, 75);
+    --darkhl: rgb(215, 215, 215);
+    --brand:rgb(255, 115, 0);
+}
+
+main {
+    height: 100%;
+}
+
+h1 {
+    background-color: var(--darkhl);
+    width: 80%;
+    height: 40px;
+    border-radius: 1rem;
+    text-align: center;
+    align-items: center;
+    margin-top: 3%;
+}
+
+
+span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+span > a {
+    padding-right: 10%;
+    color: white;
+    transition-duration: 500ms;
+    font-size: 1.5rem;
+}
+
+span > a:hover {
+    font-size: 1.7rem;
+}
+
+#pic-container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pic {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1rem;
+    background-image: url(../images/dogs/rrrrrrrrrrrrr.jpg);
+}
+
+
+iframe {
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
+}
