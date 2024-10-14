@@ -1,0 +1,46 @@
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+}
+
+
+span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+span > a {
+    padding-right: 10%;
+    color: white;
+    transition-duration: 500ms;
+    font-size: 1.5rem;
+}
+
+span > a:hover {
+    font-size: 1.7rem;
+}
+
+#pic-container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pic {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1rem;
+    background-image: url(../images/dogs/rrrrrrrrrrrrr.jpg);
+}
+
