@@ -39,7 +39,7 @@ function photo_gallery(array) {
     setInterval(() => {
         let img = pick_img(array);
         display_img(img);
-    }, 3000);
+    }, 2000);
 }
 
 photo_gallery(photoGallery);

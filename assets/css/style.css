@@ -9,7 +9,7 @@
 :root {
     --darkmain: rgb(35, 35, 35);
     --dark2: rgb(75, 75, 75);
-    --darkhl: rgb(150, 150, 150);
+    --darkhl: rgb(215, 215, 215);
     --brand:rgb(255, 115, 0);
 }
 
@@ -60,7 +60,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 22%;
+    margin-top: 100px;
 }
 
 section {
@@ -68,7 +68,7 @@ section {
     background-color: var(--darkhl);
     padding: 3%;
     border-radius: 1rem;
-    box-shadow: 5px 5px 10px 3px rgba(255, 255, 255, 0.15);
+    box-shadow: 5px 5px 10px 3px rgba(255, 255, 255, 0.2);
 }
 
 section > p {
