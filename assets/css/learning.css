@@ -17,16 +17,12 @@
     flex: 1 1;
 }
 
-.content {
-    padding-top: 10%;
-    flex: 1 1;
-    width: 90%;
-}
-
 body {
     flex-direction: column;
     background-color: var(--darkhl);
     height: auto;
+    width: 100%;
+    align-items: center;
 }
 
 nav {
@@ -37,9 +33,9 @@ nav {
     align-items: center;
 }
 
-nav >img {
+nav > a {
     width: 100px;
-    aspect-ratio: 1/1;
+    height: 100%;
 }
 
 h1 {
@@ -48,15 +44,28 @@ h1 {
     color: white;
 }
 
+#toc-link {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-right: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
 main {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     margin-top: 100px;
     height: 100%;
-    width: 100%;
+    width: 95%;
 }
 
 section {
     width: 100%;
+    margin-top: 2%;
+    margin-left: 1%;
 }
