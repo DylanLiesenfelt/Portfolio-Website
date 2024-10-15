@@ -58,7 +58,38 @@ span > a:hover {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 1rem;
-    background-image: url(../images/dogs/rrrrrrrrrrrrr.jpg);
+}
+
+#pics1 {
+    background-image: url(../images/dogs/dsafdsa.webp);
+}
+
+#pics2 {
+    background-image: url(../images/dogs/dsfgsdfg.jpg);
+}
+
+#pics3 {
+    background-image: url(../images/dogs/erdgerg.jpg);
+}
+
+#pics4 {
+    background-image: url(../images/dogs/esfef.jpg);
+}
+
+#pics5 {
+    background-image: url(../images/dogs/esfews.jpg);
+}
+
+#pics6 {
+    background-image: url(../images/dogs/ewfwafw.jpg);
+}
+
+#pics7 {
+    background-image: url(../images/dogs/ewrfdwefwe.jpg);
+}
+
+#pics8 {
+    background-image: url(../images/dogs/gdrgfer.jpg);
 }
 
 iframe {
