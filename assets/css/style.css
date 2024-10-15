@@ -70,7 +70,7 @@ section {
     background-color: var(--darkhl);
     padding: 3%;
     border-radius: 1rem;
-    box-shadow: 5px 5px 10px 3px rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 10px 3px rgba(255, 255, 255, 0.3);
 }
 
 section > p {
@@ -90,6 +90,8 @@ section > footer > ul {
 
 section > footer > ul > li > a {
     color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 section > footer > ul > li > a > img {
@@ -101,22 +103,44 @@ section > footer > ul > li > a > img:hover {
     width: 55px;
 }
 
-#learning-section > div {
-    display: flex;
-    flex-direction: column;
-    padding: 3%;
-    font-size: 1.5rem;
-}
-
-#learning-section > div > ul {
+#learning-mods > li {
     list-style: circle;
-    padding-top: 3%;
+    font-size: calc(1vw + 1rem);
+    margin-top: 3%;
+    margin-left: 20px;
 }
 
-#learning-section > div > ul > li {
-    transition-duration: 500ms;
-}
+@media screen and (min-width:600px){
+    #nav-links {
+        font-size: 1.2rem;
+    }
 
-#learning-section > div > ul > li:hover {
-    font-size: larger;
+    section > p {
+        font-size: 2rem;
+    }
+
+    section > footer > ul > li > a  {
+        font-size: 1rem;
+    }
+
+    section > footer > ul > li > a > img {
+        width: 75px;
+    }
+
+    section > footer > ul > li > a > img:hover {
+        width: 100px;
+    }
+
+    #learning-mods > li{
+        font-size: 1.5rem;
+        margin-top: 1%;
+    }
+
+    .content {
+        padding-top: 3%;
+    }
+
+    section {
+        box-shadow: 10px 10px 10px 7px rgba(255, 255, 255, 0.2);
+    }
 }
