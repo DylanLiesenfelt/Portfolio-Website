@@ -47,16 +47,13 @@ function photo_gallery(dis, array) {
     setInterval(() => {
         let img = pick_img(array);
         display_img(dis,img);
-    }, 3500);
+    }, 5000);
 }
 
 function init_gallery(dis, array) {
     let img = pick_img(array);
         display_img(dis,img);
 }
-
-
-
 
 photo_gallery(DISPLAY1, photoGallery);
 photo_gallery(DISPLAY2, photoGallery);

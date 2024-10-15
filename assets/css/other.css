@@ -26,7 +26,7 @@ span {
 h1 {
     width: 100%;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     color: white;
 }
 
@@ -47,7 +47,7 @@ span > a:hover {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
+    margin-top: 5%;
 }
 
 .pics {
@@ -60,35 +60,35 @@ span > a:hover {
     border-radius: 1rem;
 }
 
-#pics1 {
+#pic1 {
     background-image: url(../images/dogs/dsafdsa.webp);
 }
 
-#pics2 {
+#pic2 {
     background-image: url(../images/dogs/dsfgsdfg.jpg);
 }
 
-#pics3 {
+#pic3 {
     background-image: url(../images/dogs/erdgerg.jpg);
 }
 
-#pics4 {
+#pic4 {
     background-image: url(../images/dogs/esfef.jpg);
 }
 
-#pics5 {
+#pic5 {
     background-image: url(../images/dogs/esfews.jpg);
 }
 
-#pics6 {
+#pic6 {
     background-image: url(../images/dogs/ewfwafw.jpg);
 }
 
-#pics7 {
+#pic7 {
     background-image: url(../images/dogs/ewrfdwefwe.jpg);
 }
 
-#pics8 {
+#pic8 {
     background-image: url(../images/dogs/gdrgfer.jpg);
 }
 
@@ -105,5 +105,13 @@ iframe {
     }
     .pics {
         margin-top: 1.5%;
+    }
+
+    #pic-container {
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
     }
 }
