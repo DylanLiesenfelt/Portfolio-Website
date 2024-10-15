@@ -1,4 +1,12 @@
-const DISPLAY = document.getElementById('pic')
+const DISPLAY1 = document.getElementById('pic1')
+const DISPLAY2 = document.getElementById('pic2')
+const DISPLAY3 = document.getElementById('pic3')
+const DISPLAY4 = document.getElementById('pic4')
+const DISPLAY5 = document.getElementById('pic5')
+const DISPLAY6 = document.getElementById('pic6')
+const DISPLAY7 = document.getElementById('pic7')
+const DISPLAY8 = document.getElementById('pic8')
+
 
 let photoGallery = [
     '../images/dogs/dsafdsa.webp',
@@ -30,16 +38,33 @@ function pick_img(array) {
     return array[randomIndex]
 }
 
-function display_img(img) {
-    DISPLAY.style.backgroundImage = `url(${img})`
-    DISPLAY.style.borderRadius = 'border-radius: 1rem'
+function display_img(dis,img) {
+    dis.style.backgroundImage = `url(${img})`
+    dis.style.borderRadius = 'border-radius: 1rem'
 }
 
-function photo_gallery(array) {
+function photo_gallery(dis, array) {
     setInterval(() => {
         let img = pick_img(array);
-        display_img(img);
-    }, 2000);
+        display_img(dis,img);
+    }, 3500);
 }
 
-photo_gallery(photoGallery);
+function init_gallery(dis, array) {
+    let img = pick_img(array);
+        display_img(dis,img);
+}
+
+
+
+
+photo_gallery(DISPLAY1, photoGallery);
+photo_gallery(DISPLAY2, photoGallery);
+photo_gallery(DISPLAY3, photoGallery);
+photo_gallery(DISPLAY4, photoGallery);
+photo_gallery(DISPLAY5, photoGallery);
+photo_gallery(DISPLAY6, photoGallery);
+photo_gallery(DISPLAY7, photoGallery);
+photo_gallery(DISPLAY8, photoGallery);
+
+
