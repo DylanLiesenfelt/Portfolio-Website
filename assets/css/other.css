@@ -16,16 +16,6 @@ main {
     justify-content: flex-start;
 }
 
-h1 {
-    background-color: var(--darkhl);
-    width: 80%;
-    height: 40px;
-    border-radius: 1rem;
-    text-align: center;
-    align-items: center;
-    margin-top: 5%;
-}
-
 span {
     width: 100%;
     display: flex;
@@ -33,8 +23,15 @@ span {
     justify-content: flex-end;
 }
 
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+}
+
 span > a {
-    padding-right: 10%;
+    margin-right: 20px;
     color: white;
     transition-duration: 500ms;
     font-size: 1.5rem;
@@ -71,3 +68,11 @@ iframe {
 }
 
 
+@media screen and (min-width:600px) {
+    #pic3, #pic4, #pic5, #pic6, #pic7, #pic8{
+        display: none;
+    }
+    .pics {
+        margin-top: 1.5%;
+    }
+}
