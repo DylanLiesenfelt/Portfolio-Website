@@ -7,32 +7,31 @@
     <link rel="shortcut icon" href="../../../images/icons/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css">
     <link rel="stylesheet" href="../../../css/projects.css">
-
 </head>
-<body class="container">
-    <nav class="container">
+<body>
+    <nav>
         <a href="../../../../index.html"><img src="../../../images/icons/favicon.png" alt="logo"></a>
-        <h1>Data Science & Sports Betting</h1>
+        <h1>Data Science and Sports Betting</h1>
     </nav>
-    <main class="container">
-        <div id="addiction-statement">
-            <strong><em>THIS PROJECT WAS NOT MADE WITH THE INTENTION TO PROMOTE OR SUPPORT GAMBLING/SPORTS BETTING!</em></strong>
+    <main>
+        <section id="statement">
+            <strong><em>THIS PROJECT WAS NOT MADE WITH THE INTENTION TO PROMOTE OR SUPPORT GAMBLING/SPORTS BETTING</em></strong>
             <p>If you have an addiction seek help.</p>
             <p>Gambling Addiction Hotline: <a href="tel:+1-800-426-2537">1-800-GAMBLER</a></p>
-        </div>
-        <h2>Introduction</h2>
+        </section>
+        <h2>Introduction:</h2>
         <section>
             <p>
-                Before we dive in, let’s clear something up right away.<br>
+                Before we dive in, let’s clear something up right away.
                 I do <strong>not</strong> condone supporting, cheering for, or celebrating the Dallas Cowboys in any way, shape, or form.<br><br>
-                With that out of the way, Dak Prescott happens to be the longest-tenured active quarterback for a single team in the NFL (thanks, Google). For our purposes, that means more data—and more data means more accurate predictions.<br>
+                With that out of the way, Dak Prescott happens to be the longest-tenured active quarterback for a single team in the NFL (thanks, Google). For our purposes, that means more data—and more data means more accurate predictions.<br><br>
                 So, what’s this project all about? It’s about using machine learning to predict a player's stat outcome for a game. In essence, sports betting is just data science in disguise. Our goal here is to see if we can use the same tools—data science and machine learning—to challenge the odds set by Vegas.
-                How are we going to do this? By building a simple, supervised linear regression model to predict Dak Prescott’s passing yards in an upcoming game against the San Francisco 49ers (Week 8 2024 || 27 Oct 2024).
+                <br><br>How are we going to do this? By building a simple, supervised linear regression model to predict Dak Prescott’s passing yards in an upcoming game against the San Francisco 49ers (Week 8 2024 || 27 Oct 2024).
             </p>
             <p>Link to the project's <a href="https://github.com/DylanLiesenfelt/Machine-Learning-and-Sports-Betting" target="_blank">GitHub Repository</a>.</p>
             <p>Link to download the <a href="./Dak Passing Yards VS SF.pdf" download target="_blank">PDF of my notebook</a>.</p>
         </section>
-        <h2>The Data</h2>
+        <h2>The Data: </h2>
         <section>
             <p>
                 I was able to get all the data I needed from <a href="https://www.pro-football-reference.com/">pro-football-reference.com</a>.
@@ -45,15 +44,15 @@
             <p>Big thanks to them!</p>
             <p>
                 Since our player in this project is a quarterback, I think it's fitting to try to predict Dak's passing yards for this upcoming game.<br> 
-                If you open the CSV for Dak's regular season stats, you'll notice I removed the rushing and receiving stats. Why? 1. They're irrelevant for this project, and 2. There were some junk columns that were causing issues with Pandas.
+                <br>If you open the CSV for Dak's regular season stats, you'll notice I removed the rushing and receiving stats. Why? 1. They're irrelevant for this project, and 2. There were some junk columns that were causing issues with Pandas.
             </p>
             <pre><code>
-    import pandas as pd
+import pandas as pd
     
-    df = pd.read_csv('DakPrescott.csv')  # Loading our data into pandas
-    df = df.dropna()  # Dropping samples from our data that are blank
+df = pd.read_csv('DakPrescott.csv')  # Loading our data into pandas
+df = df.dropna()  # Dropping samples from our data that are blank
     
-    print(df.head())  # Displaying our clean data
+print(df.head())  # Displaying our clean data
             </code></pre>
             <pre class="output">
 
@@ -77,15 +76,15 @@
                 In the output, we see the first five rows of our data, which includes labels for our columns. However, columns like date, result, and week are examples of categorical data, and for this project, we’re focusing on the numerical data.
             </p>
             <pre><code>
-    nummerical_cols = ['Age', 'Cmp', 'Att', 'Cmp%', 'Pass_Yds', 'Pass_TD', 'Int', 'Passer_rating', 'Sk', 'Y/A']
-    features = df[nummerical_cols]
+nummerical_cols = ['Age', 'Cmp', 'Att', 'Cmp%', 'Pass_Yds', 'Pass_TD', 'Int', 'Passer_rating', 'Sk', 'Y/A']
+features = df[nummerical_cols]
             </code></pre>
             <p>
                 We’ve now isolated the numerical columns in the dataset, assigning them to the variable <code>features</code>. These will be the features we use for our model. We can now check out some basic statistics with this data.
             </p>
             <pre><code>
-    pd.set_option('display.float_format', '{:,.2f}'.format) # Display numbers only up to two decimal places
-    print(features.describe(percentiles=[0.25,.5,.75])) # Display stats based on our numerical data
+pd.set_option('display.float_format', '{:,.2f}'.format) # Display numbers only up to two decimal places
+print(features.describe(percentiles=[0.25,.5,.75])) # Display stats based on our numerical data
             </code></pre>
             <pre class="output">
 
@@ -121,8 +120,20 @@
                 <br><br>These correlations provide key insights for our model: they confirm that features like completions, attempts, and passer rating are strong predictors of passing yards. By focusing on these highly correlated variables, our linear regression model is better positioned to capture the trends and patterns that influence a quarterback's passing performance, giving us more confidence in the accuracy of our predictions.
             </p>
         </section>
-        
-        <h2>The Model</h2>
+        <h2>The Model: </h2>
+        <section>
+            <p>
+                Now we have to split our target (Passing Yards) away from the rest of the features
+            </p>
+            <pre><code>
+features = features.drop(columns='Pass_Yds') # Removing Pass_Yds column
+target = df['Pass_Yds'] # Assigning Target the column of Pass_yds
+            </code></pre>
+            <p>
+                Now we have our final target and features. Lets got our training and testing data
+            </p>
+
+        </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
