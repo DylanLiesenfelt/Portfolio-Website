@@ -3,40 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science</title>
-    <link rel="shortcut icon" href="../../images/icons/favicon.png" type="image/x-icon">
+    <title>Data Science & Sports Betting</title>
+    <link rel="shortcut icon" href="../../../images/icons/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css">
+    <link rel="stylesheet" href="../../../css/projects.css">
 
 </head>
 <body class="container">
     <nav class="container">
-        <a href="../../../index.html"><img src="../../images/icons/favicon.png" alt="logo"></a>
+        <a href="../../../../index.html"><img src="../../../images/icons/favicon.png" alt="logo"></a>
         <h1>Data Science & Sports Betting</h1>
     </nav>
     <main class="container">
-        <strong><em>THIS PROJECT'S PURPOSE IS NOT TO SUPPORT OR PROMOTE SPORTS BETTING!</em></strong>
-        <p>Gambling Addiction Hotline: <a href="tel:+1-800-426-2537">1-800-GAMBLER</a></p>
-    
+        <div id="addiction-statement">
+            <strong><em>THIS PROJECT WAS NOT MADE WITH THE INTENTION TO PROMOTE OR SUPPORT GAMBLING/SPORTS BETTING!</em></strong>
+            <p>If you have an addiction seek help.</p>
+            <p>Gambling Addiction Hotline: <a href="tel:+1-800-426-2537">1-800-GAMBLER</a></p>
+        </div>
         <h2>Introduction</h2>
         <section>
             <p>
-                Before we dive in, let’s clear something up right away.<br><br>
+                Before we dive in, let’s clear something up right away.<br>
                 I do <strong>not</strong> condone supporting, cheering for, or celebrating the Dallas Cowboys in any way, shape, or form.<br><br>
-                With that out of the way, Dak Prescott happens to be the longest-tenured active quarterback for a single team in the NFL (thanks, Google). For our purposes, that means more data—and more data means more accurate predictions.<br><br>
-                So, what’s this project all about? It’s about using machine learning to predict a player's stat outcome for a game. In essence, sports betting is just data science in disguise. Our goal here is to see if we can use the same tools—data science and machine learning—to challenge the odds set by Vegas.<br><br>
+                With that out of the way, Dak Prescott happens to be the longest-tenured active quarterback for a single team in the NFL (thanks, Google). For our purposes, that means more data—and more data means more accurate predictions.<br>
+                So, what’s this project all about? It’s about using machine learning to predict a player's stat outcome for a game. In essence, sports betting is just data science in disguise. Our goal here is to see if we can use the same tools—data science and machine learning—to challenge the odds set by Vegas.
                 How are we going to do this? By building a simple, supervised linear regression model to predict Dak Prescott’s passing yards in an upcoming game against the San Francisco 49ers (Week 8 2024 || 27 Oct 2024).
             </p>
             <p>Link to the project's <a href="https://github.com/DylanLiesenfelt/Machine-Learning-and-Sports-Betting" target="_blank">GitHub Repository</a>.</p>
-            <p>Link to download the <a href="./dssports/Dak Passing Yards VS SF.pdf" download target="_blank">PDF of my notebook</a>.</p>
+            <p>Link to download the <a href="./Dak Passing Yards VS SF.pdf" download target="_blank">PDF of my notebook</a>.</p>
         </section>
-    
         <h2>The Data</h2>
         <section>
             <p>
                 I was able to get all the data I needed from <a href="https://www.pro-football-reference.com/">pro-football-reference.com</a>.
             </p>
             <ul>
-                <li>Dak's Regular Season Career Stats: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/">Link</a> || <a href="/assets/pages/projects/dssports/DakPrescott.csv" download>Download (CSV)</a></li>
+                <li>Dak's Regular Season Career Stats: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/">Link</a> || <a href="./DakPrescott.csv" download>Download (CSV)</a></li>
                 <li>Dak's Stats VS 49ers: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/">Link</a></li>
                 <li>SF's Defensive Stats 2024: <a href="https://www.pro-football-reference.com/teams/sfo/2024.htm#all_defense">Link</a></li>
             </ul>
@@ -54,6 +56,7 @@
     print(df.head())  # Displaying our clean data
             </code></pre>
             <pre class="output">
+
     Output:
     
     Rk     Year       Date   G#  Week   Age Team  Opp   Result   Cmp   Att  \
@@ -84,7 +87,8 @@
     pd.set_option('display.float_format', '{:,.2f}'.format) # Display numbers only up to two decimal places
     print(features.describe(percentiles=[0.25,.5,.75])) # Display stats based on our numerical data
             </code></pre>
-            <pre>
+            <pre class="output">
+
     Output:
     
             Age    Cmp    Att   Cmp%  Pass_Yds  Pass_TD    Int  Passer_rating  \
@@ -107,15 +111,16 @@
     75%     3.00   9.00  
     max     8.00  12.66  
             </pre>
+            <p>
+                In the notebook, I visualize this data using histograms and scatter plots. To reduce clutter, I won’t include them here, but I encourage you to download the PDF of my notebook if you're interested in seeing them.
+                <br><br>However, I will show the correlation matrix here as it is directly relevant to what we're doing in this project:<br><br>
+            </p>
+            <img src="./cor matrix.png" alt="Correlation Matrix showing relationships between completions, attempts, passing yards, passer rating, and more.">
+            <p>
+                <br><br>The correlation between completions (Cmp) and attempts (Att) with passing yards (Pass_Yds) is particularly significant, with values of 0.81 and 0.71, respectively. This is intuitive since a quarterback’s passing yards generally increase with the number of passes they attempt and complete. Similarly, we see a high correlation (0.82) between passer rating (Passer_rating) and yards per attempt (Y/A), indicating that a quarterback's efficiency per pass is crucial for their overall rating. The relationship between passer rating and passing touchdowns (0.72) also stands out, as a higher passer rating is typically associated with more touchdowns and fewer interceptions (notably a negative correlation of -0.58 between passer rating and interceptions).
+                <br><br>These correlations provide key insights for our model: they confirm that features like completions, attempts, and passer rating are strong predictors of passing yards. By focusing on these highly correlated variables, our linear regression model is better positioned to capture the trends and patterns that influence a quarterback's passing performance, giving us more confidence in the accuracy of our predictions.
+            </p>
         </section>
-        <p>
-            In the notebook, I visualize this data using histograms and scatter plots. To reduce clutter, I won’t include them here, but I encourage you to download the PDF of my notebook if you're interested in seeing them.
-            <br><br>However, I will show the correlation matrix here as it is directly relevant to what we're doing in this project:
-            <img src="./dssports/cor matrix.png" alt="Correlation Matrix showing relationships between completions, attempts, passing yards, passer rating, and more.">
-            <br><br>The correlation between completions (Cmp) and attempts (Att) with passing yards (Pass_Yds) is particularly significant, with values of 0.81 and 0.71, respectively. This is intuitive since a quarterback’s passing yards generally increase with the number of passes they attempt and complete. Similarly, we see a high correlation (0.82) between passer rating (Passer_rating) and yards per attempt (Y/A), indicating that a quarterback's efficiency per pass is crucial for their overall rating. The relationship between passer rating and passing touchdowns (0.72) also stands out, as a higher passer rating is typically associated with more touchdowns and fewer interceptions (notably a negative correlation of -0.58 between passer rating and interceptions).
-            <br><br>These correlations provide key insights for our model: they confirm that features like completions, attempts, and passer rating are strong predictors of passing yards. By focusing on these highly correlated variables, our linear regression model is better positioned to capture the trends and patterns that influence a quarterback's passing performance, giving us more confidence in the accuracy of our predictions.
-        </p>
-        
         
         <h2>The Model</h2>
     </main>

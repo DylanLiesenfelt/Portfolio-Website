@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+:root {
+    --darkmain: rgb(35, 35, 35);
+    --dark2: rgb(10, 10, 50);
+    --darkhl: rgb(215, 215, 215);
+    --brand:rgb(255, 115, 0);
+}
+
+
+.container {
+    display: flex;
+    flex: 1 1;
+}
+
+body {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(175, 175, 175);
+}
+
+nav {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background-color: var(--dark2);
+    align-items: center;
+}
+
+nav > a {
+    width: 100px;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+main {
+    margin-top: 100px;
+    flex-direction: column;
+    padding: 1%;
+    width: 90%;
+    background-color: var(--darkhl);
+}
+
+#addiction-statement {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+section {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(0.5vw + 0.5rem);
+    ma
+}
+
+section > p {
+    margin-top: 0.5rem;
+}
+
+section > ul {
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+pre {
+    width: 50%;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    font-weight: bold;
+    margin-left: 25%;
+    padding: 0 1%;
+}
+
+pre > code {
+    border-radius: .5rem;
+}
+
+.output {
+    background-color: var(--darkmain);
+    color:#00ff0d;
+    text-shadow: #009c12 2px 2px 10px ;
+    width: 40%;
+    margin-left: 30%;
+}
+
+
+section > img {
+    margin-left: 35%;
+    width: 30%;
+}
