@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science</title>
+    <link rel="shortcut icon" href="../../images/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css">
+
+</head>
+<body class="container">
+    <nav class="container">
+        <a href="../../../index.html"><img src="../../images/icons/favicon.png" alt="logo"></a>
+        <h1>Data Science & Sports Betting</h1>
+    </nav>
+    <main class="container">
+        <strong><em>THIS PROJECT'S PURPOSE IS NOT TO SUPPORT OR PROMOTE SPORTS BETTING!</em></strong>
+        <p>Gambling Addiction Hotline: <a href="tel:+1-800-426-2537">1-800-GAMBLER</a></p>
+    
+        <h2>Introduction</h2>
+        <section>
+            <p>
+                Before we dive in, let’s clear something up right away.<br><br>
+                I do <strong>not</strong> condone supporting, cheering for, or celebrating the Dallas Cowboys in any way, shape, or form.<br><br>
+                With that out of the way, Dak Prescott happens to be the longest-tenured active quarterback for a single team in the NFL (thanks, Google). For our purposes, that means more data—and more data means more accurate predictions.<br><br>
+                So, what’s this project all about? It’s about using machine learning to predict a player's stat outcome for a game. In essence, sports betting is just data science in disguise. Our goal here is to see if we can use the same tools—data science and machine learning—to challenge the odds set by Vegas.<br><br>
+                How are we going to do this? By building a simple, supervised linear regression model to predict Dak Prescott’s passing yards in an upcoming game against the San Francisco 49ers (Week 8 2024 || 27 Oct 2024).
+            </p>
+            <p>Link to the project's <a href="https://github.com/DylanLiesenfelt/Machine-Learning-and-Sports-Betting" target="_blank">GitHub Repository</a>.</p>
+            <p>Link to download the <a href="./dssports/Dak Passing Yards VS SF.pdf" download target="_blank">PDF of my notebook</a>.</p>
+        </section>
+    
+        <h2>The Data</h2>
+        <section>
+            <p>
+                I was able to get all the data I needed from <a href="https://www.pro-football-reference.com/">pro-football-reference.com</a>.
+            </p>
+            <ul>
+                <li>Dak's Regular Season Career Stats: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/">Link</a> || <a href="/assets/pages/projects/dssports/DakPrescott.csv" download>Download (CSV)</a></li>
+                <li>Dak's Stats VS 49ers: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/">Link</a></li>
+                <li>SF's Defensive Stats 2024: <a href="https://www.pro-football-reference.com/teams/sfo/2024.htm#all_defense">Link</a></li>
+            </ul>
+            <p>Big thanks to them!</p>
+            <p>
+                Since our player in this project is a quarterback, I think it's fitting to try to predict Dak's passing yards for this upcoming game.<br> 
+                If you open the CSV for Dak's regular season stats, you'll notice I removed the rushing and receiving stats. Why? 1. They're irrelevant for this project, and 2. There were some junk columns that were causing issues with Pandas.
+            </p>
+            <pre><code>
+    import pandas as pd
+    
+    df = pd.read_csv('DakPrescott.csv')  # Loading our data into pandas
+    df = df.dropna()  # Dropping samples from our data that are blank
+    
+    print(df.head())  # Displaying our clean data
+            </code></pre>
+            <pre class="output">
+    Output:
+    
+    Rk     Year       Date   G#  Week   Age Team  Opp   Result   Cmp   Att  \
+    0 1.00 2,016.00  9/11/2016 1.00  1.00 23.04  DAL  NYG  L 19-20 25.00 45.00   
+    1 2.00 2,016.00  9/18/2016 2.00  2.00 23.05  DAL  WAS  W 27-23 22.00 30.00   
+    2 3.00 2,016.00  9/25/2016 3.00  3.00 23.06  DAL  CHI  W 31-17 19.00 24.00   
+    3 4.00 2,016.00  10/2/2016 4.00  4.00 23.07  DAL  SFO  W 24-17 23.00 32.00   
+    4 5.00 2,016.00  10/9/2016 5.00  5.00 23.07  DAL  CIN  W 28-14 18.00 24.00   
+    
+    Cmp%  Pass_Yds  Pass_TD  Int  Passer_rating   Sk   Yds   Y/A  AY/A  
+    0 55.56    227.00     0.00 0.00          69.40 0.00  0.00  5.04  5.04  
+    1 73.33    292.00     0.00 0.00         103.70 4.00 14.00  9.73  9.73  
+    2 79.17    248.00     1.00 0.00         123.60 0.00  0.00 10.33 11.17  
+    3 71.88    245.00     2.00 0.00         114.70 2.00 11.00  7.66  8.91  
+    4 75.00    227.00     1.00 0.00         117.90 1.00  5.00  9.46 10.29
+            </pre>
+            <p>
+                In the output, we see the first five rows of our data, which includes labels for our columns. However, columns like date, result, and week are examples of categorical data, and for this project, we’re focusing on the numerical data.
+            </p>
+            <pre><code>
+    nummerical_cols = ['Age', 'Cmp', 'Att', 'Cmp%', 'Pass_Yds', 'Pass_TD', 'Int', 'Passer_rating', 'Sk', 'Y/A']
+    features = df[nummerical_cols]
+            </code></pre>
+            <p>
+                We’ve now isolated the numerical columns in the dataset, assigning them to the variable <code>features</code>. These will be the features we use for our model. We can now check out some basic statistics with this data.
+            </p>
+            <pre><code>
+    pd.set_option('display.float_format', '{:,.2f}'.format) # Display numbers only up to two decimal places
+    print(features.describe(percentiles=[0.25,.5,.75])) # Display stats based on our numerical data
+            </code></pre>
+            <pre>
+    Output:
+    
+            Age    Cmp    Att   Cmp%  Pass_Yds  Pass_TD    Int  Passer_rating  \
+    count 120.00 120.00 120.00 120.00    120.00   120.00 120.00         120.00   
+    mean   26.72  22.81  34.14  67.15    258.84     1.75   0.67          98.55   
+    std     2.55   6.24   8.85   9.53     84.82     1.27   0.83          26.72   
+    min    23.04   4.00   8.00  37.84     37.00     0.00   0.00          30.40   
+    25%    24.15  19.00  27.00  61.54    207.75     1.00   0.00          80.77   
+    50%    26.13  22.00  33.00  66.67    249.50     2.00   0.00         101.05   
+    75%    29.12  27.00  39.00  72.64    295.25     3.00   1.00         116.67   
+    max    31.08  42.00  58.00  88.89    502.00     5.00   3.00         158.30   
+                
+            Sk    Y/A  
+    count 120.00 120.00  
+    mean    2.09   7.64  
+    std     1.66   1.81  
+    min     0.00   3.46  
+    25%     1.00   6.40  
+    50%     2.00   7.69  
+    75%     3.00   9.00  
+    max     8.00  12.66  
+            </pre>
+        </section>
+        <p>
+            In the notebook, I visualize this data using histograms and scatter plots. To reduce clutter, I won’t include them here, but I encourage you to download the PDF of my notebook if you're interested in seeing them.
+            <br><br>However, I will show the correlation matrix here as it is directly relevant to what we're doing in this project:
+            <img src="./dssports/cor matrix.png" alt="Correlation Matrix showing relationships between completions, attempts, passing yards, passer rating, and more.">
+            <br><br>The correlation between completions (Cmp) and attempts (Att) with passing yards (Pass_Yds) is particularly significant, with values of 0.81 and 0.71, respectively. This is intuitive since a quarterback’s passing yards generally increase with the number of passes they attempt and complete. Similarly, we see a high correlation (0.82) between passer rating (Passer_rating) and yards per attempt (Y/A), indicating that a quarterback's efficiency per pass is crucial for their overall rating. The relationship between passer rating and passing touchdowns (0.72) also stands out, as a higher passer rating is typically associated with more touchdowns and fewer interceptions (notably a negative correlation of -0.58 between passer rating and interceptions).
+            <br><br>These correlations provide key insights for our model: they confirm that features like completions, attempts, and passer rating are strong predictors of passing yards. By focusing on these highly correlated variables, our linear regression model is better positioned to capture the trends and patterns that influence a quarterback's passing performance, giving us more confidence in the accuracy of our predictions.
+        </p>
+        
+        
+        <h2>The Model</h2>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
