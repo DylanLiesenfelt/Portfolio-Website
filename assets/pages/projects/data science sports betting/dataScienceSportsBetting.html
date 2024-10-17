@@ -16,9 +16,10 @@
     <main>
         <section id="statement">
             <strong><em>THIS PROJECT WAS NOT MADE WITH THE INTENTION TO PROMOTE OR SUPPORT GAMBLING/SPORTS BETTING</em></strong>
-            <p>If you have an addiction seek help.</p>
+            <p>If you have an addiction, seek help.</p>
             <p>Gambling Addiction Hotline: <a href="tel:+1-800-426-2537">1-800-GAMBLER</a></p>
         </section>
+
         <h2>Introduction:</h2>
         <section>
             <p>
@@ -26,12 +27,13 @@
                 I do <strong>not</strong> condone supporting, cheering for, or celebrating the Dallas Cowboys in any way, shape, or form.<br><br>
                 With that out of the way, Dak Prescott happens to be the longest-tenured active quarterback for a single team in the NFL (thanks, Google). For our purposes, that means more data—and more data means more accurate predictions.<br><br>
                 So, what’s this project all about? It’s about using machine learning to predict a player's stat outcome for a game. In essence, sports betting is just data science in disguise. Our goal here is to see if we can use the same tools—data science and machine learning—to challenge the odds set by Vegas.
-                <br><br>How are we going to do this? By building a simple, supervised linear regression model to predict Dak Prescott’s passing yards in an upcoming game against the San Francisco 49ers (Week 8 2024 || 27 Oct 2024).
+                <br><br>How are we going to do this? By building a simple, supervised linear regression model to predict Dak Prescott’s passing yards in an upcoming game against the San Francisco 49ers (Week 8, 2024 || 27 Oct 2024).
             </p>
             <p>Link to the project's <a href="https://github.com/DylanLiesenfelt/Machine-Learning-and-Sports-Betting" target="_blank">GitHub Repository</a>.</p>
             <p>Link to download the <a href="./Dak Passing Yards VS SF.pdf" download target="_blank">PDF of my notebook</a>.</p>
         </section>
-        <h2>The Data: </h2>
+
+        <h2>The Data:</h2>
         <section>
             <p>
                 I was able to get all the data I needed from <a href="https://www.pro-football-reference.com/">pro-football-reference.com</a>.
@@ -73,18 +75,18 @@ print(df.head())  # Displaying our clean data
     4 75.00    227.00     1.00 0.00         117.90 1.00  5.00  9.46 10.29
             </pre>
             <p>
-                In the output, we see the first five rows of our data, which includes labels for our columns. However, columns like date, result, and week are examples of categorical data, and for this project, we’re focusing on the numerical data.
+                In the output, we see the first five rows of our data, which include labels for our columns. However, columns like <strong>Date</strong>, <strong>Result</strong>, and <strong>Week</strong> are examples of categorical data. For this project, we’re focusing on the numerical data.
             </p>
             <pre><code>
 nummerical_cols = ['Age', 'Cmp', 'Att', 'Cmp%', 'Pass_Yds', 'Pass_TD', 'Int', 'Passer_rating', 'Sk', 'Y/A']
 features = df[nummerical_cols]
             </code></pre>
             <p>
-                We’ve now isolated the numerical columns in the dataset, assigning them to the variable <code>features</code>. These will be the features we use for our model. We can now check out some basic statistics with this data.
+                We’ve now isolated the numerical columns in the dataset, assigning them to the variable <code>features</code>. These will be the features we use for our model. We can now check out some basic statistics from this data.
             </p>
             <pre><code>
-pd.set_option('display.float_format', '{:,.2f}'.format) # Display numbers only up to two decimal places
-print(features.describe(percentiles=[0.25,.5,.75])) # Display stats based on our numerical data
+pd.set_option('display.float_format', '{:,.2f}'.format) # Display numbers with up to two decimal places
+print(features.describe(percentiles=[0.25, 0.5, 0.75])) # Display stats based on our numerical data
             </code></pre>
             <pre class="output">
 
@@ -112,27 +114,239 @@ print(features.describe(percentiles=[0.25,.5,.75])) # Display stats based on our
             </pre>
             <p>
                 In the notebook, I visualize this data using histograms and scatter plots. To reduce clutter, I won’t include them here, but I encourage you to download the PDF of my notebook if you're interested in seeing them.
-                <br><br>However, I will show the correlation matrix here as it is directly relevant to what we're doing in this project:<br><br>
+                <br><br>However, I will show the correlation matrix here as it is directly relevant to what we're doing in this project:
             </p>
             <img src="./cor matrix.png" alt="Correlation Matrix showing relationships between completions, attempts, passing yards, passer rating, and more.">
+            <p> 
+                Notice how passer rating has a strong correlation with <strong>Y/A</strong> (Yards per Attempt). This makes perfect sense if you know the Passer Rating formula:
+            </p>
             <p>
-                <br><br>The correlation between completions (Cmp) and attempts (Att) with passing yards (Pass_Yds) is particularly significant, with values of 0.81 and 0.71, respectively. This is intuitive since a quarterback’s passing yards generally increase with the number of passes they attempt and complete. Similarly, we see a high correlation (0.82) between passer rating (Passer_rating) and yards per attempt (Y/A), indicating that a quarterback's efficiency per pass is crucial for their overall rating. The relationship between passer rating and passing touchdowns (0.72) also stands out, as a higher passer rating is typically associated with more touchdowns and fewer interceptions (notably a negative correlation of -0.58 between passer rating and interceptions).
-                <br><br>These correlations provide key insights for our model: they confirm that features like completions, attempts, and passer rating are strong predictors of passing yards. By focusing on these highly correlated variables, our linear regression model is better positioned to capture the trends and patterns that influence a quarterback's passing performance, giving us more confidence in the accuracy of our predictions.
+                <a href="https://en.wikipedia.org/wiki/Passer_rating">
+                    <img src="./varsOfQBR.png" alt="Variables for the Passer Rating formula">
+                    <img src="./qbrform.png" alt="Part one of the Passer Rating formula">
+                    <img src="./finalQBR.png" alt="The final formula for the Passer rating">
+                </a>
+                <br><br>Pretty neat, right?<br><br>
+                We should also look at the correlation between passing yards and variables like completions (Cmp), attempts (Att), touchdowns (Pass_TD), passer rating, and yards per attempt (Y/A). These features will heavily influence the predictions of the model. While multicollinearity could be an issue, we are trying to keep this project as simple as possible.
             </p>
         </section>
-        <h2>The Model: </h2>
+
+        <h2>The Model:</h2>
         <section>
             <p>
-                Now we have to split our target (Passing Yards) away from the rest of the features
+                Now, we need to separate our target variable (Passing Yards) from the rest of the features.
             </p>
             <pre><code>
 features = features.drop(columns='Pass_Yds') # Removing Pass_Yds column
-target = df['Pass_Yds'] # Assigning Target the column of Pass_yds
+target = df['Pass_Yds'] # Assigning target to the column of Pass_Yds
             </code></pre>
             <p>
-                Now we have our final target and features. Lets got our training and testing data
+                Now, we have our target and features. Let’s split the data into training and testing sets.
             </p>
+            <pre><code>
+from sklearn.model_selection import train_test_split
 
+X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2) # Split the data 80/20 into training and testing sets
+
+print(X_train.shape, y_train.shape, X_test.shape, y_test.shape) # Display the shape of our sets.
+            </code></pre>
+            <pre class="output">
+
+    Output:
+
+    (96, 9) (96,) (24, 9) (24,)
+            </pre>
+            <p>
+                Now we can make our model, fit the data, and train the model. Then, we'll back-test it.
+            </p>
+            <pre><code>
+from sklearn.linear_model import LinearRegression
+
+linear_reg = LinearRegression() # Create the linear regression model
+linear_reg.fit(X_train, y_train) # Fit the model with our training data
+linear_pred = linear_reg.predict(X_test) # Generate predictions
+            </code></pre>
+            <p>
+                It's that easy. Now, let’s see how our model performed.
+            </p>
+            <pre><code>
+dif = [ ]
+table_data = [ ]
+
+for i in range(len(linear_pred)):
+    predicted = linear_pred[i]
+    actual = y_test.values[i]
+    difference = actual - predicted
+    dif.append(difference)
+
+    # Append each row as a dictionary
+    table_data.append({"Predicted": predicted, "Actual": actual, "Difference": difference})
+
+# Convert the list of dictionaries into a pandas DataFrame
+test_data = pd.DataFrame(table_data)
+test_stats = test_data.describe(percentiles=[0.25, .5, .75]) # Calculate stats for the test
+
+# Display the data
+print(test_data)
+print(test_stats)
+            </code></pre>
+            <pre class="output">
+
+    Output:
+
+    Predicted  Actual  Difference
+    0      169.04  168.00       -1.04
+    1      494.55  502.00        7.45
+    2      276.83  273.00       -3.83
+    3      222.53  223.00        0.47
+    4      280.76  284.00        3.24
+    5      247.56  249.00        1.44
+    6      330.06  334.00        3.94
+    7      232.07  232.00       -0.07
+    8      280.93  272.00       -8.93
+    9      305.27  299.00       -6.27
+    10     171.60  179.00        7.40
+    11     260.90  255.00       -5.90
+    12     223.62  212.00      -11.62
+    13     345.42  352.00        6.58
+    14      76.77  102.00       25.23
+    15     258.54  248.00      -10.54
+    16     372.32  374.00        1.68
+    17     239.04  245.00        5.96
+    18     249.23  249.00       -0.23
+    19     232.76  227.00       -5.76
+    20     151.11  170.00       18.89
+    21     325.50  319.00       -6.50
+    22     225.55  212.00      -13.55
+    23     253.64  247.00       -6.64
+
+           Predicted  Actual  Difference
+    count       24.00    24.00       24.00
+    mean     259.40  259.46         0.06
+    std           82.10    80.25         9.17
+    min          76.77  102.00      -13.55
+    25%       225.06  220.25        -6.33
+    50%       251.43  248.50        -0.15
+    75%       287.01  287.75         4.45
+    max       494.55  502.00       25.23
+            </pre>
+            <p>
+                We can see the average difference between the predicted and actual values is only 0.06 yards—not too shabby.
+            </p>
+        </section>
+
+        <section>
+            <h2>Results:</h2>
+            <p>
+                Now, we just need to feed the model values for the features. But, where are we going to get those values? We’ll make them up—kind of. Since we trained the model on historical data, we can generate values based on historical data.<br><br>
+                I will be using stats from Dak’s past games vs San Francisco and normalizing them against the performance of the 49ers' defense so far this year. We are currently going into week 7 of the NFL, so we will be using data up to week 6 as they haven't played their week 7 game yet.<br><br>
+                Once again, data is coming from <a href="https://www.pro-football-reference.com/">pro-football-reference.com</a>:
+            </p>
+            <ul>
+                <li>Dak's Stats VS SF: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/?opp_id=sfo">Link</a></li>
+                <li>49ers' Defensive Stats 2024: <a href="https://www.pro-football-reference.com/teams/sfo/2024.htm#all_defense">Link</a></li>
+            </ul>
+            <pre><code>
+# Dak's Stats vs SF
+num_games = 3
+
+dak_cmp_SF = 53/num_games
+dak_att_SF = 81/num_games
+dak_cmpPer_SF = 65.43
+dak_td_SF = 6/num_games
+dak_int_SF = 3/num_games
+dak_pRate_SF = 98.4
+dak_sk_SF = 5/num_games
+dak_ydsAtt_SF = 7.8
+            </code></pre>
+            <pre><code>
+# 49ers' Defensive Stats 2024 (So far)
+games = 6
+
+SF_passAlw = (198+257+198+143+189+309)/games
+SF_int = 6/games
+SF_sks = 16/games
+SF_pasTDAlw = 8/games
+SF_passCmp = 120/games
+SF_passAtt = 195/games
+SF_cmpPer = (SF_passCmp/SF_passAtt)*100
+SF_yardsAtt = (SF_passAlw/SF_passAtt)
+            </code></pre>
+            <pre><code>
+# Normalizing stats
+norm_cmp = (dak_cmp_SF/SF_passCmp) * dak_cmp_SF
+norm_att = (dak_att_SF/SF_passAtt) * dak_att_SF
+norm_cmpPer = (dak_cmpPer_SF/SF_cmpPer) * dak_cmpPer_SF
+norm_TD = (dak_td_SF/SF_pasTDAlw) * dak_td_SF
+norm_int = (dak_int_SF/SF_int) * dak_int_SF
+norm_sacks = (dak_sk_SF/SF_sks) * dak_sk_SF
+norm_yardsAtt = (dak_ydsAtt_SF/SF_yardsAtt) * dak_ydsAtt_SF
+            </code></pre>
+            <p>
+               Now that’s out of the way, we can see what values will be going into the model to predict Dak’s upcoming passing yards.
+            </p>
+            <pre><code>
+# On October 27, 2024, Dak will be 31.25 years old
+stats_vs_SF = [31.25, norm_cmp, norm_att, norm_cmpPer, norm_TD, norm_int, dak_pRate_SF, norm_sacks, norm_yardsAtt]
+
+nummerical_cols.remove('Pass_Yds')
+test = pd.DataFrame([stats_vs_SF], columns=nummerical_cols)
+
+print(test)
+            </code></pre>
+            <pre class="output">
+
+    Output:
+
+        Age     Cmp     Att    Cmp%     TD    Int  Rating     Sk    Y/A
+    0 31.25   15.61   22.43   69.57   3.00   1.00   98.40   1.04   9.17                
+            </pre>
+            <p>
+                We are finally ready to get our prediction.
+            </p>
+            <pre><code>
+predict = linear_reg.predict(test) # Plug our normalized values in to get a prediction
+pass_yards = predict[0] # Extract the passing yards from the prediction array
+print(f'This Model predicts Dak Prescott will pass for {pass_yards:.2f} yards vs SF on 10/27/2024') # Results
+            </code></pre>
+            <pre class="output">
+
+    Output:
+
+    This Model predicts Dak Prescott will pass for 240.48 yards vs SF on 10/27/2024
+            </pre>
+            <p>
+                There it is: our prediction using a machine learning linear regression model—240 passing yards. There’s one more thing we can do: normalize this value against the 49ers' defense's passing yards allowed, and then we can compare.
+            </p>
+            <pre><code>
+dak_yds_SF = 632/num_games
+norm_passYards = (dak_yds_SF/SF_passAlw) * pass_yards
+
+print(f'Dak AVG Passing Yards vs SF: {dak_yds_SF:.2f}\nSF AVG Passing Yards Allowed in 2024: {SF_passAlw:.2f}\nPredicted Passing Yards by Dak: {pass_yards:.2f}\nNormalized Predicted Pass Yards: {norm_passYards:.2f}')
+            </code></pre>
+            <pre class="output">
+
+    Output:
+
+    Dak AVG Passing Yards vs SF: 210.67
+    SF AVG Passing Yards Allowed in 2024: 215.67
+    Predicted Passing Yards by Dak: 240.48
+    Normalized Predicted Pass Yards: 234.91
+            </pre>
+        </section>
+
+        <h2>Outcome:</h2>
+        <section>
+        <p>
+            At the time of writing this (16 OCT 2024), player prop bets are not posted yet for week 8 games. So, you and I will have to come back and see what Vegas thinks about how Dak will perform.
+        </p>
+        </section>
+
+        <h2>Conclusion:</h2>
+        <section>
+            <p>
+                This was just a quick project I threw together based on things I've learned from reading and my Data Science and Analytics class. There are plenty of things to expand upon and build, including different types of models to run. Maybe there will be a part 2!
+            </p>
         </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
