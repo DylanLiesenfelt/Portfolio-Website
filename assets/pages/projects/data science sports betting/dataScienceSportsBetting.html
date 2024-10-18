@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science & Sports Betting</title>
+    <meta name="description" content="Can a basic supervised machine learning model, using linear regression, effectively predict outcomes for sports betting?">
+    <meta name="keywords" content="Dylan Liesenfelt, Liesenfelt, Computer Science, Data Science, Computer Science, Machine Learning, Artificial Intelligence, Software Engineer, Data Scientist, Data Engineer">
+    <title>Machine Learning & Sports Betting || Liesenfelt.net</title>
     <link rel="shortcut icon" href="../../../images/icons/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css">
     <link rel="stylesheet" href="../../../css/projects.css">
@@ -11,7 +13,7 @@
 <body>
     <nav>
         <a href="../../../../index.html"><img src="../../../images/icons/favicon.png" alt="logo"></a>
-        <h1>Data Science and Sports Betting</h1>
+        <h1>Machine Learning & Sports Betting</h1>
     </nav>
     <main>
         <section id="statement">
@@ -26,11 +28,15 @@
                 Before we dive in, let’s clear something up right away.
                 I do <strong>not</strong> condone supporting, cheering for, or celebrating the Dallas Cowboys in any way, shape, or form.<br><br>
                 With that out of the way, Dak Prescott happens to be the longest-tenured active quarterback for a single team in the NFL (thanks, Google). For our purposes, that means more data—and more data means more accurate predictions.<br><br>
-                So, what’s this project all about? It’s about using machine learning to predict a player's stat outcome for a game. In essence, sports betting is just data science in disguise. Our goal here is to see if we can use the same tools—data science and machine learning—to challenge the odds set by Vegas.
+                So, what’s this project all about? It’s about using machine learning and data science to predict a player's stat outcome for a game. In essence, sports betting is just applied data science made to look like random chance to those eager to throw down some money, there us a reason why the sports betting industry had <a href="https://www.statista.com/chart/29332/gross-gaming-revenue-from-sports-betting-in-the-us/">revenue of $10.9 billion in 2023</a>. Our goal here is to see if we can use the same tools—data science and machine learning—to challenge the odds set by Vegas.
                 <br><br>How are we going to do this? By building a simple, supervised linear regression model to predict Dak Prescott’s passing yards in an upcoming game against the San Francisco 49ers (Week 8, 2024 || 27 Oct 2024).
             </p>
-            <p>Link to the project's <a href="https://github.com/DylanLiesenfelt/Machine-Learning-and-Sports-Betting" target="_blank">GitHub Repository</a>.</p>
-            <p>Link to download the <a href="./Dak Passing Yards VS SF.pdf" download target="_blank">PDF of my notebook</a>.</p>
+            <p>
+                Projects GitHub Repository: <a href="https://github.com/DylanLiesenfelt/Machine-Learning-and-Sports-Betting" target="_blank">Link</a>
+            </p>
+            <p>
+                Jupyter Notebook PDF: <a href="./Dak Passing Yards VS SF.pdf" target="_blank">Link</a> || <a href="./Dak Passing Yards VS SF.pdf" download target="_blank">Download</a>
+            </p>
         </section>
 
         <h2>The Data:</h2>
@@ -45,7 +51,7 @@
             </ul>
             <p>Big thanks to them!</p>
             <p>
-                Since our player in this project is a quarterback, I think it's fitting to try to predict Dak's passing yards for this upcoming game.<br> 
+                Since our player in this project is a quarterback, I think it's fitting to try to predict Dak's passing yards for this upcoming game.<br>
                 <br>If you open the CSV for Dak's regular season stats, you'll notice I removed the rushing and receiving stats. Why? 1. They're irrelevant for this project, and 2. There were some junk columns that were causing issues with Pandas.
             </p>
             <pre><code>
@@ -234,9 +240,8 @@ print(test_stats)
                 We can see the average difference between the predicted and actual values is only 0.06 yards—not too shabby.
             </p>
         </section>
-
+        <h2>Results:</h2>
         <section>
-            <h2>Results:</h2>
             <p>
                 Now, we just need to feed the model values for the features. But, where are we going to get those values? We’ll make them up—kind of. Since we trained the model on historical data, we can generate values based on historical data.<br><br>
                 I will be using stats from Dak’s past games vs San Francisco and normalizing them against the performance of the 49ers' defense so far this year. We are currently going into week 7 of the NFL, so we will be using data up to week 6 as they haven't played their week 7 game yet.<br><br>
