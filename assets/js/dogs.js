@@ -1,4 +1,3 @@
-// Array of dimages from your directory
 const dogImages = [
     "../assets/images/dogs/dsafdsa.webp",
     '../assets/images/dogs/dsfgsdfg.jpg',
@@ -24,15 +23,11 @@ const dogImages = [
     '../assets/images/dogs/werwr.jpg',
 ];
 
-
 function changeImage(imageElementId) {
     const randomImage = dogImages[Math.floor(Math.random() * dogImages.length)];
     document.getElementById(imageElementId).src = randomImage;
 }
 
-
-
-// Set interval to uimages every 5 seconds
 setInterval(() => {
     changeImage('dog1');
     changeImage('dog2');
@@ -40,5 +35,7 @@ setInterval(() => {
     changeImage('dog4');
     changeImage('dog5');
     changeImage('dog6');
+    changeImage('dog7');
+    changeImage('dog8');
 
-}, 5000);  // Change interval as needed (5000ms = 5 seconds)
+}, 5000);
