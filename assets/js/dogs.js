@@ -1,67 +1,44 @@
-const DISPLAY1 = document.getElementById('pic1')
-const DISPLAY2 = document.getElementById('pic2')
-const DISPLAY3 = document.getElementById('pic3')
-const DISPLAY4 = document.getElementById('pic4')
-const DISPLAY5 = document.getElementById('pic5')
-const DISPLAY6 = document.getElementById('pic6')
-const DISPLAY7 = document.getElementById('pic7')
-const DISPLAY8 = document.getElementById('pic8')
+// Array of dimages from your directory
+const dogImages = [
+    "../assets/images/dogs/dsafdsa.webp",
+    '../assets/images/dogs/dsfgsdfg.jpg',
+    '../assets/images/dogs/erdgerg.jpg',
+    '../assets/images/dogs/esfef.jpg',
+    '../assets/images/dogs/esfews.jpg',
+    '../assets/images/dogs/ewfwafw.jpg',
+    '../assets/images/dogs/ewrdfwerf.jpg',
+    '../assets/images/dogs/ewrfdwefwe.jpg',
+    '../assets/images/dogs/ewsarfe.jpg',
+    '../assets/images/dogs/gdrgfer.jpg',
+    '../assets/images/dogs/gergergerg.jpg',
+    '../assets/images/dogs/image.jpg',
+    '../assets/images/dogs/rrrrrrrrrrrrr.jpg',
+    '../assets/images/dogs/sdfsdfse.jpg',
+    '../assets/images/dogs/sdfwes.jpg',
+    '../assets/images/dogs/sefrwesfwe.jpg',
+    '../assets/images/dogs/sefwse.jpg',
+    '../assets/images/dogs/wadawdawdaw.jpg',
+    '../assets/images/dogs/wadewf.jpg',
+    '../assets/images/dogs/werdw3r.jpg',
+    '../assets/images/dogs/werfwe.jpg',
+    '../assets/images/dogs/werwr.jpg',
+];
 
 
-let photoGallery = [
-    '../images/dogs/dsafdsa.webp',
-    '../images/dogs/dsfgsdfg.jpg',
-    '../images/dogs/erdgerg.jpg',
-    '../images/dogs/esfef.jpg',
-    '../images/dogs/esfews.jpg',
-    '../images/dogs/ewfwafw.jpg',
-    '../images/dogs/ewrdfwerf.jpg',
-    '../images/dogs/ewrfdwefwe.jpg',
-    '../images/dogs/ewsarfe.jpg',
-    '../images/dogs/gdrgfer.jpg',
-    '../images/dogs/gergergerg.jpg',
-    '../images/dogs/image.jpg',
-    '../images/dogs/rrrrrrrrrrrrr.jpg',
-    '../images/dogs/sdfsdfse.jpg',
-    '../images/dogs/sdfwes.jpg',
-    '../images/dogs/sefrwesfwe.jpg',
-    '../images/dogs/sefwse.jpg',
-    '../images/dogs/wadawdawdaw.jpg',
-    '../images/dogs/wadewf.jpg',
-    '../images/dogs/werdw3r.jpg',
-    '../images/dogs/werfwe.jpg',
-    '../images/dogs/werwr.jpg',
-]
-
-function pick_img(array) {
-    let randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex]
+function changeImage(imageElementId) {
+    const randomImage = dogImages[Math.floor(Math.random() * dogImages.length)];
+    document.getElementById(imageElementId).src = randomImage;
 }
 
-function display_img(dis,img) {
-    dis.style.backgroundImage = `url(${img})`
-    dis.style.borderRadius = 'border-radius: 1rem'
-}
-
-function photo_gallery(dis, array) {
-    setInterval(() => {
-        let img = pick_img(array);
-        display_img(dis,img);
-    }, 5000);
-}
-
-function init_gallery(dis, array) {
-    let img = pick_img(array);
-        display_img(dis,img);
-}
-
-photo_gallery(DISPLAY1, photoGallery);
-photo_gallery(DISPLAY2, photoGallery);
-photo_gallery(DISPLAY3, photoGallery);
-photo_gallery(DISPLAY4, photoGallery);
-photo_gallery(DISPLAY5, photoGallery);
-photo_gallery(DISPLAY6, photoGallery);
-photo_gallery(DISPLAY7, photoGallery);
-photo_gallery(DISPLAY8, photoGallery);
 
 
+// Set interval to uimages every 5 seconds
+setInterval(() => {
+    changeImage('dog1');
+    changeImage('dog2');
+    changeImage('dog3');
+    changeImage('dog4');
+    changeImage('dog5');
+    changeImage('dog6');
+
+}, 5000);  // Change interval as needed (5000ms = 5 seconds)

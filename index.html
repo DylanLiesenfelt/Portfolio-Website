@@ -3,82 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My name is Dylan Liesenfelt I am a Computer Science and Artificial Intelligence student at Florida Atlantic University, this is my portfolio page. Come Check it Out!">
-    <meta name="keywords" content="Dylan Liesenfelt, Liesenfelt, Computer Science, Data Science, Computer Science, Machine Learning, Artificial Intelligence, Software Engineer, Data Scientist, Data Engineer">
+    <meta name="description" content="My name is Dylan Liesenfelt. I am a Computer Science and Artificial Intelligence student at Florida Atlantic University. This is my portfolio page. Come check it out!">
+    <meta name="keywords" content="Dylan Liesenfelt, Liesenfelt, Computer Science, Data Science, Machine Learning, Artificial Intelligence, Software Engineer, Data Scientist, Data Engineer">
     <title>Dylan Liesenfelt</title>
     <link rel="shortcut icon" href="./assets/images/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-<body class="container">
-    <nav class="container">
-        <img src="./assets/images/icons/favicon.png" alt="logo">
-        <ul id="nav-links" class="container">
-            <li><a href="#about-section">ABOUT</a></li>
-            <li><a href="#project-section">PROJECTS</a></li>
-            <li><a href="#learning-section">LEARNING</a></li>
-            <li><a href="./assets/pages/dogs.html">DOGS</a></li>
-        </ul>
-    </nav>
-    <main class="container">
-        <div class="container content">
-            <section id="about-section" class="container">
-                <header>
-                    <h2>ABOUT</h2>
-                </header>
-                <p>
-                    My name is Dylan Liesenfelt.<br><br>
-                    I am a 29 year old Navy Veteran who is currently attending Florida Atlantic University, majoring in Computer Science,
-                    and minoring in Artificial Intelligence. After graduating I intend to pursue a Masters in a Data Science/AI program.<br><br>
-                    I enjoy weightlifting, fishing, 3d printing/building things. But my favorites are my girlfriend and our dogs (See Photo Gallery)<br><br>
-                    If you would like to contact me, follow my journey, or just say hello, then please use the links below.<br><br>
-                    Thanks for coming to my site, and please have a look around!
-                </p>
-                <footer class="container">
-                    <ul class="container">
-                        <li><a href="https://github.com/DylanLiesenfelt" target="_blank"><img src="./assets/images/icons/icons8-github-100(7).png" alt="GitHub">GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/in/dylanliesenfelt/" target="_blank"><img src="./assets/images/icons/icons8-linkedin-100(6).png" alt="LinkedIn">LinkedIn</a></li>
-                        <li><a href="https://www.youtube.com/channel/UCVTl9UNv9QFPbWFvv9k_ZUA" target="_blank" ><img src="./assets/images/icons/icons8-youtube-100(2).png" alt="YouTube">YouTube</a></li>
-                        <li><a href="mailto:dylanliesenfelt@proton.me" target="_blank"><img src="./assets/images/icons/icons8-email-100(7).png" alt="email">Email</a></li>
-                        <li><a href="./assets/pages/resume.html" target="_blank"><img src="./assets/images/icons/icons8-profile-100.png" alt="Resume">Resume</a></li>
-                    </ul>
-                </footer>
-            </section>
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-3">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <a class="navbar-brand d-flex align-items-center">
+                <img src="./assets/images/icons/favicon.png" alt="Logo" width="50" class="me-2">
+                <span class="fs-5 fs-lg-4">Dylan Liesenfelt</span>
+            </a>
+            <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link text-light px-3" href="#about-section">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light px-3" href="#project-section">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light px-3" href="#dogs-section">Dogs</a>
+                </li>
+            </ul>
         </div>
-        <div class="container content">
-            <section id="project-section" class="container">
-                <header>
-                    <h2>PROJECTS</h2>
-                </header>
-                <div id="card-container" class="container">
-                    <div id="DS-Sports" class="card">
-                        <a href="/assets/pages/projects/data science sports betting/dataScienceSportsBetting.html">
-                            <header>
-                                <h3>Machine Learning & Sports Betting</h3>
-                                <img src="./assets/images/icons/icons8-python-100(1).png" alt="python logo">
-                            </header>
-                            <p>
-                                
-                            </p>
+    </nav>
+    <main class="container mt-5 pt-5 text-light">
+        <section id="about-section" class="py-5">
+            <div class="text-center">
+                <h2 class="mb-4">About Me</h2>
+                <p class="lead">
+                    My name is Dylan Liesenfelt. I am a 29-year-old Navy Veteran currently studying Computer Science with a minor in Artificial Intelligence at Florida Atlantic University. I plan to pursue a Master's in Data Science/AI after graduating.<br><br>
+                    I enjoy weightlifting, fishing, 3D printing, and spending time with my girlfriend and our dogs. If you would like to follow my journey, contact me, or just say hello, please use the links below.<br><br>
+                    Thank you for visiting my site, and I hope you enjoy exploring my work!
+                </p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="https://github.com/DylanLiesenfelt" target="_blank">
+                        <img src="./assets/images/icons/icons8-github-100(8).png" alt="GitHub" width="40">
+                    </a>
+                    <a href="https://www.linkedin.com/in/dylanliesenfelt/" target="_blank">
+                        <img src="./assets/images/icons/icons8-linkedin-100(7).png" alt="LinkedIn" width="40">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCVTl9UNv9QFPbWFvv9k_ZUA" target="_blank">
+                        <img src="./assets/images/icons/icons8-youtube-100(3).png" alt="YouTube" width="40">
+                    </a>
+                    <a href="mailto:dylanliesenfelt@proton.me" target="_blank">
+                        <img src="./assets/images/icons/icons8-email-100(10).png" alt="Email" width="40">
+                    </a>
+                    <a href="./assets/misc/Dylan Liesenfelt - Resume.pdf" target="_blank">
+                        <img src="./assets/images/icons/icons8-resume-100(3).png" alt="Resume" width="40">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="project-section" class="py-5 shadow-sm">
+            <div class="text-center mb-5">
+                <h2>Projects</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <a href="/assets/pages/projects/data science sports betting/dataScienceSportsBetting.html" class="text-decoration-none text-dark">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Machine Learning & Sports Betting</h5>
+                                <img src="./assets/images/icons/icons8-python-100(1).png" class="img-fluid mb-3" alt="Python logo" style="width: 60px;">
+                                <p class="card-text">
+                                    Can a basic supervised machine learning model using linear regression come to the same conclusion as vegas odds makers? Lets find out!
+                                </p>
+                            </div>
                         </a>
                     </div>
                 </div>
-            </section>
-        </div>
-        <div class="container content">
-            <section id="learning-section" class="container">
-                <header>
-                    <h2>LEARNING</h2>
-                </header>
-                <p>
-                    I have always found that I learn better by teaching, so I have built these educational resources below in attempt to further my own knowledge and understanding.
-                </p>
-                <ul id="learning-mods">
-                    <li><a href="./assets/pages/learning mods/data science/datasci.html" target="_blank">Data Science</a></li>
-                    <li><a href="./assets/pages/learning mods/data structures & algos/dsa.html" target="_blank">Data Structures and Algorithms</a></li>
-                    <li><a href="./assets/pages/learning mods/functional programming/functional.html" target="_blank">Functional Programming</a></li>
-                    <li><a href="./assets/pages/learning mods/oop/oop.html" target="_blank">Object Oriented Programming</a></li>
-                </ul>
-            </section>
-        </div>
+            </div>
+        </section>
+        <section id="dogs-section" class="py-5">
+            <div class="text-center mb-5">
+                <h2>My Dogs</h2>
+                <p class="lead">Here’s some pics of my dogs!</p>
+            </div>
+            <div class="row dog-gallery">
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <img id="dog1" src="./assets/images/dogs/dsafdsa.webp" class="img-fluid rounded shadow-sm" alt="Dog 1">
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <img id="dog2" src="./assets/images/dogs/dsfgsdfg.jpg" class="img-fluid rounded shadow-sm" alt="Dog 2">
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <img id="dog3" src="./assets/images/dogs/erdgerg.jpg" class="img-fluid rounded shadow-sm" alt="Dog 3">
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <img id="dog4" src="./assets/images/dogs/esfef.jpg" class="img-fluid rounded shadow-sm" alt="Dog 3">
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <img id="dog5" src="./assets/images/dogs/esfews.jpg" class="img-fluid rounded shadow-sm" alt="Dog 3">
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <img id="dog6" src="./assets/images/dogs/ewfwafw.jpg" class="img-fluid rounded shadow-sm" alt="Dog 3">
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/dogs.js"></script>
 </body>
 </html>

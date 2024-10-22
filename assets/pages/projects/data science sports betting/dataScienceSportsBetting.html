@@ -9,38 +9,123 @@
     <link rel="shortcut icon" href="../../../images/icons/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
 </head>
 </head>
 <body>
-    <nav class="navbar navbar-fixed bg-dark text-light px-2">
-        <a class="navbar-brand" href="../../../../index.html"><img src="../../../images/icons/favicon.png" alt="Logo Image" width="50px"></a>
-        <h1>Machine Learning & Sports Betting: Part 1</h1>
+    <nav class="navbar sticky-top bg-primary text-light px-3">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="../../../../index.html">
+                <img src="../../../images/icons/favicon.png" alt="Logo" width="50" class="me-3">
+                <span class="fs-5 fs-lg-4 text-light">Machine Learning & Sports Betting</span>
+            </a>
+            <ul class="navbar-nav d-flex flex-row align-items-center mb-0">
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#intro">Intro</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#data">Data</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#code">Code</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#results">Results</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <main class="px-3 py-3">
-        <section class="border border-danger bg-danger bg-opacity-10 rounded mt-3 px-2 py-2 text-center">
-            <h2 class="text-danger">SEEK HELP IF YOU HAVE A GAMBLING OR SPORT BETTING ADDICTION.</h2>
+        <section class="border border-danger bg-danger bg-opacity-10 rounded mt-3 px-2 py-2 text-center container-md mx-auto">
+            <h2 class="text-danger">SEEK HELP IF YOU HAVE A GAMBLING OR SPORTS BETTING ADDICTION.</h2>
             <p>Gambling Addiction Hotline: <a href="tel:+1-800-426-2537">1-800-GAMBLER</a></p>
         </section>
-        <section class="border rounded mt-3 px-2 py-2">
-            <h2>Introduction:</h2>
-        </section>
-        <section class="border rounded mt-3 px-2 py-2">
-            <h2>Data:</h2>
+        <section class="border rounded mt-3 px-2 py-2 container">
+            <h2 id="intro">Introduction:</h2>
             <p>
+                Sports betting has become a significant industry in the U.S., growing at an exponential rate. In 2023 alone, Americans wagered a record-breaking $119.84 billion on sports betting, according to the 
+                <a href="https://www.spglobal.com/marketintelligence/en/news-insights/latest-news-headlines/american-gaming-association-legal-sports-betting-hits-record-revenue-in-2023-80522087" target="_blank">American Gaming Association</a>. As sports betting continues to expand in popularity, particularly with the increasing legalization in various states, this figure is expected to rise further in the coming years. 
+            </p>
+            <p>
+                When you think about it, sports betting is essentially applied data science. Bettors and oddsmakers alike analyze vast amounts of data — player performance, team stats, injury reports, and other factors — to make predictions about the outcome of games. The objective of this project is to determine whether a simple supervised machine learning model, specifically using linear regression, can effectively predict the passing yards of NFL quarterbacks. By leveraging historical data, we aim to see if our model can arrive at conclusions similar to those of professional oddsmakers in Las Vegas.
+            </p>
+            <p>
+                Dak Prescott was chosen for this analysis due to his extensive data set. As the longest-tenured active starting quarterback for a single team, Prescott has accumulated a large amount of historical data, which is invaluable for building a predictive model. The more data we have, the better our chances of developing an accurate model. Additionally, his career spans various seasons and matchups, allowing us to evaluate his performance in different contexts.
+            </p>
+            <p>
+                The project focuses on predicting Dak Prescott’s passing yards against specific defenses, the Cowboys will be playing the San Francisco 49ers this weekend (October 27th, 2024), so we will be trying to predict Dak's  passing yards for this game. By analyzing Prescott's past performance, as well as the defensive statistics of the opposing team, we aim to build a reliable model that can predict how many passing yards he will throw in a given game.
+            </p>
+        </section>
+        <section class="border rounded mt-3 px-2 py-2 container">
+            <h2 id="data">Data:</h2>
+            <p>
+                I was able to get all the data I needed from <a href="https://www.pro-football-reference.com/">www.pro-football-reference.com</a>. So thanks to them!
                 <ul>
                     <li>Dak's Career Regular Season Stats: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/" target="_blank">Link</a></li>
                     <li>Dak's Stats VS 49ers: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/?opp_id=sfo" target="_blank">Link</a></li>
                     <li>SF 2024 Defense Stats: <a href="https://www.pro-football-reference.com/teams/sfo/2024.htm#all_defense">Link</a></li>
+                    <li>CSV of the Final Data Set I Used: <a href="./DakPrescott.csv" download>Download</a></li>
                 </ul>
             </p>
-        </section>
-        <section class="border rounded mt-3 px-2 py-2">
-            <h2>Code:</h2>
             <p>
-                Full Code Here: <a href="" download>Download</a>
+                I started out by building the model in Jupyter notebooks, going over the data, and then finalizing it in a separate python file.
             </p>
-            <h3>Read the data</h3>
-            <pre class="border border-success bg-dark bg-opacity-70 text-light rounded px-3">
+            <p>
+                If you would like to check out the notebook you can check it out here:
+                <ul>
+                    <li>Notebook File: <a href="./Dak Passing Yards VS SF.ipynb" download="">Download</a></li>
+                    <li>Notebook PDF: <a href="./Dak Passing Yards VS SF.pdf" target="_blank">Link</a></li>
+                </ul>
+                Some good charts for visualization in there so if you are really into that, then I highly recommend taking a look. But there is only one that I will be talking about here because I believe it the most relevant. The correlation matrix:
+            </p>
+            <img class="d-block img-fluid mx-auto"  src="./cor matrix.png" alt="Correlation Matrix">
+            <p>
+                In the correlation matrix we can see how correlated the features of the model are to each other. The one we care about the most is the correlation with our target, passing yards.
+            </p>
+            <p>
+                We can se the most correlated relation with passing yards is completions, pass attempts, passing touch downs, passer rating and passing yards per attempt.<br>
+                For right now we will be using all the features shown in the matrix, and we will be talking more about this and things like multicollinearity a little later on.
+            </p>
+            <p>
+                Now we have our features, target, and data.
+            </p>
+        </section>
+        <section class="border rounded mt-3 px-2 py-2 container">
+            <h2 id="code">Code:</h2>
+            <p>
+                Full Code Here: <a href="./mod1.py" download>Download</a>
+            </p>
+            <p>
+                Here is a quick breakdown of the code. We will start with the the final function, and then breakdown each sub function.
+            </p>
+            <pre class="bg-dark text-light rounded px-3  container">
+                <code>
+def prediction(data, features, target, norm1, norm2):
+    df = read_data(data)
+
+    X_train, X_test, y_train, y_test = split_data(df[features], df[target])
+
+    model = train_model(X_train, y_train)
+    test_model(model, X_test, y_test)
+
+    # Convert prediction result to float
+    final_predict = model.predict(test)
+    final_predict = final_predict[0, 0]
+    final_predict = float(final_predict)
+    norm_predict = (norm1/norm2) * final_predict # Normalize
+
+    # Display results
+    print(f'Average Pass Yards vs Opponent: {qb_passYards_opp:.2f}')
+    print(f'Average Opponent Pass Yards Allowed 2024: {opp_passYards_allowed:.2f}')
+    print(f'Predicted Pass Yards: {final_predict:.2f}')
+    print(f'Predicted Normalized: {norm_predict:.2f}')
+                </code>
+            </pre>
+            <h3>Reading the Data:</h3>
+            <pre class="bg-dark text-light rounded px-3 container">
                 <code>
 def read_data(data):
     df = pd.read_csv(data)
@@ -48,16 +133,16 @@ def read_data(data):
     return df
                 </code>
             </pre>
-            <h3>Split the data</h3>
-            <pre class="border border-success bg-dark bg-opacity-70 text-light rounded px-3">
+            <h3>Split the Data:</h3>
+            <pre class="bg-dark text-light rounded px-3 container">
                 <code>
 def split_data(features, target):
-    X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=69, shuffle=True)
+    X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=69)
     return X_train, X_test, y_train, y_test
                 </code>
             </pre>
-            <h3>Train the model</h3>
-            <pre class="border border-success bg-dark bg-opacity-70 text-light rounded px-3">
+            <h3>Train the Model:</h3>
+            <pre class="bg-dark text-light rounded px-3 container">
                 <code>
 def train_model(X_train, y_train):
     linear_reg = LinearRegression()
@@ -65,8 +150,8 @@ def train_model(X_train, y_train):
     return linear_reg
                 </code>
             </pre>
-            <h3>Test the model</h3>
-            <pre class="border border-success bg-dark bg-opacity-70 text-light rounded px-3">
+            <h3>Test the Model:</h3>
+            <pre class="bg-dark text-light rounded px-3 container">
                 <code>
 def test_model(model, X_test, y_test):
     prediction = model.predict(X_test)
@@ -76,15 +161,84 @@ def test_model(model, X_test, y_test):
     mse = mean_squared_error(y_test, prediction)
     r2 = r2_score(y_test, prediction)
     print(f'Mean Absolute Error: {mae:.2f}\nMAE %: {maePer:.2f}\nMean Squared Error: {mse:.2f}\nR2 Score: {r2:.2f}')
-
                 </code>
             </pre>
         </section>
-        <section class="border rounded mt-3 px-2 py-2">
-            <h2>Results:</h2>
+        <section class="border rounded mt-3 px-2 py-2 container">
+            <h2 id="results">Results:</h2>
+            <p>
+                Now is the moment we have all been waiting for lets see what the model thinks.
+            </p>
+            <pre class="px-3 bg-dark text-light rounded container">
+
+    Age        Cmp        Att       Cmp%   Pass_TD    Int  Passer_rating        Sk       Y/A
+0  31.25  16.064542  22.986486  69.882415  3.111111  0.875     123.211559  0.714286  9.405627
+
+Mean Absolute Error: 8.67
+MAE %: 6.08
+R2 Score: 0.98
+
+Average Pass YArds vs Opponent: 210.67
+Average Opponent Pass Yards Allowed 2024: 205.14
+Predicted Pass Yards: 227.75
+Predicted Normalized: 233.89
+            </pre>
+            <p>
+                The model has spoken, <strong>234</strong> passing yards for Dak this weekend, with all being said that sounds more than reasonable.
+            </p>
+            <p>
+                You may be wondering how we came to this "normalized" conclusion, since I never went over that yet. Since we do not Dak's passing TDs, passer rating, ect..., we kind of have to make them up, a historically backed guess. The inputs we put into the model to come to this conclusion were derived from the average of Dak's historical stats versus the 49ers, and the complementary defensive stats for the 49ers this year. There were multiple ways we could have done this (we will probably explore those in another project) but thats what I choose this time. Here is an example of how I normalized the data:
+            </p>
+            <pre>
+(Dak's Historical Stat Average vs The 49ers / Average 49er Defensive Stat for 2024) * Dak's Historical Stat Average vs The 49ers
+            </pre>
+            <p>
+                Earlier in the <a href="./dataScienceSportsBetting.html#data">Data</a> section I talked about the correlations between our target and the other features. So lets make some adjustments and see how they effect the outcome. We are going to remove the following features:
+            </p>
+            <ul>
+                <li>Age (0.17)</li>
+                <li>Completion % (0.29)</li>
+                <li>Interceptions (0.03)</li>
+                <li>Sacks (0)</li>
+            </ul>
+            <p>
+                We can see based off their correlation score these features are not really correlated to passing yards so they act as background noise if you will.
+            </p>
+            <ul>
+                <li>Attempts</li>
+                <li>Passer Rating</li>
+            </ul>
+            <p>
+                We will be removing these as well as they have high correlation with other features, which could lead to <a href="https://en.wikipedia.org/wiki/Multicollinearity">multicollinearity</a>, the potential for redundant information to be highly weighted in the model.
+            </p>
+            <p>
+                Adjusted Model File: <a href="./mod2.py" download>Download</a>
+            </p>
+            <p>
+                After removing those features this is what the model has to say:
+            </p>
+            <pre class="px-3 bg-dark text-light rounded container">
+
+        Cmp   Pass_TD       Y/A
+0  16.064542  3.111111  9.405627
+
+Mean Absolute Error: 31.60
+MAE %: 14.64
+R2 Score: 0.83
+
+Average Pass Yards vs Opponent: 210.67
+Average Opponent Pass Yards Allowed 2024: 205.14
+Predicted Pass Yards: 235.54
+Predicted Normalized: 241.88
+            </pre>
+            <p>
+                Now the model says <strong>242</strong> passing yards, still extremely reasonable and not that far off from the original prediction.
+            </p>
         </section>
-        <section class="border rounded mt-3 px-2 py-2">
-            <h2>Conclusion:</h2>
+        <section class="border rounded mt-3 px-2 py-2 container">
+            <h2 id="conclusion">Conclusion:</h2>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
