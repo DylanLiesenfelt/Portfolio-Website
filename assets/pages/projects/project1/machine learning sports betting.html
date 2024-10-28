@@ -73,7 +73,7 @@
                     <li>Dak's Career Regular Season Stats: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/" target="_blank">Link</a></li>
                     <li>Dak's Stats VS 49ers: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/?opp_id=sfo" target="_blank">Link</a></li>
                     <li>SF 2024 Defense Stats: <a href="https://www.pro-football-reference.com/teams/sfo/2024.htm#all_defense">Link</a></li>
-                    <li>CSV of the Final Data Set I Used: <a href="./DakPrescott.csv" download>Download</a></li>
+                    <li>CSV of the Final Data Set I Used: <a href="./downloads/DakPrescott.csv" download>Download</a></li>
                 </ul>
             </p>
             <p>
@@ -82,12 +82,12 @@
             <p>
                 If you would like to check out the notebook you can check it out here:
                 <ul>
-                    <li>Notebook File: <a href="./Dak Passing Yards VS SF.ipynb" download="">Download</a></li>
-                    <li>Notebook PDF: <a href="./Dak Passing Yards VS SF.pdf" target="_blank">Link</a></li>
+                    <li>Notebook File: <a href="./downloads/Dak Passing Yards VS SF.ipynb" download>Download</a></li>
+                    <li>Notebook PDF: <a href="./downloads/Dak Passing Yards VS SF.pdf" target="_blank">Link</a></li>
                 </ul>
                 Some good charts for visualization in there so if you are really into that, then I highly recommend taking a look. But there is only one that I will be talking about here because I believe it the most relevant. The correlation matrix:
             </p>
-            <img class="d-block img-fluid mx-auto"  src="./cor matrix.png" alt="Correlation Matrix">
+            <img class="d-block img-fluid mx-auto"  src="./images/cor matrix.png" alt="Correlation Matrix">
             <p>
                 In the correlation matrix we can see how correlated the features of the model are to each other. The one we care about the most is the correlation with our target, passing yards.
             </p>
@@ -102,7 +102,7 @@
         <section class="border rounded mt-3 px-2 py-2 container">
             <h2 id="code">Code:</h2>
             <p>
-                Full Code Here: <a href="./mod1.py" download>Download</a>
+                Full Code Here: <a href="./downloads/test model.py" download>Download</a>
             </p>
             <p>
                 Here is a quick breakdown of the code. We will start with the the final function, and then breakdown each sub function.
@@ -218,7 +218,7 @@ Predicted Normalized: 233.89
                 We will be removing these as well as they have high correlation with other features, which could lead to <a href="https://en.wikipedia.org/wiki/Multicollinearity">multicollinearity</a>, the potential for redundant information to be highly weighted in the model.
             </p>
             <p>
-                Adjusted Model File: <a href="./mod2.py" download>Download</a>
+                Adjusted Model File: <a href="./downloads/DALvsSF.py" download>Download</a>
             </p>
             <p>
                 After removing those features this is what the model has to say:
@@ -246,18 +246,18 @@ Predicted Normalized: 241.88
             <p>
                 Heres the O/U lines for the odds makers as of 10/23/2024 @ 10:30pm ET, Thanks to <a href="https://www.bettingpros.com/nfl/odds/player-props/dak-prescott/">bettingpros.com</a>, who have Prescott projected for <strong>246.3</strong> passing yards.
             </p>
-            <img class="w-100" src="./bet lines.png" alt="The betting lines from various sports books">
+            <img class="w-100" src="./images/bet lines.png" alt="The betting lines from various sports books">
             Image from: <a href="https://www.bettingpros.com/nfl/odds/player-props/dak-prescott/">bettingpros.com</a>
             <p>
-                <br>When the prop bets started coming out, the conseus line was 257 yards, now we are starting to see it come down to our models predictions. 
+                <br>When the prop bets started coming out, the conseus line was 257 yards, now we are starting to see it come down to our models predictions.
                 My model and the odds makers have a margin of only 5 yards as of right now, not bad for some backyard data science.
             </p>
             <p>
                 Well the results are in and drum roll...
             </p>
-            <img class="w-100" src="./dak passing yards.png" alt="Dak Prescott passing yards">
+            <img class="w-100" src="./images/dak passing yards.png" alt="Dak Prescott passing yards">
             <p class="mt-2">
-                Off by one yard! But, lets be realistic this is only one data point, while the model is backed by historical data (and in this instance had a lower difference than the professional odds makers), it is at the end of day highly coincidental with out more evidence to support. So that is exactly what I will be doing fro the remainder of the NFL season making predictions for daks passing yards and comparing them to Vegas and and the actual outcome to see if the model is a good predictor or we just got lucky. So if you liked this project keep update and follow up here for my more updates.
+                Off by one yard! But, lets be realistic this is only one data point, and this a very very very basic one at that. The vegas models take in a plethora of other data (Weather, Location, Injuries, etc.), so it is highly likely this result is just a coincidence. But, I will be tracking the rest of the cowboys games for the remainder of the season <a href="./project1.html">here</a>, so if you are interested in this project keep checking in. Thanks for reading!
             </p>
         </section>
     </main>
