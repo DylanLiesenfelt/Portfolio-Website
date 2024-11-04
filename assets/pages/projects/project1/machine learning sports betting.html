@@ -41,6 +41,9 @@
                 <li class="nav-item px-2">
                     <a class="nav-link text-light fs-6" href="#conclusion">Conclusion</a>
                 </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#updates">Updates</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -73,7 +76,6 @@
                     <li>Dak's Career Regular Season Stats: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/" target="_blank">Link</a></li>
                     <li>Dak's Stats VS 49ers: <a href="https://www.pro-football-reference.com/players/P/PresDa01/gamelog/?opp_id=sfo" target="_blank">Link</a></li>
                     <li>SF 2024 Defense Stats: <a href="https://www.pro-football-reference.com/teams/sfo/2024.htm#all_defense">Link</a></li>
-                    <li>CSV of the Final Data Set I Used: <a href="./downloads/DakPrescott.csv" download>Download</a></li>
                 </ul>
             </p>
             <p>
@@ -82,7 +84,6 @@
             <p>
                 If you would like to check out the notebook you can check it out here:
                 <ul>
-                    <li>Notebook File: <a href="./downloads/Dak Passing Yards VS SF.ipynb" download>Download</a></li>
                     <li>Notebook PDF: <a href="./downloads/Dak Passing Yards VS SF.pdf" target="_blank">Link</a></li>
                 </ul>
                 Some good charts for visualization in there so if you are really into that, then I highly recommend taking a look. But there is only one that I will be talking about here because I believe it the most relevant. The correlation matrix:
@@ -102,7 +103,8 @@
         <section class="border rounded mt-3 px-2 py-2 container">
             <h2 id="code">Code:</h2>
             <p>
-                Full Code Here: <a href="./downloads/test model.py" download>Download</a>
+                Git Hub Repo: <a href="https://github.com/DylanLiesenfelt/Machine-Learning-and-Sports-Betting" target="_blank">Link</a>
+                (Changes have been made since initial post)
             </p>
             <p>
                 Here is a quick breakdown of the code. We will start with the the final function, and then breakdown each sub function.
@@ -218,9 +220,6 @@ Predicted Normalized: 233.89
                 We will be removing these as well as they have high correlation with other features, which could lead to <a href="https://en.wikipedia.org/wiki/Multicollinearity">multicollinearity</a>, the potential for redundant information to be highly weighted in the model.
             </p>
             <p>
-                Adjusted Model File: <a href="./downloads/DALvsSF.py" download>Download</a>
-            </p>
-            <p>
                 After removing those features this is what the model has to say:
             </p>
             <pre class="px-3 bg-dark text-light rounded container">
@@ -249,7 +248,7 @@ Predicted Normalized: 241.88
             <img class="w-100" src="./images/bet lines.png" alt="The betting lines from various sports books">
             Image from: <a href="https://www.bettingpros.com/nfl/odds/player-props/dak-prescott/">bettingpros.com</a>
             <p>
-                <br>When the prop bets started coming out, the conseus line was 257 yards, now we are starting to see it come down to our models predictions.
+                <br>When the prop bets started coming out, the consensus line was 257 yards, now we are starting to see it come down to our models predictions.
                 My model and the odds makers have a margin of only 5 yards as of right now, not bad for some backyard data science.
             </p>
             <p>
@@ -261,7 +260,28 @@ Predicted Normalized: 241.88
             </p>
         </section>
         <section class="border rounded mt-3 px-2 py-2 container">
-            <h2 id="Updates">Updates</h2>
+            <h2 id="updates">Updates</h2>
+            <p>
+                So there has been some problems since the first run of the project and hindsight is 20/20 after all. (And yes the first prediction does seem to be a very correlated coincidence)
+            </p>
+            <p>
+                1. The way I was normalizing the inputs is flawed, some match ups like the week 9 DAL vs ATL game would blow up (in this case 130%-ish) leading to predictions of 430 passing yards. which while not impossible were unlikely.
+                <br>2. The NFL does have a recency bias, so normalizing for games years in the past is not conclusive for predicted outcomes. Players (especially QBs)tend to perform better later in careers.
+                <br>3. Dak got injured in the game versus ATL effectively putting the project at a stand still, having one testing point was a major flaw.
+            </p>
+            <p>
+                So, since I plan on making a more generalized model next year anyways its probably better I add more diverse field of QBs to track.
+                The next two most longest tenured QBs for a single Team are Patrick Mahomes and Josh Allen, I will also be following Jayden Daniels and CJ Stroud to see how the model handles players with a limited data set. Lastly Aaron Rodgers, as he is the longest tenured starting QB in the NFLl, he will be our outlier case.
+            </p>
+            <p>
+                Since this a more diverse cast of QBs I have changed up the model, no longer will we be using Linear Regression instead it will be Lasso Regression (basically a modified linear regression model). Lasso regression can handle feature selection for us (if it find features are not correlated to the predicted outcomes they are less weighted or weighted zero in the calculation), so I will not have to test each QBs data set to see how features interact with each other and tailor the model individually. This leads to more generalization.
+            </p>
+            <p>
+                Last is the way way normalization is now handled. I will no longer normalize the predicted outcome because it is based off of normalized inputs, so it is pseudo-normalized already. The inputs will be normalized using the QBs 2024 season stat averages against the opposing Defenses 2024 season stat averages. To avoid over-fitting the model 2024 samples were removed from the data sets.
+            </p>
+            <p>
+                Thats it for now to keep up to date check out the <a href="./project1.html">project page</a> you can also download the data sets and individual models code used fro each prediction there. Additionally you can get all of that onb the projects <a href="https://github.com/DylanLiesenfelt/Machine-Learning-and-Sports-Betting" target="_blank">Github Page</a> as well. Thanks for reading!
+            </p>
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
