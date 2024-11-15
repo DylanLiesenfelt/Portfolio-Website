@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Can a basic supervised machine learning model, using linear regression, effectively predict outcomes for sports betting?">
+    <meta name="keywords" content="Dylan Liesenfelt, Liesenfelt, Computer Science, Data Science, Computer Science, Machine Learning, Artificial Intelligence, Software Engineer, Data Scientist, Data Engineer">
+    <title>Machine Learning & Sports Betting || Liesenfelt.net</title>
+    <meta property="og:title" content="Machine Learning & Sports Betting">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.liesenfelt.net/assets/pages/projects/data%20science%20sports%20betting/dataScienceSportsBetting.html">
+    <meta property="og:image" content="https://www.liesenfelt.net/assets/pages/projects/data%20science%20sports%20betting/card.jpg">
+    <meta property="og:description" content="Can a basic supervised machine learning model, using linear regression, effectively predict outcomes for sports betting?">
+    <meta property="og:site_name" content="liesenfelt.net">
+    <link rel="shortcut icon" href="../../assets/images/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+</head>
+<body>
+    <nav class="navbar sticky-top bg-primary text-light px-3">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="../../../../index.html">
+                <img src="../../assets/images/icons/favicon.png" alt="Logo" width="50" class="me-3">
+                <span class="fs-6 text-light">Machine Learning & Sports Betting</span>
+            </a>
+            <ul class="navbar-nav d-flex flex-row align-items-center mb-0">
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#intro">Intro</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#data">Data</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#code">Code</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#results">Results</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#conclusion">Conclusion</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link text-light fs-6" href="#updates">Updates</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="px-3 py-3 d-flex flex-column align-items-center">
+        <div class="alert alert-warning text-center w-50" role="alert">
+            <strong>Disclaimer:</strong> This project is just for fun! Any bets placed are at your own risk.
+        </div>
+        <section class="border rounded mt-3 px-4 py-2 container">
+            <h2 id="intro">Introduction:</h2>
+            <p>
+                Sports betting has become a significant industry in the U.S., growing at an exponential rate. In 2023 alone, Americans wagered a record-breaking $119.84 billion on sports betting, according to the 
+                <a href="https://www.spglobal.com/marketintelligence/en/news-insights/latest-news-headlines/american-gaming-association-legal-sports-betting-hits-record-revenue-in-2023-80522087" target="_blank">American Gaming Association</a>. As sports betting continues to expand in popularity, particularly with the increasing legalization in various states, this figure is expected to rise further in the coming years. 
+            </p>
+            <p>
+                When you think about it, sports betting is essentially applied data science. Bettors and odds-makers alike analyze vast amounts of data — player performance, team stats, injury reports, and other factors — to make predictions about the outcome of games. The objective of this project is to determine whether a simple supervised machine learning model, specifically using linear regression, can effectively predict the passing yards of NFL quarterbacks. By leveraging historical data, we aim to see if our model can arrive at conclusions similar to those of professional oddsmakers in Las Vegas.
+            </p>
+            <p>
+                So, if you have been following this project since the beginning you would know we started by following Cowboys quarterback Dak Prescott, however shortly after Dak had a season ending injury, big changes were made.
+            </p>
+            <p>
+                The next two QBs with longest tenured starting position for a single team, are Patrick Mahomes and Josh Allen. As well as Aaron Rodgers for being by far the largest outlier of all starting QBs. Lastly CJ Stroud and Jayden Daniels to see how the model handles limited data.
+            </p>
+        </section>
+        <section class="border rounded mt-3 px-4 py-2 container">
+            <h2 id="data">Data:</h2>
+            
+        </section>
+        <section class="border rounded mt-3 px-4 py-2 container">
+            <h2 id="code">Code:</h2>
+            <p>
+                Since this new version of the project is working with multiple QBs, and I want to eventually scale this to all NFL starting QBs, I built the model to be modular.
+            </p>
+            <p>
+                This how it works, the individual QBs career dataset is used to train the model. Currently the model is a <a href="https://scikit-learn.org/dev/modules/generated/sklearn.linear_model.ElasticNet.html" target="_blank">Elastic Net</a> model, which is a combination of both <a href="https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.Ridge.html" target="_blank">Ridge</a> (L2 regularization) and <a href="https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.Lasso.html" target="_blank">Lasso</a> (L1 Regularization) models. The model takes a parameter called l1_ratio which controls how much of the overall model is influenced by both individual models, a value of1 being all L1 and value of 0 being all L2, for right now we will be using a 0.5 ratio value. The good thing about L1 regularization is a pseudo built in in feature selection. Essentially if the model sees no correlation between a feature and a predicted outcome it sets that features weight to zero, which works well here where were working with similar structure of data, but that data has different outcomes due to play styles or experience.
+            </p>
+            <p>
+                Once the model is trained, we can make our prediction of the next game with our target being passing yards. we need inputs, guesses basically to feed to the model to make a prediction. 
+            </p>
+            <h3>Inputs Module: <button class="btn btn-success" onclick="window.location.href='./model/inputs.py';" download="inputs.py">Download</button></h3>
+            <p>
+                
+            </p>
+            <pre>
+                <code>
+    class Stats:
+        def __init__(self, age, completions, attempts, passingYards, passingTDs, interceptions, sacks ):
+            self.age = age
+            self.cmp = completions
+            self.att = attempts
+            self.yards = passingYards
+            self.td = passingTDs
+            self.int = interceptions
+            self.sacks = sacks
+                </code>
+            </pre>
+        </section>
+        <section class="border rounded mt-3 px-2 py-2 container">
+            <h2 id="results">Results:</h2>
+
+        </section>
+        <section class="border rounded mt-3 px-2 py-2 container">
+            <h2 id="conclusion">Conclusion:</h2>
+
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
